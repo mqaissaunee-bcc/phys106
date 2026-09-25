@@ -12,7 +12,9 @@
     ['module-01', 'Our Place in the Universe', 15],
     ['module-02', 'The Science of Astronomy', 13],
     ['module-03', "Motion, Gravity, Light, and Telescopes", 13],
-    ['module-04', "The Solar System and Its Origin", 13]
+    ['module-04', "The Solar System and Its Origin", 13],
+    ['module-05', "Worlds Up Close", 13],
+    ['module-06', "Small Bodies and Other Planetary Systems", 13]
   ];
 
   function openDB() {
