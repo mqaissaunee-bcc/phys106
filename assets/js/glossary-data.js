@@ -202,5 +202,21 @@ window.PHYS106_GLOSSARY = {
   "hot-jupiter": { term: "Hot Jupiter", module: 6, def: "A giant exoplanet orbiting very close to its star, with a period of only days." },
   "super-earth": { term: "Super-Earth", module: 6, def: "An exoplanet larger than Earth but smaller than Neptune; the most common size of planet found so far." },
   "habitable-zone": { term: "Habitable zone", module: 6, def: "The range of distances from a star where a planet with an Earth-like atmosphere could have liquid water on its surface." },
-  "planetary-migration": { term: "Planetary migration", module: 6, def: "The movement of a planet inward or outward from where it formed, driven by interactions with its disk or with other planets." }
+  "planetary-migration": { term: "Planetary migration", module: 6, def: "The movement of a planet inward or outward from where it formed, driven by interactions with its disk or with other planets." },
+  "special-relativity": { term: "Special relativity", module: 7, def: "Einstein’s 1905 theory describing how measurements of space and time depend on relative motion, based on the constancy of the speed of light." },
+  "reference-frame": { term: "Reference frame", module: 7, def: "The point of view from which an observer measures positions, motions, and times." },
+  "light-clock": { term: "Light clock", module: 7, def: "A thought-experiment clock in which a pulse of light bounces between two mirrors; each round trip is one tick." },
+  "time-dilation": { term: "Time dilation", module: 7, def: "The slowing of a moving clock (or of a clock in strong gravity) compared with an observer’s own clock." },
+  "lorentz-factor": { term: "Lorentz factor (γ)", module: 7, def: "The factor by which moving clocks slow and moving lengths shrink: γ = 1 ÷ √(1 − v²/c²)." },
+  "length-contraction": { term: "Length contraction", module: 7, def: "The shortening of a moving object along its direction of motion, as measured by an observer it moves past." },
+  "simultaneity": { term: "Relativity of simultaneity", module: 7, def: "The fact that events simultaneous for one observer may not be simultaneous for another moving relative to the first." },
+  "spacetime": { term: "Spacetime", module: 7, def: "The four-dimensional combination of three dimensions of space and one of time." },
+  "general-relativity": { term: "General relativity", module: 7, def: "Einstein’s 1915 theory of gravity, in which mass and energy curve spacetime." },
+  "equivalence-principle": { term: "Equivalence principle", module: 7, def: "The principle that the effects of gravity are exactly equivalent to the effects of acceleration." },
+  "gravitational-time-dilation": { term: "Gravitational time dilation", module: 7, def: "The slowing of time in stronger gravity: clocks lower in a gravitational field tick more slowly." },
+  "gravitational-lensing": { term: "Gravitational lensing", module: 7, def: "The bending of light from a distant object by the gravity of a massive object between it and us, producing distorted, multiple, or ring-shaped images." },
+  "black-hole": { term: "Black hole", module: 7, def: "A region where spacetime is so strongly curved that nothing, not even light, can escape." },
+  "event-horizon": { term: "Event horizon", module: 7, def: "The boundary of a black hole, the point of no return from which nothing can escape." },
+  "schwarzschild-radius": { term: "Schwarzschild radius", module: 7, def: "The radius of a black hole’s event horizon, about 3 km per solar mass." },
+  "gravitational-waves": { term: "Gravitational waves", module: 7, def: "Ripples in the curvature of spacetime, produced by accelerating masses and traveling at the speed of light." }
 };
