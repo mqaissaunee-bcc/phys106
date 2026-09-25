@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My work | PHYS 106 Astronomy</title>
+<meta name="description" content="Back up, restore, or delete your PHYS 106 progress, answers, journal, and notes.">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme-init.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="6" fill="currentColor"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+      <span>PHYS 106 <span class="brand-sub">Astronomy</span></span>
+    </a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Site">
+      <ul><li><a href="index.html">Modules</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="syllabus.html">Syllabus</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="my-work.html" aria-current="page">My work</a></li></ul>
+    </nav>
+    <div class="tools">
+      <button type="button" id="text-smaller" aria-label="Decrease text size">A−</button>
+      <button type="button" id="text-larger" aria-label="Increase text size">A+</button>
+      <button type="button" id="theme-btn">Theme: auto</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <h1>My work</h1>
+  <p class="lede">Your reading progress, activity answers, quiz scores, Moon journal, and notes are saved only in this browser, on this device. Nothing is sent anywhere.</p>
+  <div class="prose">
+    <p>That keeps your work private, but it also means it stays behind if you switch computers, clear your browser data, or open the course inside Canvas instead of directly. A backup file solves all three: download one each week, keep it somewhere safe such as OneDrive, and restore it wherever you need it.</p>
+    <p id="mw-last" class="mw-last" aria-live="polite"></p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>What is saved in this browser</caption>
+      <thead><tr><th scope="col">Module</th><th scope="col" class="num">Sections read</th><th scope="col" class="num">Self-check best</th><th scope="col" class="num">Activity answers</th><th scope="col" class="num">Notebook</th></tr></thead>
+      <tbody id="mw-body"></tbody>
+    </table>
+  </div>
+  <p id="mw-size" class="small"></p>
+  <div class="mw-actions">
+    <section class="mw-card" aria-labelledby="mw-b-h">
+      <h2 id="mw-b-h">Back up</h2>
+      <p>Download one file containing everything: progress, answers, scores, journal, notes, and the images in your notes.</p>
+      <button type="button" class="btn-primary" id="mw-backup">Download my backup</button>
+    </section>
+    <section class="mw-card" aria-labelledby="mw-r-h">
+      <h2 id="mw-r-h">Restore</h2>
+      <p>Load a backup file you downloaded earlier, on this device or another.</p>
+      <label for="mw-file">Backup file</label><br>
+      <input type="file" id="mw-file" accept=".json,application/json">
+      <fieldset>
+        <legend class="visually-hidden">How to restore</legend>
+        <label><input type="radio" name="mw-mode" value="merge" checked> <span><strong>Merge</strong> with what is here (the backup wins where both have the same item)</span></label>
+        <label><input type="radio" name="mw-mode" value="replace"> <span><strong>Replace</strong> everything here with the backup</span></label>
+      </fieldset>
+      <button type="button" id="mw-restore">Restore from backup</button>
+      <p id="mw-restore-msg" class="act-feedback" aria-live="polite"></p>
+    </section>
+    <section class="mw-card danger-zone" aria-labelledby="mw-d-h">
+      <h2 id="mw-d-h">Delete</h2>
+      <p>Remove all of your course data from this browser, for example on a shared or library computer when you are done.</p>
+      <button type="button" class="danger" id="mw-wipe">Delete all my course data</button>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Built for <span class="program">PHYS 106 Astronomy</span>, Brookdale Community College, <span class="year">2026</span>.</p>
+    <p>Original course content. Your reading progress and quiz scores are saved only in this browser.</p>
+  </div>
+</footer>
+<script src="assets/js/glossary-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/backup.js"></script>
+</body>
+</html>
