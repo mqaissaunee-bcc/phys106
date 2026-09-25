@@ -15,7 +15,9 @@
     ['module-04', "The Solar System and Its Origin", 13],
     ['module-05', "Worlds Up Close", 13],
     ['module-06', "Small Bodies and Other Planetary Systems", 13],
-    ['module-07', "Relativity: Space, Time, and Gravity", 13]
+    ['module-07', "Relativity: Space, Time, and Gravity", 13],
+    ['module-08', "The Building Blocks of the Universe", 13],
+    ['module-09', "The Sun and Measuring Stars", 13]
   ];
 
   function openDB() {
