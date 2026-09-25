@@ -19,7 +19,9 @@
     ['module-08', "The Building Blocks of the Universe", 13],
     ['module-09', "The Sun and Measuring Stars", 13],
     ['module-10', "Star Birth and Stellar Lives", 13],
-    ['module-11', "Stellar Remnants and the Milky Way", 12]
+    ['module-11', "Stellar Remnants and the Milky Way", 12],
+    ['module-12', "Galaxies and Their Evolution", 12],
+    ['module-13', "The Big Bang and the Fate of the Universe", 13]
   ];
 
   function openDB() {

@@ -18,6 +18,10 @@ assets/js/glossary-data.js  All glossary terms (add each module's terms here)
 assets/js/module-NN-sims.js   That module's simulations and activities
 ```
 
+## Status
+
+All 13 modules are live (53 simulations, about 160 activities, 80 guided problems, 260 self-check questions, 330 glossary terms). Module 6 ends with a 30-question practice midterm (Modules 1–6); Module 13 ends with a 30-question practice final (Modules 7–13). Exam question banks for Canvas are a separate instructor package.
+
 ## Publish with GitHub Desktop
 
 1. Create a new repository in GitHub Desktop and copy these files into it (keep `.nojekyll`).
