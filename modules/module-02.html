@@ -6,6 +6,7 @@
 <title>Module 2: The Science of Astronomy | PHYS 106 Astronomy</title>
 <meta name="description" content="PHYS 106 Module 2: ancient astronomy, the Copernican revolution, Kepler's laws, Galileo's evidence, how science works, and how we keep time and find our way by the sky, with four simulations and eight activities.">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/mathtools.css">
 <script src="../assets/js/theme-init.js"></script>
 </head>
 <body data-week="module-02" data-root="../">
@@ -24,6 +25,7 @@
         <li><a href="../schedule.html">Schedule</a></li>
         <li><a href="../syllabus.html">Syllabus</a></li>
         <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../math-toolkit.html">Math toolkit</a></li>
         <li><a href="../my-work.html">My work</a></li>
       </ul>
     </nav>
@@ -432,7 +434,7 @@
 
         <section class="activity" id="act-g-m2-saturn" aria-labelledby="act-g-m2-saturn-h">
           <span class="act-tag guided-tag">Guided problem 2.2</span>
-          <h3 id="act-g-m2-saturn-h">Saturn’s distance from its year</h3>
+          <h3 id="act-g-m2-saturn-h">Saturn’s year from its distance</h3>
           <p class="act-meta">Try it on your own first. Stuck? Reveal the solution one step at a time, and stop as soon as you can finish it yourself.</p>
           <div class="guided" id="g-m2-saturn" data-source="g-m2-saturn-data"></div>
         </section>
@@ -1166,29 +1168,29 @@
  "title": "Measure Earth from two cities"
 }</script>
 <script type="application/json" id="g-m2-saturn-data">{
- "prompt": "<p>Saturn takes 29.5 years to orbit the Sun. Use Kepler’s third law to find its average distance from the Sun in AU.<\/p>",
+ "prompt": "<p>Saturn orbits the Sun at an average distance of 9.54 AU. Use Kepler’s third law to find how many years it takes to orbit once.</p>",
  "check": {
-  "answer": 9.55,
+  "answer": 29.5,
   "tol": 0.03,
-  "unit": "AU",
-  "label": "Average distance"
+  "unit": "years",
+  "label": "Orbital period"
  },
  "steps": [
   {
    "title": "Write the law",
-   "body": "<p><code>p² = a³<\/code>, with p in years and a in AU.<\/p>"
+   "body": "<p><code>p² = a³</code>, with p in years and a in AU.</p>"
   },
   {
-   "title": "Square the period",
-   "body": "<p><code>p² = 29.5² = 870<\/code><\/p>"
+   "title": "Cube the distance",
+   "body": "<p><code>a³ = 9.54 × 9.54 × 9.54 ≈ 868</code> (on a TI-30XS: 9.54 ^ 3)</p>"
   },
   {
-   "title": "Take the cube root",
-   "body": "<p><code>a = ∛870 ≈ 9.55 AU<\/code>. (On a calculator: 870^(1/3), or check 9.55³ ≈ 871.)<\/p>"
+   "title": "Take the square root",
+   "body": "<p><code>p = √868 ≈ 29.5 years</code></p>"
   }
  ],
- "final": "<p>About 9.5 AU, matching the value in the Activity 2.5 table.<\/p>",
- "title": "Saturn’s distance from its year"
+ "final": "<p>About 29.5 years, matching the value in the Activity 2.5 table.</p>",
+ "title": "Saturn’s year from its distance"
 }</script>
 <script type="application/json" id="g-m2-halley-data">{
  "prompt": "<p>Halley’s Comet has a semimajor axis of 17.8 AU and comes within 0.59 AU of the Sun at perihelion. How far is it from the Sun at aphelion?<\/p>",
@@ -1369,5 +1371,6 @@
 <script src="../assets/js/site.js"></script>
 <script src="../assets/js/module-02-sims.js"></script>
 <script src="../assets/js/notes.js"></script>
+<script src="../assets/js/mathtools.js"></script>
 </body>
 </html>

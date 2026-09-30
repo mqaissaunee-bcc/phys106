@@ -645,12 +645,35 @@
   window.PHYS106.sectionLabel = sectionLabel;
   window.PHYS106.esc = esc;
 
+  /* ---------- math skills used by a guided problem (links to the Math toolkit) ---------- */
+  function siteRoot() { var l = document.querySelector('link[href*="assets/css/site.css"]'); return l ? l.getAttribute('href').split('assets/css/site.css')[0] : ''; }
+  function guidedSkills(cfg) {
+    if (cfg.skills) return cfg.skills;
+    var t = ((cfg.prompt || '') + ' ' + (cfg.steps || []).map(function (s) { return s.body; }).join(' ')).replace(/<[^>]+>/g, ' ');
+    var noSci = t.replace(/10[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, ' ');
+    var out = [];
+    if (/[a-zA-Zγρλ₀]\s*=\s*[^=]/.test(t)) out.push(['formulas', 'Formulas']);
+    if (/× 10[⁻⁰¹²³⁴⁵⁶⁷⁸⁹]|e-notation/.test(t)) out.push(['sci', 'Scientific notation']);
+    if (/[²³⁴]/.test(noSci)) out.push(['exponents', 'Exponents']);
+    if (/√/.test(t)) out.push(['roots', 'Square roots']);
+    if (/ratio|proportion|times (as|farther|more|less|smaller|larger|brighter|dimmer|faster|slower|closer)/i.test(t)) out.push(['ratios', 'Ratios']);
+    if (/%/.test(t)) out.push(['percent', 'Percent']);
+    if (/[Cc]onvert|3,600|86,400|365|× 60|÷ 60/.test(t)) out.push(['units', 'Unit conversions']);
+    if (/π/.test(t)) out.push(['circles', 'π and circles']);
+    return out.slice(0, 5);
+  }
   /* ---------- guided problems: step-by-step reveal of a worked solution ---------- */
   Array.prototype.slice.call(document.querySelectorAll('.guided[data-source]')).forEach(function (root) {
     var cfg = readCfg(root); if (!cfg) return;
     var id = root.id, st = getWork(id);
     var prompt = mk('div', 'guided-prompt'); prompt.innerHTML = cfg.prompt;
     root.appendChild(prompt);
+    var skills = guidedSkills(cfg);
+    if (skills.length) {
+      var sk = mk('p', 'guided-skills'); sk.appendChild(document.createTextNode('Math used: '));
+      skills.forEach(function (x, i) { var a = mk('a', 'skill-chip', x[1]); a.href = siteRoot() + 'math-toolkit.html#' + x[0]; sk.appendChild(a); if (i < skills.length - 1) sk.appendChild(document.createTextNode(' ')); });
+      root.appendChild(sk);
+    }
     var work = textArea(id + '-work', 'Your work (saved on this device)', 4, st.work);
     root.appendChild(work.wrap);
     var chk = null, chkIn = null, chkOut = null;

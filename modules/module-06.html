@@ -6,6 +6,7 @@
 <title>Module 6: Small Bodies and Other Planetary Systems | PHYS 106 Astronomy</title>
 <meta name="description" content="PHYS 106 Module 6: asteroids, meteorites, comets, Pluto and the Kuiper belt, cosmic impacts, and the discovery of planets around other stars, plus a review and practice midterm for Modules 1 to 6.">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/mathtools.css">
 <script src="../assets/js/theme-init.js"></script>
 </head>
 <body data-week="module-06" data-root="../">
@@ -23,7 +24,7 @@
         <li><a href="../index.html">Modules</a></li>
         <li><a href="../schedule.html">Schedule</a></li>
         <li><a href="../syllabus.html">Syllabus</a></li>
-        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../glossary.html">Glossary</a></li><li><a href="../math-toolkit.html">Math toolkit</a></li>
         <li><a href="../my-work.html">My work</a></li>
       </ul>
     </nav>
@@ -116,7 +117,7 @@
         <p>Spacecraft have visited many asteroids. NASA’s Dawn orbited Vesta and Ceres, finding that Vesta once had lava flows and that Ceres has bright salt deposits from a briny interior. OSIRIS-REx returned samples of the asteroid Bennu in 2023, and the Psyche mission is on its way to a metal-rich asteroid that may be the exposed core of a shattered protoplanet.</p>
         <section class="activity" id="act-g-m6-kirk" aria-labelledby="act-g-m6-kirk-h">
           <span class="act-tag guided-tag">Guided problem 6.1</span>
-          <h3 id="act-g-m6-kirk-h">Where is the biggest Kirkwood gap?</h3>
+          <h3 id="act-g-m6-kirk-h">Is this asteroid in the biggest Kirkwood gap?</h3>
           <p class="act-meta">Try it on your own first. Stuck? Reveal the solution one step at a time, and stop as soon as you can finish it yourself.</p>
           <div class="guided" id="g-m6-kirk" data-source="g-m6-kirk-data"></div>
         </section>
@@ -275,7 +276,7 @@
         </section>
         <section class="activity" id="act-g-m6-51peg" aria-labelledby="act-g-m6-51peg-h">
           <span class="act-tag guided-tag">Guided problem 6.3</span>
-          <h3 id="act-g-m6-51peg-h">How close is 51 Pegasi b?</h3>
+          <h3 id="act-g-m6-51peg-h">How long is a year on 51 Pegasi b?</h3>
           <p class="act-meta">Try it on your own first. Stuck? Reveal the solution one step at a time, and stop as soon as you can finish it yourself.</p>
           <div class="guided" id="g-m6-51peg" data-source="g-m6-51peg-data"></div>
         </section>
@@ -414,7 +415,7 @@
         
         <p>The midterm covers Modules 1 through 6. Use this map to find what you need to review. Each heading links to its module.</p>
         <h3><a href="module-01.html">Module 1: Our Place in the Universe</a></h3><ul><li>Cosmic address, light-years, and lookback time; the scale of space and deep time.</li><li>The celestial sphere, altitude and azimuth, circumpolar stars, and why latitude matters.</li><li>Seasons come from axis tilt, not distance; Moon phases come from viewing geometry; eclipses need a node.</li></ul><h3><a href="module-02.html">Module 2: The Science of Astronomy</a></h3><ul><li>Ancient astronomy, Eratosthenes, Ptolemy’s epicycles, and the Copernican revolution.</li><li>Kepler’s three laws (p² = a³) and Galileo’s evidence, including the phases of Venus.</li><li>Solar vs. sidereal day, calendars and leap years, time zones, latitude and longitude.</li></ul><h3><a href="module-03.html">Module 3: Motion, Gravity, Light, and Telescopes</a></h3><ul><li>Newton’s laws, conservation laws, gravity’s inverse-square law, orbits and tides.</li><li>Light as waves and photons; continuous, emission, and absorption spectra; Wien’s law; the Doppler effect.</li><li>Telescope aperture, light-gathering, resolution, and why we go to space.</li></ul><h3><a href="module-04.html">Module 4: The Solar System and Its Origin</a></h3><ul><li>Terrestrial vs. jovian planets; asteroids, comets, and the Kuiper belt and Oort cloud.</li><li>The nebular theory: heating, spinning, flattening; the frost line; accretion and nebular capture.</li><li>Giant impacts, the heavy bombardment, and radiometric dating (4.56 billion years).</li></ul><h3><a href="module-05.html">Module 5: Worlds Up Close</a></h3><ul><li>Interiors, internal heat, and the four geological processes; why size matters.</li><li>The greenhouse effect; gaining and losing atmospheres; Venus, Earth, and Mars.</li><li>Jovian interiors, tidal heating and resonance, icy moons with oceans, and rings.</li></ul><h3><a href="#s-asteroids">Module 6: Small Bodies and Other Planetary Systems</a></h3><ul><li>Asteroids, meteorites, comets, Pluto and the Kuiper belt, and impacts.</li><li>Doppler and transit methods; hot Jupiters, super-Earths, and habitable zones.</li><li>How exoplanets have refined the nebular theory.</li></ul>
-        <aside class="callout" aria-label="How to review"><span class="callout-title">How to review</span><p>Start with the self-check quiz at the end of each module; your best score is saved on the My work page. Redo any guided problem you had to reveal all the steps for, this time without help. Re-run the simulations for the ideas that still feel shaky, and reread your notes exports. Then take the practice midterm below.</p></aside>
+        <aside class="callout" aria-label="How to review"><span class="callout-title">How to review</span><p>Start with the self-check quiz at the end of each module; your best score is saved on the My work page. Redo any guided problem you had to reveal all the steps for, this time without help. Re-run the simulations for the ideas that still feel shaky, and reread your notes exports. Then take the practice midterm below. Keep the <a href="../formula-sheet.html">formula and constants sheet</a> beside you as you practice.</p></aside>
         <footer class="section-footer"><button type="button" class="mark-done" aria-pressed="false">Mark section complete</button></footer>
       </section>
 
@@ -481,29 +482,29 @@
 </footer>
 
 <script type="application/json" id="g-m6-kirk-data">{
- "prompt": "<p>One of the largest Kirkwood gaps is where an asteroid would orbit exactly twice for each orbit of Jupiter (Jupiter’s period is 11.86 years). At what distance from the Sun is that gap?<\/p>",
+ "prompt": "<p>One of the largest Kirkwood gaps is where an asteroid would orbit exactly twice for each orbit of Jupiter (Jupiter’s period is 11.86 years). An asteroid at 3.28 AU from the Sun: what is its orbital period in years, and is it in that gap?<\/p>",
  "check": {
-  "answer": 3.28,
-  "tol": 0.03,
-  "unit": "AU",
-  "label": "Distance"
+  "answer": 5.94,
+  "tol": 0.02,
+  "unit": "years",
+  "label": "Period"
  },
  "steps": [
   {
-   "title": "Find the period",
-   "body": "<p>Twice as many orbits means half the period: <code>11.86 ÷ 2 = 5.93 years<\/code><\/p>"
-  },
-  {
    "title": "Use Kepler’s third law",
-   "body": "<p><code>a³ = p² = 5.93² ≈ 35.2<\/code><\/p>"
+   "body": "<p><code>p² = a³<\/code>, so first cube the distance: <code>3.28 × 3.28 × 3.28 ≈ 35.3<\/code><\/p>"
   },
   {
-   "title": "Take the cube root",
-   "body": "<p><code>a = ∛35.2 ≈ 3.28 AU<\/code>, in the outer asteroid belt.<\/p>"
+   "title": "Take the square root",
+   "body": "<p><code>p = √35.3 ≈ 5.94 years<\/code><\/p>"
+  },
+  {
+   "title": "Compare with Jupiter",
+   "body": "<p>Half of Jupiter’s period is <code>11.86 ÷ 2 = 5.93 years<\/code>. The asteroid would orbit twice for each Jupiter orbit, so it sits right in the gap, and Jupiter’s repeated tugs would clear it out.<\/p>"
   }
  ],
- "final": "<p>About 3.3 AU from the Sun.<\/p>",
- "title": "Where is the biggest Kirkwood gap?"
+ "final": "<p>About 5.94 years: right in the 2-to-1 gap at 3.3 AU.<\/p>",
+ "title": "Is this asteroid in the biggest Kirkwood gap?"
 }</script>
 <script type="application/json" id="tf-m6-myths-data">[
  {
@@ -610,33 +611,33 @@
  "explain": "<p>Surveys suggest nearly every star has planets, with more than one on average. With about 2 × 10¹¹ stars and 1–2 planets each, the Milky Way likely holds a few hundred billion planets, at least as many planets as stars.<\/p>"
 }</script>
 <script type="application/json" id="g-m6-51peg-data">{
- "prompt": "<p>51 Pegasi b orbits its Sun-like star every 4.23 days. Using Kepler’s third law (for a Sun-mass star, p² = a³ with p in years and a in AU), how far is it from its star?<\/p>",
+ "prompt": "<p>51 Pegasi b orbits its Sun-like star at 0.052 AU. Using Kepler’s third law (for a Sun-mass star, p² = a³ with p in years and a in AU), how many days does one orbit take?<\/p>",
  "check": {
-  "answer": 0.052,
-  "tol": 0.04,
-  "unit": "AU",
-  "label": "Distance"
+  "answer": 4.33,
+  "tol": 0.03,
+  "unit": "days",
+  "label": "Orbital period"
  },
  "steps": [
   {
-   "title": "Convert the period to years",
-   "body": "<p><code>4.23 ÷ 365.25 ≈ 0.01158 years<\/code><\/p>"
+   "title": "Cube the distance",
+   "body": "<p><code>0.052 × 0.052 × 0.052 ≈ 0.000141<\/code> (1.41 × 10⁻⁴)<\/p>"
   },
   {
-   "title": "Square it",
-   "body": "<p><code>0.01158² ≈ 1.34 × 10⁻⁴<\/code><\/p>"
+   "title": "Take the square root",
+   "body": "<p><code>√0.000141 ≈ 0.0119 years<\/code><\/p>"
   },
   {
-   "title": "Take the cube root",
-   "body": "<p><code>a = ∛(1.34 × 10⁻⁴) ≈ 0.051 AU<\/code><\/p>"
+   "title": "Convert years to days",
+   "body": "<p><code>0.0119 × 365 ≈ 4.3 days<\/code>. The measured period is 4.23 days.<\/p>"
   },
   {
    "title": "Compare",
-   "body": "<p>Mercury orbits at 0.39 AU. This giant planet is about 8 times closer to its star than Mercury is to the Sun, so hot that it earned the name hot Jupiter.<\/p>"
+   "body": "<p>Mercury orbits at 0.39 AU in 88 days. This giant planet is about 8 times closer to its star than Mercury is to the Sun, so hot that it earned the name hot Jupiter.<\/p>"
   }
  ],
- "final": "<p>About 0.05 AU.<\/p>",
- "title": "How close is 51 Pegasi b?"
+ "final": "<p>About 4.3 days.<\/p>",
+ "title": "How long is a year on 51 Pegasi b?"
 }</script>
 <script type="application/json" id="g-m6-wobble-data">{
  "prompt": "<p>For a Sun-like star, a planet causes a wobble of about 28.4 m/s × (planet mass in Jupiter masses) ÷ √(distance in AU). What wobble does Jupiter (1 Jupiter mass, 5.2 AU) cause?<\/p>",
@@ -1347,5 +1348,6 @@
 <script src="../assets/js/site.js"></script>
 <script src="../assets/js/module-06-sims.js"></script>
 <script src="../assets/js/notes.js"></script>
+<script src="../assets/js/mathtools.js"></script>
 </body>
 </html>

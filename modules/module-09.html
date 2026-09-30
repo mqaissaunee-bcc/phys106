@@ -6,6 +6,7 @@
 <title>Module 9: The Sun and Measuring Stars | PHYS 106 Astronomy</title>
 <meta name="description" content="PHYS 106 Module 9: how the Sun shines, its layers and activity, and how astronomers measure stars’ luminosities, distances, temperatures, masses, and ages using the H-R diagram.">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/mathtools.css">
 <script src="../assets/js/theme-init.js"></script>
 </head>
 <body data-week="module-09" data-root="../">
@@ -23,7 +24,7 @@
         <li><a href="../index.html">Modules</a></li>
         <li><a href="../schedule.html">Schedule</a></li>
         <li><a href="../syllabus.html">Syllabus</a></li>
-        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../glossary.html">Glossary</a></li><li><a href="../math-toolkit.html">Math toolkit</a></li>
         <li><a href="../my-work.html">My work</a></li>
       </ul>
     </nav>
@@ -400,7 +401,7 @@
         
         <p>Binary stars reveal a key fact: along the main sequence, <strong>mass determines everything</strong>. High-mass stars are at the hot, luminous upper left; low-mass stars at the cool, dim lower right. Main-sequence stars range from about 0.08 solar masses (below that, fusion never ignites) to roughly 150 solar masses.</p>
         <p>Luminosity rises steeply with mass, roughly as mass to the 3.5 power. A star twice the Sun’s mass is about 11 times as luminous. That means massive stars burn through their fuel much faster, and their <button class="term" data-term="main-sequence-lifetime">main-sequence lifetime</button> is far shorter:</p>
-        <span class="eq">lifetime ≈ 10 billion years × (mass ÷ Sun’s mass)⁻²·⁵</span>
+        <span class="eq">lifetime ≈ 10 billion years × (mass ÷ luminosity), with mass and luminosity in solar units</span>
         <aside class="callout analogy" aria-label="Analogy">
           <span class="callout-title">Think of it this way</span>
           <p>A massive star is like a big-engine sports car with a larger fuel tank: it has more fuel, but it guzzles it so fast that it runs dry long before a small economy car. The smallest red dwarfs sip so slowly that they will shine for trillions of years.</p>
@@ -453,7 +454,7 @@
       <section class="reading-section prose" id="s-summary" aria-labelledby="h-summary">
         <span class="section-num">Wrap-up</span>
         <h2 id="h-summary">Summary and key terms</h2>
-        <ul><li>The Sun is in gravitational equilibrium: outward gas pressure balances gravity. Only nuclear fusion can power it for 10 billion years.</li><li>The proton–proton chain fuses 4 hydrogen nuclei into helium, converting 0.7% of the mass to energy; the solar thermostat keeps the rate steady.</li><li>Energy moves from the core through the radiation zone (slow random walk) and convection zone to the 5,800 K photosphere; the corona is over a million degrees.</li><li>Magnetic activity produces sunspots, flares, and CMEs on an 11-year cycle; CMEs cause auroras and space weather.</li><li>Helioseismology and solar neutrinos confirm models of the Sun’s interior.</li><li>Apparent brightness = luminosity ÷ 4πd². Distance in parsecs = 1 ÷ parallax in arcseconds; 1 pc ≈ 3.26 ly.</li><li>Spectral types OBAFGKM run from hottest to coolest; stars are mostly hydrogen and helium.</li><li>Binary star orbits give stellar masses: M₁ + M₂ = a³/p².</li><li>The H-R diagram shows the main sequence, giants, supergiants, and white dwarfs; position reveals radius.</li><li>Mass determines a main-sequence star’s luminosity and lifetime (≈ 10 billion years × M⁻²·⁵). Cluster turnoffs reveal ages; the oldest globular clusters are 12–13 billion years old.</li></ul>
+        <ul><li>The Sun is in gravitational equilibrium: outward gas pressure balances gravity. Only nuclear fusion can power it for 10 billion years.</li><li>The proton–proton chain fuses 4 hydrogen nuclei into helium, converting 0.7% of the mass to energy; the solar thermostat keeps the rate steady.</li><li>Energy moves from the core through the radiation zone (slow random walk) and convection zone to the 5,800 K photosphere; the corona is over a million degrees.</li><li>Magnetic activity produces sunspots, flares, and CMEs on an 11-year cycle; CMEs cause auroras and space weather.</li><li>Helioseismology and solar neutrinos confirm models of the Sun’s interior.</li><li>Apparent brightness = luminosity ÷ 4πd². Distance in parsecs = 1 ÷ parallax in arcseconds; 1 pc ≈ 3.26 ly.</li><li>Spectral types OBAFGKM run from hottest to coolest; stars are mostly hydrogen and helium.</li><li>Binary star orbits give stellar masses: M₁ + M₂ = a³/p².</li><li>The H-R diagram shows the main sequence, giants, supergiants, and white dwarfs; position reveals radius.</li><li>Mass determines a main-sequence star’s luminosity and lifetime (≈ 10 billion years × mass ÷ luminosity). Cluster turnoffs reveal ages; the oldest globular clusters are 12–13 billion years old.</li></ul>
         <h3>Key terms</h3>
         <ul class="term-list">
           <li><button class="term" data-term="gravitational-equilibrium">Gravitational equilibrium</button></li>
@@ -766,25 +767,25 @@
  "explain": "Temperature decreases to the right, so number 6 points toward cooler stars. The Sun sits in the middle of the main sequence."
 }</script>
 <script type="application/json" id="g-m9-life-data">{
- "prompt": "<p>Using lifetime ≈ 10 billion years × M⁻²·⁵, find the main-sequence lifetime of a star with twice the Sun’s mass.<\/p>",
+ "prompt": "<p>A star with twice the Sun’s mass has twice the fuel, but it is about 11 times as luminous, so it burns fuel 11 times as fast. Using lifetime ≈ 10 billion years × (mass ÷ luminosity), how long will it live?<\/p>",
  "check": {
-  "answer": 1.77,
+  "answer": 1.82,
   "tol": 0.03,
   "unit": "billion years",
   "label": "Lifetime"
  },
  "steps": [
   {
-   "title": "Compute M to the 2.5 power",
-   "body": "<p><code>2²·⁵ = 2² × √2 ≈ 4 × 1.414 ≈ 5.66<\/code><\/p>"
+   "title": "Divide fuel by burn rate",
+   "body": "<p><code>mass ÷ luminosity = 2 ÷ 11 ≈ 0.18<\/code><\/p>"
   },
   {
-   "title": "Divide",
-   "body": "<p><code>10 ÷ 5.66 ≈ 1.77 billion years<\/code><\/p>"
+   "title": "Multiply by the Sun’s lifetime",
+   "body": "<p><code>10 billion years × 0.18 ≈ 1.8 billion years<\/code><\/p>"
   },
   {
    "title": "Compare",
-   "body": "<p>Twice the mass, but less than one-fifth the lifetime of the Sun.<\/p>"
+   "body": "<p>Twice the mass, but less than one-fifth of the Sun’s lifetime.<\/p>"
   }
  ],
  "final": "<p>About 1.8 billion years.<\/p>",
@@ -797,11 +798,11 @@
  "checklist": [
   "Agree that a more massive star has more hydrogen fuel",
   "Explain that more mass means stronger gravity, a hotter and denser core, and much faster fusion",
-  "Say luminosity rises much faster than mass (about mass³·⁵)",
+  "Say luminosity rises much faster than mass (10 times the mass is about 3,000 times as luminous)",
   "Conclude that lifetime (fuel ÷ burn rate) drops sharply with mass",
   "Give numbers, such as about 30 million years for 10 solar masses vs. 10 billion for the Sun"
  ],
- "model": "<p>A 10-solar-mass star does have 10 times the fuel, but its much stronger gravity squeezes its core to higher temperature and density, and fusion speeds up enormously. Its luminosity is roughly 10³·⁵, or about 3,000 times the Sun’s, so it burns fuel thousands of times faster while having only 10 times as much. Fuel divided by burn rate gives a lifetime of only about 30 million years, compared with the Sun’s 10 billion.<\/p>"
+ "model": "<p>A 10-solar-mass star does have 10 times the fuel, but its much stronger gravity squeezes its core to higher temperature and density, and fusion speeds up enormously. Its luminosity is about 3,000 times the Sun’s, so it burns fuel thousands of times faster while having only 10 times as much. Fuel divided by burn rate gives a lifetime of only about 30 million years, compared with the Sun’s 10 billion.<\/p>"
 }</script>
 <script type="application/json" id="quiz-module-09-data">[
  {
@@ -1000,7 +1001,7 @@
    "exactly 10 times longer"
   ],
   "answer": 0,
-  "explain": "Lifetime ≈ 10 Gyr × M⁻²·⁵ ≈ 30 million years."
+  "explain": "10 times the fuel burned about 3,000 times as fast: 10 billion × 10 ÷ 3,000 ≈ 30 million years."
  },
  {
   "q": "A cluster’s main-sequence turnoff tells us its",
@@ -1029,5 +1030,6 @@
 <script src="../assets/js/site.js"></script>
 <script src="../assets/js/module-09-sims.js"></script>
 <script src="../assets/js/notes.js"></script>
+<script src="../assets/js/mathtools.js"></script>
 </body>
 </html>

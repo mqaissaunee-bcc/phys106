@@ -6,6 +6,7 @@
 <title>Module 5: Worlds Up Close | PHYS 106 Astronomy</title>
 <meta name="description" content="PHYS 106 Module 5: planetary interiors and geology, atmospheres and the greenhouse effect, and the jovian planets with their moons and rings, with four simulations and interactive activities.">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/mathtools.css">
 <script src="../assets/js/theme-init.js"></script>
 </head>
 <body data-week="module-05" data-root="../">
@@ -23,7 +24,7 @@
         <li><a href="../index.html">Modules</a></li>
         <li><a href="../schedule.html">Schedule</a></li>
         <li><a href="../syllabus.html">Syllabus</a></li>
-        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../glossary.html">Glossary</a></li><li><a href="../math-toolkit.html">Math toolkit</a></li>
         <li><a href="../my-work.html">My work</a></li>
       </ul>
     </nav>
@@ -611,7 +612,7 @@
  "explain": "<p>Venus’s thick, bright clouds reflect about 77% of sunlight back to space, far more than Earth’s 30%. Without a greenhouse effect it would be about −47 °C, colder than Earth’s −19 °C, despite being closer to the Sun. Its 465 °C surface is due entirely to its enormous carbon-dioxide atmosphere.<\/p>"
 }</script>
 <script type="application/json" id="g-m5-teq-data">{
- "prompt": "<p>A planet’s no-greenhouse temperature is T = 278 K × (1 − reflectivity)^¼ ÷ √d, with d in AU. Earth reflects 30% of sunlight (reflectivity 0.30) and is at 1 AU. Find T.<\/p>",
+ "prompt": "<p>A planet’s no-greenhouse temperature is T = 278 K × (reflection factor) ÷ √d, with d in AU. The reflection factor accounts for sunlight bounced back to space; for Earth, which reflects 30% of sunlight, it is 0.915. Find Earth’s no-greenhouse temperature.<\/p>",
  "check": {
   "answer": 254,
   "tol": 0.02,
@@ -620,20 +621,16 @@
  },
  "steps": [
   {
-   "title": "Absorbed fraction",
-   "body": "<p><code>1 − 0.30 = 0.70<\/code><\/p>"
+   "title": "Substitute the values",
+   "body": "<p><code>T = 278 K × 0.915 ÷ √1<\/code><\/p>"
   },
   {
-   "title": "Take the fourth root",
-   "body": "<p><code>0.70^¼ ≈ 0.915<\/code> (square root twice: √0.70 = 0.837, √0.837 = 0.915)<\/p>"
+   "title": "Simplify",
+   "body": "<p>√1 = 1, so <code>T = 278 × 0.915 ≈ 254 K<\/code><\/p>"
   },
   {
-   "title": "Multiply",
-   "body": "<p><code>278 K × 0.915 ÷ √1 ≈ 254 K<\/code><\/p>"
-  },
-  {
-   "title": "Compare with reality",
-   "body": "<p>254 K is −19 °C. Earth’s actual average is about 15 °C, so the natural greenhouse effect adds about 34 °C.<\/p>"
+   "title": "Convert to Celsius and compare",
+   "body": "<p><code>254 − 273 = −19 °C<\/code>. Earth’s actual average is about 15 °C, so the natural greenhouse effect adds about 34 °C.<\/p>"
   }
  ],
  "final": "<p>About 254 K (−19 °C).<\/p>",
@@ -1053,5 +1050,6 @@
 <script src="../assets/js/site.js"></script>
 <script src="../assets/js/module-05-sims.js"></script>
 <script src="../assets/js/notes.js"></script>
+<script src="../assets/js/mathtools.js"></script>
 </body>
 </html>

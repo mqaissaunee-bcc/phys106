@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math toolkit | PHYS 106 Astronomy</title>
+<meta name="description" content="The math skills used in PHYS 106, matched to MATH 015 Prealgebra, with astronomy examples, TI-30XS keystrokes, and quick practice.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/mathtools.css">
+<script src="assets/js/theme-init.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="6" fill="currentColor"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+      <span>PHYS 106 <span class="brand-sub">Astronomy</span></span>
+    </a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Site">
+      <ul><li><a href="index.html">Modules</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="syllabus.html">Syllabus</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="math-toolkit.html" aria-current="page">Math toolkit</a></li><li><a href="my-work.html">My work</a></li></ul>
+    </nav>
+    <div class="tools">
+      <button type="button" id="text-smaller" aria-label="Decrease text size">A−</button>
+      <button type="button" id="text-larger" aria-label="Increase text size">A+</button>
+      <button type="button" id="theme-btn">Theme: auto</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="prose">
+  <h1>Math toolkit</h1>
+  <p class="lede">Every calculation in PHYS 106 uses skills from MATH 015 (Prealgebra), plus one new skill, scientific notation, which is taught here and in Module 1. Each guided problem in the modules lists the skills it uses and links to them on this page.</p>
+  <aside class="callout" aria-label="Your calculator"><span class="callout-title">Your calculator</span><p>Use a scientific calculator such as the TI-30XS MultiView, the calculator used in MATH 015. The simulations and calculators on this site handle any harder math, such as cube roots and fractional powers; you are never asked to do that by hand.</p></aside>
+  <p>See also the printable <a href="formula-sheet.html">formula and constants sheet</a>.</p>
+  <section class="reading" id="readiness" aria-labelledby="readiness-h">
+    <h2 id="readiness-h">Math readiness check</h2>
+    <p>Ten quick questions, one or two for each skill. It is not graded and takes about 10 minutes; use a calculator. When you finish, you will get links to review any skill you missed.</p>
+    <div class="readiness" data-source="readiness-data"></div>
+  </section>
+  <div class="table-wrap"><table class="tk-map"><caption>Skills used in this course and where they are taught in MATH 015</caption><thead><tr><th scope="col">Skill</th><th scope="col">MATH 015 section</th></tr></thead><tbody><tr><td><a href="#exponents">Order of operations and exponents</a></td><td>3.1</td></tr><tr><td><a href="#percent">Fractions, decimals, and percent</a></td><td>4.1–6.3</td></tr><tr><td><a href="#ratios">Ratios, rates, and proportions</a></td><td>7.1–7.2</td></tr><tr><td><a href="#units">Unit conversions</a></td><td>7.3</td></tr><tr><td><a href="#roots">Squares and square roots</a></td><td>5.6</td></tr><tr><td><a href="#formulas">Formulas and simple equations</a></td><td>3.3–3.5</td></tr><tr><td><a href="#circles">π and circles</a></td><td>5.3</td></tr><tr><td><a href="#sci">Scientific notation (new in this course)</a></td><td>not in MATH 015; taught in Module 1</td></tr><tr><td><a href="#graphs">Reading graphs</a></td><td>7.5</td></tr></tbody></table></div>
+  
+  <section class="reading" id="exponents" aria-labelledby="exponents-h">
+    <h2 id="exponents-h">Order of operations and exponents</h2>
+    <p class="act-meta">MATH 015 textbook section: 3.1</p>
+    <p>An exponent says how many times to multiply a number by itself: 5² = 5 × 5 = 25, and 3³ = 3 × 3 × 3 = 27. Work in this order: parentheses, exponents, multiplication and division, then addition and subtraction.</p><p><strong>In astronomy:</strong> Kepler’s third law, p² = a³. For a planet 4 AU from the Sun, a³ = 4 × 4 × 4 = 64.</p>
+    <p><strong>TI-30XS:</strong> square a number with <span class="tk-keys">x²</span>; use <span class="tk-keys">^</span> for any other power (for example, <span class="tk-keys">9.54 ^ 3</span>).</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-exponents" data-source="tk-exponents-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="percent" aria-labelledby="percent-h">
+    <h2 id="percent-h">Fractions, decimals, and percent</h2>
+    <p class="act-meta">MATH 015 textbook section: 4.1–6.3</p>
+    <p>A percent is a fraction out of 100: 25% = 25/100 = 0.25. Percent change = (new − old) ÷ old, written as a percent.</p><p><strong>In astronomy:</strong> the Big Bang made about 25% helium by mass: 4 of every 16 particles. Carbon dioxide in Earth’s air rose from 280 to 420 parts per million, and (420 − 280) ÷ 280 = 0.5, a 50% increase.</p>
+    <p><strong>TI-30XS:</strong> enter fractions with <span class="tk-keys">n/d</span>; switch between fraction and decimal with <span class="tk-keys">◄►</span>.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-percent" data-source="tk-percent-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="ratios" aria-labelledby="ratios-h">
+    <h2 id="ratios-h">Ratios, rates, and proportions</h2>
+    <p class="act-meta">MATH 015 textbook section: 7.1–7.2</p>
+    <p>A ratio compares two quantities by division. "How many times as big" is a ratio: Jupiter’s diameter ÷ Earth’s diameter = 139,820 ÷ 12,742 ≈ 11, so Jupiter is about 11 times as wide. A rate is a ratio with units, like 70 km/s per megaparsec. A proportion sets two ratios equal; solve it with cross products.</p><p><strong>In astronomy:</strong> scale models, light-travel times, and rules like "double the distance and gravity becomes one-fourth as strong."</p>
+    <p><strong>Tip:</strong> when a problem asks "how many times," divide the larger quantity by the smaller one.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-ratios" data-source="tk-ratios-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="units" aria-labelledby="units-h">
+    <h2 id="units-h">Unit conversions</h2>
+    <p class="act-meta">MATH 015 textbook section: 7.3</p>
+    <p>Multiply by a conversion factor written as a fraction equal to 1, so the units you don’t want cancel: 3 hours × (60 minutes ÷ 1 hour) = 180 minutes.</p><p><strong>In astronomy:</strong> seconds to years (1 year ≈ 31,600,000 seconds), kilometers to AU (1 AU = 150 million km), and light-years to kilometers (1 light-year ≈ 9.46 trillion km).</p>
+    <p><strong>Tip:</strong> write the units on every number and cross out the ones that cancel.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-units" data-source="tk-units-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="roots" aria-labelledby="roots-h">
+    <h2 id="roots-h">Squares and square roots</h2>
+    <p class="act-meta">MATH 015 textbook section: 5.6</p>
+    <p>A square root undoes squaring: √49 = 7 because 7² = 49. Most square roots are decimals, so use the calculator.</p><p><strong>In astronomy:</strong> the last step of Kepler’s third law (p = √(a³)), the inverse-square law for brightness (3 times farther means 3² = 9 times dimmer, so 9 times dimmer means √9 = 3 times farther), and the Lorentz factor in relativity.</p>
+    <p><strong>TI-30XS:</strong> press <span class="tk-keys">2nd</span> then <span class="tk-keys">x²</span> for <span class="tk-keys">√</span>, type the number, and close the parenthesis.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-roots" data-source="tk-roots-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="formulas" aria-labelledby="formulas-h">
+    <h2 id="formulas-h">Formulas and simple equations</h2>
+    <p class="act-meta">MATH 015 textbook section: 3.3–3.5</p>
+    <p>To evaluate a formula, substitute the values and follow the order of operations. To find an unknown in a simple formula, undo the operations in reverse order.</p><p><strong>In astronomy:</strong> Hubble’s law, v = H₀ × d. If v = 7,000 km/s and H₀ = 70, then 7,000 = 70 × d, so d = 7,000 ÷ 70 = 100 megaparsecs. Parallax: d = 1 ÷ p.</p>
+    <p><strong>Tip:</strong> write the formula first, then a second line with the numbers substituted in.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-formulas" data-source="tk-formulas-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="circles" aria-labelledby="circles-h">
+    <h2 id="circles-h">π and circles</h2>
+    <p class="act-meta">MATH 015 textbook section: 5.3</p>
+    <p>A circle’s circumference is C = 2πr and its area is A = πr². Formulas for spheres, such as surface area 4πr² and volume (4/3)πr³, are always given when you need them; you only evaluate them.</p><p><strong>In astronomy:</strong> orbits, the area light spreads over (4πd²), and planets’ volumes and densities.</p>
+    <p><strong>TI-30XS:</strong> use the <span class="tk-keys">π</span> key rather than typing 3.14, and round only at the end.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-circles" data-source="tk-circles-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="sci" aria-labelledby="sci-h">
+    <h2 id="sci-h">Scientific notation (new in this course)</h2>
+    <p class="act-meta">MATH 015 textbook section: not in MATH 015; taught in Module 1</p>
+    <p>Astronomy deals with numbers far too big or small to write out. Scientific notation writes a number as a value from 1 to 10 times a power of ten: 150,000,000 km = 1.5 × 10⁸ km, and 0.0000001 m = 1 × 10⁻⁷ m. A positive power of ten moves the decimal point right; a negative one moves it left.</p><p>To multiply, multiply the front numbers and add the powers: (3 × 10⁸) × (2 × 10³) = 6 × 10¹¹. To divide, divide the front numbers and subtract the powers. Once you enter the numbers correctly, the calculator does this for you.</p>
+    <p><strong>TI-30XS:</strong> enter 3 × 10⁸ as <span class="tk-keys">3</span> <span class="tk-keys">×10ⁿ</span> <span class="tk-keys">8</span>. For a negative power, use the <span class="tk-keys">(−)</span> key, not the subtraction key. To see answers in scientific notation, press <span class="tk-keys">mode</span> and choose SCI. Answer boxes on this site also accept e-notation: type 3e8 for 3 × 10⁸.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-sci" data-source="tk-sci-data" aria-live="polite"></div>
+  </section>
+  <section class="reading" id="graphs" aria-labelledby="graphs-h">
+    <h2 id="graphs-h">Reading graphs</h2>
+    <p class="act-meta">MATH 015 textbook section: 7.5</p>
+    <p>Each point on a graph has an x-value (horizontal axis) and a y-value (vertical axis). Always read the axis labels and units first.</p><p><strong>In astronomy:</strong> the simulations graph brightness over time (light curves), speed against distance (Hubble’s law), and luminosity against temperature (the H-R diagram). Some axes multiply by 10 at each tick, so equal steps mean "10 times more." Those axes are always labeled, and you only need to read them, not calculate with them.</p>
+    <p><strong>Tip:</strong> on the H-R diagram, temperature increases to the <em>left</em>, the opposite of most graphs.</p>
+    <h3>Quick check</h3>
+    <div class="quiz" data-quiz="tk-graphs" data-source="tk-graphs-data" aria-live="polite"></div>
+  </section>
+  </div>
+</main>
+<script type="application/json" id="readiness-data">[{"skill": "exponents", "skillTitle": "Order of operations and exponents", "q": "What is 4³?", "choices": ["64", "12", "16", "43"], "answer": 0, "explain": "4 × 4 × 4 = 64."}, {"skill": "exponents", "skillTitle": "Order of operations and exponents", "q": "Evaluate 10 − 2 × 3.", "choices": ["4", "24", "−2", "14"], "answer": 0, "explain": "Multiply first: 10 − 6 = 4."}, {"skill": "percent", "skillTitle": "Fractions, decimals, and percent", "q": "What is 30% of 250?", "choices": ["75", "30", "7.5", "83"], "answer": 0, "explain": "0.30 × 250 = 75."}, {"skill": "percent", "skillTitle": "Fractions, decimals, and percent", "q": "Write 3/8 as a decimal.", "choices": ["0.375", "0.38", "3.8", "0.83"], "answer": 0, "explain": "3 ÷ 8 = 0.375."}, {"skill": "ratios", "skillTitle": "Ratios, rates, and proportions", "q": "A spacecraft travels 180,000 km in 3 hours. At the same rate, how far does it go in 5 hours?", "choices": ["300,000 km", "108,000 km", "540,000 km", "900,000 km"], "answer": 0, "explain": "180,000 ÷ 3 = 60,000 km per hour; × 5 = 300,000 km."}, {"skill": "units", "skillTitle": "Unit conversions", "q": "How many minutes are in 2.5 hours?", "choices": ["150", "25", "250", "125"], "answer": 0, "explain": "2.5 × 60 = 150 minutes."}, {"skill": "roots", "skillTitle": "Squares and square roots", "q": "What is √144?", "choices": ["12", "72", "14", "288"], "answer": 0, "explain": "12 × 12 = 144."}, {"skill": "formulas", "skillTitle": "Formulas and simple equations", "q": "Solve 25 × x = 400.", "choices": ["16", "375", "10,000", "425"], "answer": 0, "explain": "Divide both sides by 25."}, {"skill": "circles", "skillTitle": "π and circles", "q": "What is the circumference of a circle with a radius of 5 cm, to the nearest tenth? (C = 2πr)", "choices": ["31.4 cm", "15.7 cm", "78.5 cm", "10.0 cm"], "answer": 0, "explain": "2 × π × 5 ≈ 31.4 cm."}, {"skill": "sci", "skillTitle": "Scientific notation", "q": "Write 3.2 × 10⁵ as an ordinary number.", "choices": ["320,000", "3,200,000", "32,000", "0.000032"], "answer": 0, "explain": "Move the decimal point 5 places right. (This skill is taught in Module 1 if it is new to you.)"}]</script><script type="application/json" id="tk-exponents-data">[{"q": "What is 2³?", "choices": ["8", "6", "9", "5"], "answer": 0, "explain": "2 × 2 × 2 = 8."}, {"q": "Evaluate 3 + 2 × 4².", "choices": ["35", "80", "100", "27"], "answer": 0, "explain": "Exponent first (16), then multiply (32), then add: 35."}, {"q": "A planet is 9 AU from the Sun. What is a³?", "choices": ["729", "81", "27", "243"], "answer": 0, "explain": "9 × 9 × 9 = 729."}]</script>
+<script type="application/json" id="tk-percent-data">[{"q": "Write 0.7% as a decimal.", "choices": ["0.007", "0.07", "0.7", "7"], "answer": 0, "explain": "Divide by 100: 0.7 ÷ 100 = 0.007."}, {"q": "Of every 16 particles, 4 became helium. What percent is that?", "choices": ["25%", "4%", "16%", "40%"], "answer": 0, "explain": "4 ÷ 16 = 0.25 = 25%."}, {"q": "A quantity grows from 200 to 250. What is the percent increase?", "choices": ["25%", "50%", "20%", "250%"], "answer": 0, "explain": "(250 − 200) ÷ 200 = 0.25 = 25%."}]</script>
+<script type="application/json" id="tk-ratios-data">[{"q": "One star is 100 light-years away and another is 25 light-years away. How many times farther is the first?", "choices": ["4", "75", "125", "2,500"], "answer": 0, "explain": "100 ÷ 25 = 4."}, {"q": "On a scale where 1 cm stands for 10,000 km, how many centimeters represent Earth’s 12,742-km diameter?", "choices": ["About 1.3 cm", "About 13 cm", "About 127 cm", "About 0.13 cm"], "answer": 0, "explain": "12,742 ÷ 10,000 ≈ 1.3 cm."}, {"q": "Solve the proportion 3/8 = x/40.", "choices": ["15", "5", "120", "24"], "answer": 0, "explain": "Cross multiply: 8x = 120, so x = 15."}]</script>
+<script type="application/json" id="tk-units-data">[{"q": "How many seconds are in one hour?", "choices": ["3,600", "60", "360", "86,400"], "answer": 0, "explain": "60 × 60 = 3,600."}, {"q": "A signal takes 14,400 seconds to arrive. How many hours is that?", "choices": ["4", "240", "144", "0.4"], "answer": 0, "explain": "14,400 ÷ 3,600 = 4 hours."}, {"q": "Convert 0.5 days to hours.", "choices": ["12", "5", "30", "50"], "answer": 0, "explain": "0.5 × 24 = 12 hours."}]</script>
+<script type="application/json" id="tk-roots-data">[{"q": "What is √729?", "choices": ["27", "9", "364.5", "81"], "answer": 0, "explain": "27 × 27 = 729."}, {"q": "A star looks 16 times dimmer than an identical star. How many times farther away is it?", "choices": ["4", "16", "8", "256"], "answer": 0, "explain": "√16 = 4."}, {"q": "Find √0.36.", "choices": ["0.6", "0.06", "0.18", "6"], "answer": 0, "explain": "0.6 × 0.6 = 0.36."}]</script>
+<script type="application/json" id="tk-formulas-data">[{"q": "Using d = 1 ÷ p, what is d when p = 0.25?", "choices": ["4", "0.25", "25", "1.25"], "answer": 0, "explain": "1 ÷ 0.25 = 4."}, {"q": "Solve 70 × d = 14,000.", "choices": ["200", "980,000", "14,070", "20"], "answer": 0, "explain": "Divide both sides by 70."}, {"q": "Evaluate E = m × 9 when m = 0.002.", "choices": ["0.018", "0.0018", "9.002", "18"], "answer": 0, "explain": "0.002 × 9 = 0.018."}]</script>
+<script type="application/json" id="tk-circles-data">[{"q": "A circle has a radius of 10 km. What is its circumference, to the nearest kilometer?", "choices": ["63 km", "31 km", "314 km", "100 km"], "answer": 0, "explain": "2 × π × 10 ≈ 62.8 km."}, {"q": "What is the area of a circle with a radius of 2 m, to the nearest square meter?", "choices": ["13 m²", "6 m²", "25 m²", "4 m²"], "answer": 0, "explain": "π × 2² ≈ 12.6 m²."}, {"q": "Using V = (4/3)πr³, what is the volume of a sphere with a radius of 3 cm, to the nearest cubic centimeter?", "choices": ["113 cm³", "38 cm³", "36 cm³", "339 cm³"], "answer": 0, "explain": "(4/3) × π × 27 ≈ 113 cm³."}]</script>
+<script type="application/json" id="tk-sci-data">[{"q": "Write 4,600,000,000 in scientific notation.", "choices": ["4.6 × 10⁹", "46 × 10⁸", "4.6 × 10⁸", "4.6 × 10¹⁰"], "answer": 0, "explain": "Move the decimal point 9 places."}, {"q": "What is (2 × 10³) × (4 × 10⁵)?", "choices": ["8 × 10⁸", "8 × 10¹⁵", "6 × 10⁸", "8 × 10²"], "answer": 0, "explain": "2 × 4 = 8, and 3 + 5 = 8."}, {"q": "Write 3 × 10⁻⁴ as a decimal.", "choices": ["0.0003", "0.003", "30,000", "0.00003"], "answer": 0, "explain": "Move the decimal point 4 places left."}]</script>
+<script type="application/json" id="tk-graphs-data">[{"q": "On a graph whose tick marks read 1, 10, 100, 1,000, each tick is", "choices": ["10 times the one before", "10 more than the one before", "twice the one before", "100 more than the one before"], "answer": 0, "explain": "Each step multiplies by 10."}, {"q": "On a graph of speed (y) against distance (x), a point at x = 100 and y = 7,000 represents", "choices": ["an object 100 units away moving at 7,000 units", "an object 7,000 units away moving at 100 units", "a speed of 70", "nothing; more data is needed"], "answer": 0, "explain": "x is distance and y is speed."}, {"q": "On the H-R diagram, stars on the left side are", "choices": ["hotter", "cooler", "closer", "older"], "answer": 0, "explain": "Temperature increases to the left."}]</script>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Built for <span class="program">PHYS 106 Astronomy</span>, Brookdale Community College, <span class="year">2026</span>.</p>
+    <p>Original course content. Your reading progress and quiz scores are saved only in this browser.</p>
+  </div>
+</footer>
+<script src="assets/js/glossary-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/mathtools.js"></script>
+</body>
+</html>

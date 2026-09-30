@@ -22,6 +22,22 @@ assets/js/module-NN-sims.js   That module's simulations and activities
 
 All 13 modules are live (53 simulations, about 160 activities, 80 guided problems, 260 self-check questions, 330 glossary terms). Module 6 ends with a 30-question practice midterm (Modules 1–6); Module 13 ends with a 30-question practice final (Modules 7–13). Exam question banks for Canvas are a separate instructor package.
 
+## Math level
+
+All computed work is aligned to MATH 015 (Prealgebra), the course prerequisite, plus scientific notation, which the course teaches in Module 1. `math-toolkit.html` reviews each skill with the matching MATH 015 section, astronomy examples, TI-30XS keystrokes, and quick checks. Guided problems automatically list the skills they use (detected in `site.js`, or set explicitly with a `skills` list in the problem's JSON) and link to the toolkit. Harder operations (cube roots, fractional powers, logarithmic scales) appear only inside simulations and calculators, which do the math for students. When adding problems, keep required work to: arithmetic, order of operations with whole-number exponents, square roots, percent, ratios and proportions, unit conversions, π, evaluating formulas, one-variable linear equations, and scientific notation.
+
+## Math tools (`mathtools.js`, `mathtools.css`)
+
+A portable pair of files (reads its storage prefix from `<html data-store-prefix="...">`, default `phys106-`):
+
+- **Calculator:** a Calc button on every page opens a TI-30XS-style calculator (×10ⁿ, (−), x², √, ^, π, ans), with normal/SCI display, the answer in words, a history, and "Add history to notes." It uses its own expression parser, so there is no `eval`.
+- **Just-in-time refreshers:** in each module, a collapsible scientific-notation refresher appears at the first large number and the first small number (in readings or problems). Module 1, which teaches the topic directly, is skipped. "Scientific notation" skill links on guided problems open the same refresher in a dialog.
+- **Numbers in words:** scientific notation in readings gets its value in words, such as "(150 million km)", unless words are already there.
+- **Readiness check:** a `.readiness[data-source]` component; used at the top of `math-toolkit.html`.
+- **Print buttons:** any `button[data-print]`.
+
+`formula-sheet.html` collects every formula and constant used in the course and prints on about two pages.
+
 ## Publish with GitHub Desktop
 
 1. Create a new repository in GitHub Desktop and copy these files into it (keep `.nojekyll`).

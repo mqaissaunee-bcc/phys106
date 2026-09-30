@@ -1106,3 +1106,23 @@ a.week-card:hover { border-color: var(--accent); }
 .mw-last { font-family: var(--font-ui); font-weight: 600; color: var(--good); }
 .mw-last.warn { color: var(--bad); }
 .notes-foot a.backup-link { font-size: 0.8rem; margin-left: auto; }
+
+/* Math skills used by a guided problem */
+.guided-skills { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin: .5rem 0 .75rem; font-size: .9rem; color: var(--muted); }
+.skill-chip { display: inline-flex; align-items: center; min-height: 32px; padding: .15rem .7rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface-2, var(--surface)); color: var(--accent); text-decoration: none; }
+.skill-chip:hover, .skill-chip:focus-visible { text-decoration: underline; }
+/* Math toolkit */
+.tk-keys { font-family: var(--mono, ui-monospace, monospace); background: var(--surface-2, var(--surface)); border: 1px solid var(--rule); border-radius: .4rem; padding: .05rem .4rem; white-space: nowrap; }
+.tk-map td:first-child { white-space: nowrap; }
+
+/* Formula sheet */
+.fs-table td:first-child { font-weight: 600; width: 38%; }
+@media print {
+  .no-print, .topbar, .site-footer, .skip-link { display: none !important; }
+  .formula-sheet { font-size: 10pt; }
+  .formula-sheet h1 { font-size: 15pt; margin: 0 0 4pt; }
+  .formula-sheet h2 { font-size: 11pt; margin: 8pt 0 2pt; }
+  .formula-sheet .lede { font-size: 9pt; margin: 0 0 4pt; }
+  .fs-table td, .fs-table th { padding: 2pt 4pt; }
+  .formula-sheet section { break-inside: avoid; }
+}

@@ -6,6 +6,7 @@
 <title>Module 10: Star Birth and Stellar Lives | PHYS 106 Astronomy</title>
 <meta name="description" content="PHYS 106 Module 10: how stars form in molecular clouds, the limits on stellar masses, the lives of low- and high-mass stars, how stars make the elements, and the future of the Sun.">
 <link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/mathtools.css">
 <script src="../assets/js/theme-init.js"></script>
 </head>
 <body data-week="module-10" data-root="../">
@@ -23,7 +24,7 @@
         <li><a href="../index.html">Modules</a></li>
         <li><a href="../schedule.html">Schedule</a></li>
         <li><a href="../syllabus.html">Syllabus</a></li>
-        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../glossary.html">Glossary</a></li><li><a href="../math-toolkit.html">Math toolkit</a></li>
         <li><a href="../my-work.html">My work</a></li>
       </ul>
     </nav>
@@ -126,7 +127,8 @@
         <h2 id="h-s-collapse">Gravity versus pressure</h2>
         
         <p>For a cloud to become a star, its gravity must overwhelm the thermal pressure of its gas. Gravity wins more easily when the cloud is massive, cold (low pressure), and dense (particles close together). The minimum mass a cloud needs to collapse at a given temperature and density is called the <button class="term" data-term="jeans-mass">Jeans mass</button>, roughly</p>
-        <span class="eq">minimum mass ≈ 2 solar masses × (T ÷ 10 K)^1.5 × (density ÷ 10,000 per cm³)^−0.5</span>
+        <span class="eq">at 10 K and 10,000 particles per cm³: minimum mass ≈ 2 solar masses</span>
+        <p>To adjust for a warmer cloud, find the temperature ratio (for example, 40 K ÷ 10 K = 4) and multiply the minimum mass by that ratio times its square root (4 × √4 = 8). A denser cloud needs less mass: divide by the square root of the density ratio.</p>
         <aside class="callout analogy" aria-label="Analogy">
           <span class="callout-title">Think of it this way</span>
           <p>Picture a crowd trying to squeeze toward a stage while everyone jostles and pushes outward. A small, energetic crowd stays spread out; a huge crowd, or a calm, tired one, packs together. Gravity is the pull toward the stage; temperature is the jostling.</p>
@@ -486,10 +488,10 @@
  ],
  "correct": 2,
  "observe": "<p>In the simulation below, set a 10 K cloud of 3 solar masses at 10,000 particles per cm³. Then raise the temperature to 40 K.<\/p>",
- "explain": "<p>Warmer gas pushes back harder. The Jeans mass grows as temperature to the 1.5 power: 4 times hotter means 4¹·⁵ = 8 times more mass needed. The warmed cloud is stable. Stars form in the coldest clouds for this reason.<\/p>"
+ "explain": "<p>Warmer gas pushes back harder. The minimum mass grows with the temperature ratio times its square root: 4 times hotter means 4 × √4 = 8 times more mass needed. The warmed cloud is stable. Stars form in the coldest clouds for this reason.<\/p>"
 }</script>
 <script type="application/json" id="g-m10-jeans-data">{
- "prompt": "<p>At 10 K and 10,000 particles per cm³, the minimum mass for collapse is about 2 solar masses. What is it at 40 K and the same density?<\/p>",
+ "prompt": "<p>At 10 K and 10,000 particles per cm³, the minimum mass for collapse is about 2 solar masses. For a warmer cloud, multiply by the temperature ratio times its square root. What is the minimum mass at 40 K and the same density?<\/p>",
  "check": {
   "answer": 16,
   "tol": 0.03,
@@ -502,8 +504,8 @@
    "body": "<p><code>40 K ÷ 10 K = 4<\/code><\/p>"
   },
   {
-   "title": "Raise it to the 1.5 power",
-   "body": "<p><code>4^1.5 = 4 × √4 = 8<\/code><\/p>"
+   "title": "Multiply the ratio by its square root",
+   "body": "<p><code>4 × √4 = 4 × 2 = 8<\/code><\/p>"
   },
   {
    "title": "Multiply",
@@ -1002,5 +1004,6 @@
 <script src="../assets/js/site.js"></script>
 <script src="../assets/js/module-10-sims.js"></script>
 <script src="../assets/js/notes.js"></script>
+<script src="../assets/js/mathtools.js"></script>
 </body>
 </html>
