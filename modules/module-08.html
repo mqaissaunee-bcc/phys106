@@ -493,31 +493,7 @@
   </div>
 </footer>
 
-<script type="application/json" id="g-m8-empty-data">{
- "prompt": "<p>A hydrogen atom has a radius of about 5.3 × 10⁻¹¹ m; its nucleus, a single proton, has a radius of about 8.4 × 10⁻¹⁶ m. How many times larger is the atom than its nucleus?<\/p>",
- "check": {
-  "answer": 63000,
-  "tol": 0.04,
-  "unit": "times",
-  "label": "Ratio"
- },
- "steps": [
-  {
-   "title": "Divide the radii",
-   "body": "<p><code>5.3 × 10⁻¹¹ ÷ 8.4 × 10⁻¹⁶<\/code><\/p>"
-  },
-  {
-   "title": "Divide the front numbers, subtract the powers",
-   "body": "<p><code>(5.3 ÷ 8.4) × 10⁽⁻¹¹⁺¹⁶⁾ ≈ 0.63 × 10⁵ ≈ 63,000<\/code><\/p>"
-  },
-  {
-   "title": "Scale it up",
-   "body": "<p>If the nucleus were a 1-cm pea, the atom would be <code>63,000 cm ≈ 630 m<\/code> across, several football fields.<\/p>"
-  }
- ],
- "final": "<p>About 63,000 times larger.<\/p>",
- "title": "How empty is an atom?"
-}</script>
+<script type="application/json" id="g-m8-empty-data">{"prompt": "<p>A hydrogen atom has a radius of about 5.3 × 10⁻¹¹ m; its nucleus, a single proton, has a radius of about 8.4 × 10⁻¹⁶ m. How many times larger is the atom than its nucleus?</p>", "check": {"answer": 63000, "tol": 0.04, "unit": "times", "label": "Ratio"}, "steps": [{"title": "Divide the radii", "body": "<p><code>5.3 × 10⁻¹¹ ÷ 8.4 × 10⁻¹⁶</code></p>"}, {"title": "Divide the front numbers, subtract the powers", "body": "<p><code>(5.3 ÷ 8.4) × 10⁽⁻¹¹⁺¹⁶⁾ ≈ 0.63 × 10⁵ ≈ 63,000</code></p>"}, {"title": "Scale it up", "body": "<p>If the nucleus were a 1-cm pea, the atom would be <code>63,000 cm ≈ 630 m</code> across, several football fields.</p>"}], "final": "<p>About 63,000 times larger.</p>", "title": "How empty is an atom?", "concept": {"q": "If a hydrogen atom were the size of a football stadium, how big would its nucleus be?", "choices": ["About the size of the field", "About the size of a grain of sand hidden in the stands", "About the size of a car", "About the size of a pea"], "answer": 3, "explain": "The atom is about 60,000 times wider than its nucleus, so atoms, and everything made of them, are mostly empty space."}}</script>
 <script type="application/json" id="order-m8-size-data">{
  "items": [
   "A proton (about 10⁻¹⁵ m)",
@@ -573,31 +549,7 @@
   }
  ]
 }</script>
-<script type="application/json" id="g-m8-anni-data">{
- "prompt": "<p>If 1 kg of matter annihilated with 1 kg of antimatter, how much energy would be released? (c = 3 × 10⁸ m/s.) Give your answer in joules, in e-notation.<\/p>",
- "check": {
-  "answer": 1.8e+17,
-  "tol": 0.03,
-  "unit": "J",
-  "label": "Energy"
- },
- "steps": [
-  {
-   "title": "Total mass converted",
-   "body": "<p>Both the matter and the antimatter disappear: 2 kg.<\/p>"
-  },
-  {
-   "title": "Apply E = mc²",
-   "body": "<p><code>2 × (3 × 10⁸)² = 2 × 9 × 10¹⁶ = 1.8 × 10¹⁷ J<\/code><\/p>"
-  },
-  {
-   "title": "Put it in context",
-   "body": "<p>About 43 megatons of TNT, close to the largest nuclear bomb ever tested.<\/p>"
-  }
- ],
- "final": "<p>1.8 × 10¹⁷ joules.<\/p>",
- "title": "A kilogram of antimatter"
-}</script>
+<script type="application/json" id="g-m8-anni-data">{"prompt": "<p>If 1 kg of matter annihilated with 1 kg of antimatter, how much energy would be released? (c = 3 × 10⁸ m/s.) Give your answer in joules, in e-notation.</p>", "check": {"answer": 1.8e+17, "tol": 0.03, "unit": "J", "label": "Energy"}, "steps": [{"title": "Total mass converted", "body": "<p>Both the matter and the antimatter disappear: 2 kg.</p>"}, {"title": "Apply E = mc²", "body": "<p><code>2 × (3 × 10⁸)² = 2 × 9 × 10¹⁶ = 1.8 × 10¹⁷ J</code></p>"}, {"title": "Put it in context", "body": "<p>About 43 megatons of TNT, close to the largest nuclear bomb ever tested.</p>"}], "final": "<p>1.8 × 10¹⁷ joules.</p>", "title": "A kilogram of antimatter", "concept": {"q": "Why is matter–antimatter annihilation such an intense energy source?", "choices": ["It releases chemical energy", "It only produces heat, not light", "Only 1% of the mass becomes energy", "All of the mass is converted into energy"], "answer": 3, "explain": "Fusion converts less than 1% of its fuel’s mass into energy; annihilation converts 100%."}}</script>
 <script type="application/json" id="poe-m8-slit-data">{
  "question": "Electrons are fired one at a time at a barrier with two slits. After thousands have hit the screen, what pattern do they make?",
  "options": [
@@ -610,81 +562,9 @@
  "observe": "<p>In the double-slit simulation below, press Fire electrons and watch the pattern build up. Then turn on the which-slit detectors and try again.<\/p>",
  "explain": "<p>Each electron behaves like a wave that passes through both slits and interferes with itself, so electrons are most likely to land where the waves reinforce and never where they cancel: stripes. Watching which slit it uses forces it to behave like a particle, and the stripes vanish.<\/p>"
 }</script>
-<script type="application/json" id="g-m8-dbe-data">{
- "prompt": "<p>An electron (mass 9.11 × 10⁻³¹ kg) moves at 3 × 10⁶ m/s, about 1% of light speed. What is its de Broglie wavelength? (h = 6.63 × 10⁻³⁴ J·s.) Give your answer in meters, in e-notation.<\/p>",
- "check": {
-  "answer": 2.43e-10,
-  "tol": 0.04,
-  "unit": "m",
-  "label": "Wavelength"
- },
- "steps": [
-  {
-   "title": "Find the momentum",
-   "body": "<p><code>m × v = 9.11 × 10⁻³¹ × 3 × 10⁶ = 2.73 × 10⁻²⁴ kg·m/s<\/code><\/p>"
-  },
-  {
-   "title": "Divide h by the momentum",
-   "body": "<p><code>6.63 × 10⁻³⁴ ÷ 2.73 × 10⁻²⁴ ≈ 2.4 × 10⁻¹⁰ m<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>That is about the size of an atom, so electrons diffract through the regularly spaced atoms of crystals, an effect electron microscopes exploit.<\/p>"
-  }
- ],
- "final": "<p>About 2.4 × 10⁻¹⁰ m.<\/p>",
- "title": "The wavelength of an electron"
-}</script>
-<script type="application/json" id="g-m8-dbb-data">{
- "prompt": "<p>A 0.145-kg baseball is thrown at 40 m/s. What is its de Broglie wavelength, in meters, in e-notation?<\/p>",
- "check": {
-  "answer": 1.14e-34,
-  "tol": 0.04,
-  "unit": "m",
-  "label": "Wavelength"
- },
- "steps": [
-  {
-   "title": "Find the momentum",
-   "body": "<p><code>0.145 × 40 = 5.8 kg·m/s<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>6.63 × 10⁻³⁴ ÷ 5.8 ≈ 1.1 × 10⁻³⁴ m<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>That is about 10¹⁹ times smaller than a proton. Everyday objects have wavelengths far too small ever to notice, which is why we don’t see baseballs diffract.<\/p>"
-  }
- ],
- "final": "<p>About 1.1 × 10⁻³⁴ m, utterly undetectable.<\/p>",
- "title": "The wavelength of a baseball"
-}</script>
-<script type="application/json" id="g-m8-hup-data">{
- "prompt": "<p>An electron is confined within an atom, so its position is uncertain by about Δx = 1 × 10⁻¹⁰ m. Using Δp ≥ h ÷ (4π Δx), find the minimum uncertainty in its speed. (h = 6.63 × 10⁻³⁴; electron mass = 9.11 × 10⁻³¹ kg.)<\/p>",
- "check": {
-  "answer": 580000.0,
-  "tol": 0.05,
-  "unit": "m/s",
-  "label": "Speed uncertainty"
- },
- "steps": [
-  {
-   "title": "Find the momentum uncertainty",
-   "body": "<p><code>Δp = 6.63 × 10⁻³⁴ ÷ (4π × 10⁻¹⁰) ≈ 5.3 × 10⁻²⁵ kg·m/s<\/code><\/p>"
-  },
-  {
-   "title": "Convert to speed",
-   "body": "<p><code>Δv = Δp ÷ m = 5.3 × 10⁻²⁵ ÷ 9.11 × 10⁻³¹ ≈ 5.8 × 10⁵ m/s<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>Hundreds of kilometers per second! Merely confining an electron in an atom forces it to move fast. Squeeze it smaller and it moves faster still, which is why electrons don’t fall into the nucleus, and why squeezed electrons push back in dead stars (Section 8.7).<\/p>"
-  }
- ],
- "final": "<p>About 580 km/s.<\/p>",
- "title": "An electron trapped in an atom"
-}</script>
+<script type="application/json" id="g-m8-dbe-data">{"prompt": "<p>An electron (mass 9.11 × 10⁻³¹ kg) moves at 3 × 10⁶ m/s, about 1% of light speed. What is its de Broglie wavelength? (h = 6.63 × 10⁻³⁴ J·s.) Give your answer in meters, in e-notation.</p>", "check": {"answer": 2.43e-10, "tol": 0.04, "unit": "m", "label": "Wavelength"}, "steps": [{"title": "Find the momentum", "body": "<p><code>m × v = 9.11 × 10⁻³¹ × 3 × 10⁶ = 2.73 × 10⁻²⁴ kg·m/s</code></p>"}, {"title": "Divide h by the momentum", "body": "<p><code>6.63 × 10⁻³⁴ ÷ 2.73 × 10⁻²⁴ ≈ 2.4 × 10⁻¹⁰ m</code></p>"}, {"title": "Interpret", "body": "<p>That is about the size of an atom, so electrons diffract through the regularly spaced atoms of crystals, an effect electron microscopes exploit.</p>"}], "final": "<p>About 2.4 × 10⁻¹⁰ m.</p>", "title": "The wavelength of an electron", "concept": {"q": "Why do electrons show wave behavior, like diffraction through crystals?", "choices": ["They are much larger than atoms", "Their wavelengths are about the size of atoms", "They have no mass at all", "They move faster than light"], "answer": 1, "explain": "A particle’s wavelength grows as its mass times speed shrinks. An electron’s wavelength is similar to the spacing between atoms, so crystals diffract it."}}</script>
+<script type="application/json" id="g-m8-dbb-data">{"prompt": "<p>A 0.145-kg baseball is thrown at 40 m/s. What is its de Broglie wavelength, in meters, in e-notation?</p>", "check": {"answer": 1.14e-34, "tol": 0.04, "unit": "m", "label": "Wavelength"}, "steps": [{"title": "Find the momentum", "body": "<p><code>0.145 × 40 = 5.8 kg·m/s</code></p>"}, {"title": "Divide", "body": "<p><code>6.63 × 10⁻³⁴ ÷ 5.8 ≈ 1.1 × 10⁻³⁴ m</code></p>"}, {"title": "Interpret", "body": "<p>That is about 10¹⁹ times smaller than a proton. Everyday objects have wavelengths far too small ever to notice, which is why we don’t see baseballs diffract.</p>"}], "final": "<p>About 1.1 × 10⁻³⁴ m, utterly undetectable.</p>", "title": "The wavelength of a baseball", "concept": {"q": "Why don’t we ever see a thrown baseball behave like a wave?", "choices": ["Its wavelength is unimaginably tiny", "Baseballs have no wavelength", "Air blocks its waves", "Baseballs move too slowly"], "answer": 0, "explain": "The baseball’s large mass gives it a wavelength far smaller than a proton, far too small to ever notice."}}</script>
+<script type="application/json" id="g-m8-hup-data">{"prompt": "<p>An electron is confined within an atom, so its position is uncertain by about Δx = 1 × 10⁻¹⁰ m. Using Δp ≥ h ÷ (4π Δx), find the minimum uncertainty in its speed. (h = 6.63 × 10⁻³⁴; electron mass = 9.11 × 10⁻³¹ kg.)</p>", "check": {"answer": 580000.0, "tol": 0.05, "unit": "m/s", "label": "Speed uncertainty"}, "steps": [{"title": "Find the momentum uncertainty", "body": "<p><code>Δp = 6.63 × 10⁻³⁴ ÷ (4π × 10⁻¹⁰) ≈ 5.3 × 10⁻²⁵ kg·m/s</code></p>"}, {"title": "Convert to speed", "body": "<p><code>Δv = Δp ÷ m = 5.3 × 10⁻²⁵ ÷ 9.11 × 10⁻³¹ ≈ 5.8 × 10⁵ m/s</code></p>"}, {"title": "Interpret", "body": "<p>Hundreds of kilometers per second! Merely confining an electron in an atom forces it to move fast. Squeeze it smaller and it moves faster still, which is why electrons don’t fall into the nucleus, and why squeezed electrons push back in dead stars (Section 8.7).</p>"}], "final": "<p>About 580 km/s.</p>", "title": "An electron trapped in an atom", "concept": {"q": "Why can’t an electron settle motionless at the center of an atom?", "choices": ["Pinning down its position forces a large spread in its speed", "Electrons are too big to fit", "Gravity pulls it outward", "The nucleus repels it"], "answer": 0, "explain": "The uncertainty principle: the more tightly an electron is confined, the faster it must be moving, which keeps atoms the size they are."}}</script>
 <script type="application/json" id="tf-m8-myths-data">[
  {
   "s": "The uncertainty principle exists only because our instruments are too crude.",
@@ -749,31 +629,7 @@
  ],
  "model": "<p>In a normal star, hot gas pushes outward, but a white dwarf has no fuel, so that pressure would fade as it cools. What holds it up is quantum. The exclusion principle says no two electrons can share the same state, and the star’s gravity has squeezed its electrons into a tiny volume. They are forced into higher and higher energy states, moving very fast, and that motion pushes back as electron degeneracy pressure, which doesn’t depend on temperature. So even a cold white dwarf stays up, as long as it is under about 1.4 solar masses.<\/p>"
 }</script>
-<script type="application/json" id="g-m8-sunmass-data">{
- "prompt": "<p>The Sun emits 3.8 × 10²⁶ joules of energy every second, all produced by converting mass to energy in fusion. How many kilograms of mass does it convert each second? (c² = 9 × 10¹⁶ m²/s²)<\/p>",
- "check": {
-  "answer": 4200000000.0,
-  "tol": 0.04,
-  "unit": "kg",
-  "label": "Mass per second"
- },
- "steps": [
-  {
-   "title": "Rearrange E = mc²",
-   "body": "<p><code>m = E ÷ c²<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>3.8 × 10²⁶ ÷ 9 × 10¹⁶ ≈ 4.2 × 10⁹ kg<\/code><\/p>"
-  },
-  {
-   "title": "Put it in context",
-   "body": "<p>About 4 million tonnes of mass turned to energy every second. Yet over its whole 10-billion-year life, the Sun will convert less than 0.1% of its total mass.<\/p>"
-  }
- ],
- "final": "<p>About 4.2 billion kilograms per second.<\/p>",
- "title": "How much mass does the Sun convert?"
-}</script>
+<script type="application/json" id="g-m8-sunmass-data">{"prompt": "<p>The Sun emits 3.8 × 10²⁶ joules of energy every second, all produced by converting mass to energy in fusion. How many kilograms of mass does it convert each second? (c² = 9 × 10¹⁶ m²/s²)</p>", "check": {"answer": 4200000000.0, "tol": 0.04, "unit": "kg", "label": "Mass per second"}, "steps": [{"title": "Rearrange E = mc²", "body": "<p><code>m = E ÷ c²</code></p>"}, {"title": "Divide", "body": "<p><code>3.8 × 10²⁶ ÷ 9 × 10¹⁶ ≈ 4.2 × 10⁹ kg</code></p>"}, {"title": "Put it in context", "body": "<p>About 4 million tonnes of mass turned to energy every second. Yet over its whole 10-billion-year life, the Sun will convert less than 0.1% of its total mass.</p>"}], "final": "<p>About 4.2 billion kilograms per second.</p>", "title": "How much mass does the Sun convert?", "concept": {"q": "The Sun shines by fusion. What happens to its mass as it shines?", "choices": ["It stays exactly the same", "It slowly increases", "It doubles every billion years", "It slowly decreases as mass is converted into energy"], "answer": 3, "explain": "Fusion converts a little mass into energy (E = mc²): about 4 million tonnes every second, yet only a tiny fraction of the Sun over its lifetime."}}</script>
 <script type="application/json" id="est-m8-nu-data">{
  "title": "neutrinos through your body",
  "q": "How many neutrinos from the Sun pass through your body every second?",

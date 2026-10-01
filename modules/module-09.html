@@ -508,31 +508,7 @@
   </div>
 </footer>
 
-<script type="application/json" id="g-m9-solar-data">{
- "prompt": "<p>The Sun’s luminosity is 3.8 × 10²⁶ W. That power spreads over a sphere as it travels outward. How many watts fall on each square meter at Earth’s distance (1.5 × 10¹¹ m)?<\/p>",
- "check": {
-  "answer": 1344,
-  "tol": 0.03,
-  "unit": "W/m²",
-  "label": "Sunlight per square meter"
- },
- "steps": [
-  {
-   "title": "Find the area of the sphere at Earth’s distance",
-   "body": "<p><code>4π d² = 4π × (1.5 × 10¹¹)² ≈ 2.83 × 10²³ m²<\/code><\/p>"
-  },
-  {
-   "title": "Divide the power by the area",
-   "body": "<p><code>3.8 × 10²⁶ ÷ 2.83 × 10²³ ≈ 1,340 W/m²<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>About 1,360 W/m² is measured by satellites, the \"solar constant\": roughly the output of a hair dryer on every square meter facing the Sun.<\/p>"
-  }
- ],
- "final": "<p>About 1,340 W/m².<\/p>",
- "title": "How much sunlight reaches Earth?"
-}</script>
+<script type="application/json" id="g-m9-solar-data">{"prompt": "<p>The Sun’s luminosity is 3.8 × 10²⁶ W. That power spreads over a sphere as it travels outward. How many watts fall on each square meter at Earth’s distance (1.5 × 10¹¹ m)?</p>", "check": {"answer": 1344, "tol": 0.03, "unit": "W/m²", "label": "Sunlight per square meter"}, "steps": [{"title": "Find the area of the sphere at Earth’s distance", "body": "<p><code>4π d² = 4π × (1.5 × 10¹¹)² ≈ 2.83 × 10²³ m²</code></p>"}, {"title": "Divide the power by the area", "body": "<p><code>3.8 × 10²⁶ ÷ 2.83 × 10²³ ≈ 1,340 W/m²</code></p>"}, {"title": "Interpret", "body": "<p>About 1,360 W/m² is measured by satellites, the \"solar constant\": roughly the output of a hair dryer on every square meter facing the Sun.</p>"}], "final": "<p>About 1,340 W/m².</p>", "title": "How much sunlight reaches Earth?", "concept": {"q": "If Earth were twice as far from the Sun, how much sunlight would each square meter receive?", "choices": ["The same amount", "Twice as much", "One-fourth as much", "Half as much"], "answer": 2, "explain": "Light spreads over a sphere whose area grows with distance times distance. Twice as far means 2 × 2 = 4 times as spread out."}}</script>
 <script type="application/json" id="est-m9-share-data">{
  "title": "Earth’s share of sunlight",
  "q": "The Sun sends light in all directions. What fraction of it actually hits Earth?",
@@ -586,27 +562,7 @@
   "explain": "Its light peaks in the green, but it contains all colors, so it looks white from space; our atmosphere scatters blue light, making it look yellowish from the ground."
  }
 ]</script>
-<script type="application/json" id="g-m9-dim-data">{
- "prompt": "<p>Two stars have the same luminosity, but star A looks 9 times dimmer than star B. How many times farther away is star A?<\/p>",
- "check": {
-  "answer": 3,
-  "tol": 0.02,
-  "unit": "times farther",
-  "label": "Distance ratio"
- },
- "steps": [
-  {
-   "title": "Recall the inverse-square law",
-   "body": "<p>Brightness ∝ 1 ÷ distance², so distance ∝ 1 ÷ √brightness.<\/p>"
-  },
-  {
-   "title": "Apply it",
-   "body": "<p>9 times dimmer means √9 = 3 times farther.<\/p>"
-  }
- ],
- "final": "<p>3 times farther away.<\/p>",
- "title": "How much farther?"
-}</script>
+<script type="application/json" id="g-m9-dim-data">{"prompt": "<p>Two stars have the same luminosity, but star A looks 9 times dimmer than star B. How many times farther away is star A?</p>", "check": {"answer": 3, "tol": 0.02, "unit": "times farther", "label": "Distance ratio"}, "steps": [{"title": "Recall the inverse-square law", "body": "<p>Brightness ∝ 1 ÷ distance², so distance ∝ 1 ÷ √brightness.</p>"}, {"title": "Apply it", "body": "<p>9 times dimmer means √9 = 3 times farther.</p>"}], "final": "<p>3 times farther away.</p>", "title": "How much farther?", "concept": {"q": "Two identical stars appear different in brightness. What is the most likely explanation?", "choices": ["The brighter one is older", "The dimmer one is larger", "The dimmer one is farther away", "The dimmer one is hotter"], "answer": 2, "explain": "Stars with the same luminosity look dimmer the farther away they are, following the inverse-square law."}}</script>
 <script type="application/json" id="tf-m9-dist-data">{
  "labels": [
   "Depends on distance",
@@ -662,27 +618,7 @@
  "observe": "<p>In the parallax simulation below, set the distance to 5 parsecs and note the parallax. Then set it to 10 parsecs.<\/p>",
  "explain": "<p>Parallax is inversely proportional to distance: twice as far, half the parallax. That is why parallax only works well for relatively nearby stars; far away, the shift becomes too small to measure.<\/p>"
 }</script>
-<script type="application/json" id="g-m9-par-data">{
- "prompt": "<p>A star has a parallax of 0.2 arcseconds. How far away is it in parsecs, and in light-years?<\/p>",
- "check": {
-  "answer": 5,
-  "tol": 0.02,
-  "unit": "parsecs",
-  "label": "Distance"
- },
- "steps": [
-  {
-   "title": "Use the parallax formula",
-   "body": "<p><code>d = 1 ÷ 0.2 = 5 parsecs<\/code><\/p>"
-  },
-  {
-   "title": "Convert to light-years",
-   "body": "<p><code>5 × 3.26 ≈ 16.3 light-years<\/code><\/p>"
-  }
- ],
- "final": "<p>5 parsecs, about 16 light-years.<\/p>",
- "title": "Distance from parallax"
-}</script>
+<script type="application/json" id="g-m9-par-data">{"prompt": "<p>A star has a parallax of 0.2 arcseconds. How far away is it in parsecs, and in light-years?</p>", "check": {"answer": 5, "tol": 0.02, "unit": "parsecs", "label": "Distance"}, "steps": [{"title": "Use the parallax formula", "body": "<p><code>d = 1 ÷ 0.2 = 5 parsecs</code></p>"}, {"title": "Convert to light-years", "body": "<p><code>5 × 3.26 ≈ 16.3 light-years</code></p>"}], "final": "<p>5 parsecs, about 16 light-years.</p>", "title": "Distance from parallax", "concept": {"q": "Star A has a larger parallax than star B. Which star is closer?", "choices": ["Parallax says nothing about distance", "Star A", "They are the same distance", "Star B"], "answer": 1, "explain": "Nearby stars appear to shift more as Earth orbits the Sun. A larger parallax means a closer star."}}</script>
 <script type="application/json" id="order-m9-types-data">{
  "items": [
   "O (above 30,000 K, blue)",
@@ -695,56 +631,8 @@
  ],
  "explain": "Temperature ranges are approximate. M stars are by far the most common; O stars are the rarest."
 }</script>
-<script type="application/json" id="g-m9-binary-data">{
- "prompt": "<p>Two stars orbit each other with an average separation of 10 AU and an orbital period of 20 years. What is their combined mass, in solar masses?<\/p>",
- "check": {
-  "answer": 2.5,
-  "tol": 0.02,
-  "unit": "solar masses",
-  "label": "Combined mass"
- },
- "steps": [
-  {
-   "title": "Write the law",
-   "body": "<p><code>M₁ + M₂ = a³ ÷ p²<\/code><\/p>"
-  },
-  {
-   "title": "Substitute",
-   "body": "<p><code>10³ ÷ 20² = 1,000 ÷ 400<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>= 2.5 solar masses<\/code>. Measuring each star’s orbit around their center of mass would split this total between them.<\/p>"
-  }
- ],
- "final": "<p>2.5 solar masses.<\/p>",
- "title": "Weigh a binary star"
-}</script>
-<script type="application/json" id="g-m9-radius-data">{
- "prompt": "<p>A star’s radius compared with the Sun’s is R = √L ÷ (T ÷ 5,800)², with L in solar luminosities. Betelgeuse has L ≈ 100,000 and T ≈ 3,500 K. Find its radius in solar radii.<\/p>",
- "check": {
-  "answer": 868,
-  "tol": 0.05,
-  "unit": "solar radii",
-  "label": "Radius"
- },
- "steps": [
-  {
-   "title": "Square root of the luminosity",
-   "body": "<p><code>√100,000 ≈ 316<\/code><\/p>"
-  },
-  {
-   "title": "Temperature ratio, squared",
-   "body": "<p><code>3,500 ÷ 5,800 ≈ 0.603<\/code>; <code>0.603² ≈ 0.364<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>316 ÷ 0.364 ≈ 870 solar radii<\/code>, about 4 AU. Placed at the Sun’s position, Betelgeuse would extend past the orbit of Mars.<\/p>"
-  }
- ],
- "final": "<p>About 870 solar radii.<\/p>",
- "title": "How big is Betelgeuse?"
-}</script>
+<script type="application/json" id="g-m9-binary-data">{"prompt": "<p>Two stars orbit each other with an average separation of 10 AU and an orbital period of 20 years. What is their combined mass, in solar masses?</p>", "check": {"answer": 2.5, "tol": 0.02, "unit": "solar masses", "label": "Combined mass"}, "steps": [{"title": "Write the law", "body": "<p><code>M₁ + M₂ = a³ ÷ p²</code></p>"}, {"title": "Substitute", "body": "<p><code>10³ ÷ 20² = 1,000 ÷ 400</code></p>"}, {"title": "Divide", "body": "<p><code>= 2.5 solar masses</code>. Measuring each star’s orbit around their center of mass would split this total between them.</p>"}], "final": "<p>2.5 solar masses.</p>", "title": "Weigh a binary star", "concept": {"q": "Two stars orbit each other. If they orbit faster at the same separation, what does that tell you?", "choices": ["They are cooler", "They are less massive", "They are more massive", "They are farther away from us"], "answer": 2, "explain": "Stronger gravity requires faster orbits. That is how binary stars reveal stellar masses, the only direct way to weigh a star."}}</script>
+<script type="application/json" id="g-m9-radius-data">{"prompt": "<p>A star’s radius compared with the Sun’s is R = √L ÷ (T ÷ 5,800)², with L in solar luminosities. Betelgeuse has L ≈ 100,000 and T ≈ 3,500 K. Find its radius in solar radii.</p>", "check": {"answer": 868, "tol": 0.05, "unit": "solar radii", "label": "Radius"}, "steps": [{"title": "Square root of the luminosity", "body": "<p><code>√100,000 ≈ 316</code></p>"}, {"title": "Temperature ratio, squared", "body": "<p><code>3,500 ÷ 5,800 ≈ 0.603</code>; <code>0.603² ≈ 0.364</code></p>"}, {"title": "Divide", "body": "<p><code>316 ÷ 0.364 ≈ 870 solar radii</code>, about 4 AU. Placed at the Sun’s position, Betelgeuse would extend past the orbit of Mars.</p>"}], "final": "<p>About 870 solar radii.</p>", "title": "How big is Betelgeuse?", "concept": {"q": "Betelgeuse is cooler than the Sun but about 100,000 times as luminous. What must be true?", "choices": ["It is enormous, hundreds of times the Sun’s size", "It is much closer than we thought", "It is a white dwarf", "It is smaller than the Sun"], "answer": 0, "explain": "Cooler surfaces give off less light per square meter, so a cool star can be very luminous only if it has an enormous surface."}}</script>
 <script type="application/json" id="label-m9-hr-data">{
  "targets": [
   "Main sequence",
@@ -766,31 +654,7 @@
  ],
  "explain": "Temperature decreases to the right, so number 6 points toward cooler stars. The Sun sits in the middle of the main sequence."
 }</script>
-<script type="application/json" id="g-m9-life-data">{
- "prompt": "<p>A star with twice the Sun’s mass has twice the fuel, but it is about 11 times as luminous, so it burns fuel 11 times as fast. Using lifetime ≈ 10 billion years × (mass ÷ luminosity), how long will it live?<\/p>",
- "check": {
-  "answer": 1.82,
-  "tol": 0.03,
-  "unit": "billion years",
-  "label": "Lifetime"
- },
- "steps": [
-  {
-   "title": "Divide fuel by burn rate",
-   "body": "<p><code>mass ÷ luminosity = 2 ÷ 11 ≈ 0.18<\/code><\/p>"
-  },
-  {
-   "title": "Multiply by the Sun’s lifetime",
-   "body": "<p><code>10 billion years × 0.18 ≈ 1.8 billion years<\/code><\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>Twice the mass, but less than one-fifth of the Sun’s lifetime.<\/p>"
-  }
- ],
- "final": "<p>About 1.8 billion years.<\/p>",
- "title": "How long will a 2-solar-mass star live?"
-}</script>
+<script type="application/json" id="g-m9-life-data">{"prompt": "<p>A star with twice the Sun’s mass has twice the fuel, but it is about 11 times as luminous, so it burns fuel 11 times as fast. Using lifetime ≈ 10 billion years × (mass ÷ luminosity), how long will it live?</p>", "check": {"answer": 1.82, "tol": 0.03, "unit": "billion years", "label": "Lifetime"}, "steps": [{"title": "Divide fuel by burn rate", "body": "<p><code>mass ÷ luminosity = 2 ÷ 11 ≈ 0.18</code></p>"}, {"title": "Multiply by the Sun’s lifetime", "body": "<p><code>10 billion years × 0.18 ≈ 1.8 billion years</code></p>"}, {"title": "Compare", "body": "<p>Twice the mass, but less than one-fifth of the Sun’s lifetime.</p>"}], "final": "<p>About 1.8 billion years.</p>", "title": "How long will a 2-solar-mass star live?", "concept": {"q": "A star has twice the Sun’s mass. How does its lifetime compare?", "choices": ["Infinitely long", "The same as the Sun’s", "Twice as long, because it has twice the fuel", "Much shorter, because it burns its fuel far faster"], "answer": 3, "explain": "It has twice the fuel but shines about 11 times as brightly, so it runs out much sooner, after about 1.8 billion years compared with the Sun’s 10 billion."}}</script>
 <script type="application/json" id="exp-m9-life-data">{
  "title": "why massive stars die young",
  "prompt": "A friend thinks a star with 10 times the Sun’s mass, and so 10 times the fuel, should live 10 times longer. Explain why it actually lives far shorter.",

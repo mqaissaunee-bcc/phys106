@@ -188,6 +188,7 @@
 
         <h3>Powers of ten</h3>
         <p>Writing out 150,000,000 kilometers is clumsy, and counting zeros invites mistakes. <button class="term" data-term="scientific-notation">Scientific notation</button> writes the same number as 1.5 × 10⁸ km: a number between 1 and 10, times ten raised to a power. The power tells you how many places to move the decimal point. Positive powers make numbers bigger (10³ = 1,000); negative powers make them smaller (10⁻³ = 0.001).</p>
+        <p>To see what powers of ten mean in real sizes, try the <a href="../orders-of-magnitude.html">Orders of Magnitude Explorer</a>, which places everything from atoms to the observable universe on one scale.</p>
         <p>Each step up in power is a factor of ten, which means the steps add up faster than intuition expects. That is the whole trick of astronomy's scales.</p>
 
         <aside class="callout analogy" aria-label="Analogy">
@@ -1425,178 +1426,12 @@
   "explain": "Even the nearest star shifts by less than a thousandth of a degree; it was first measured in 1838."
  }
 ]</script>
-<script type="application/json" id="g-m1-sirius-data">{
- "prompt": "<p>Sirius, the brightest star in the night sky, is 8.6 light-years away. How far is that in kilometers? And in what year did the light you see from Sirius tonight leave the star?<\/p><p>Enter your distance in kilometers below. Type large numbers in e-notation: 8.1 × 10¹³ is <code>8.1e13<\/code>.<\/p>",
- "check": {
-  "answer": 81400000000000.0,
-  "tol": 0.05,
-  "unit": "km",
-  "label": "Distance to Sirius"
- },
- "steps": [
-  {
-   "title": "List what you know",
-   "body": "<p>Distance: 8.6 light-years. Conversion: 1 light-year = 9.46 × 10¹² km. You want kilometers, so light-years must cancel.<\/p>"
-  },
-  {
-   "title": "Set up the conversion",
-   "body": "<p>Multiply the distance by the conversion factor:<\/p><p><code>8.6 ly × (9.46 × 10¹² km / 1 ly)<\/code><\/p><p>The “ly” units cancel, leaving km.<\/p>"
-  },
-  {
-   "title": "Multiply the front numbers, keep the power of ten",
-   "body": "<p><code>8.6 × 9.46 = 81.4<\/code>, so the result is 81.4 × 10¹² km.<\/p>"
-  },
-  {
-   "title": "Put it in proper scientific notation",
-   "body": "<p>Move the decimal one place left and raise the power by one: <code>81.4 × 10¹² = 8.1 × 10¹³ km<\/code>, about 81 trillion kilometers.<\/p>"
-  },
-  {
-   "title": "Find when the light left",
-   "body": "<p>Light takes 8.6 years to travel 8.6 light-years, so subtract 8.6 years from the current year. In 2026 that gives about 2017.<\/p>"
-  }
- ],
- "final": "<p>About 8.1 × 10¹³ km. The light left Sirius roughly 8.6 years ago, around 2017.<\/p>",
- "title": "How far away is Sirius?"
-}</script>
-<script type="application/json" id="g-m1-saturn-data">{
- "prompt": "<p>In the 1-to-10-billion scale model, how far from the grapefruit Sun would you place Saturn? Saturn orbits at 9.5 AU, and 1 AU = 1.5 × 10¹¹ m.<\/p>",
- "check": {
-  "answer": 142.5,
-  "tol": 0.05,
-  "unit": "m",
-  "label": "Model distance"
- },
- "steps": [
-  {
-   "title": "Convert the real distance to meters",
-   "body": "<p><code>9.5 AU × 1.5 × 10¹¹ m/AU = 1.43 × 10¹² m<\/code><\/p>"
-  },
-  {
-   "title": "Apply the scale",
-   "body": "<p>The model is 10 billion (10¹⁰) times smaller, so divide: <code>1.43 × 10¹² m ÷ 10¹⁰ = 1.43 × 10² m<\/code><\/p>"
-  },
-  {
-   "title": "Write it as an ordinary number",
-   "body": "<p>1.43 × 10² m = 143 m, about one and a half football fields.<\/p>"
-  },
-  {
-   "title": "Check that it makes sense",
-   "body": "<p>Earth (1 AU) is 15 m away in the model, and Saturn is 9.5 times farther: 9.5 × 15 m ≈ 143 m. The two methods agree.<\/p>"
-  }
- ],
- "final": "<p>About 143 meters from the grapefruit Sun.<\/p>",
- "title": "Where does Saturn go in the scale model?"
-}</script>
-<script type="application/json" id="g-m1-dinos-data">{
- "prompt": "<p>The dinosaurs died out 66 million years ago. On the cosmic calendar, how many hours before the end of the year did that happen?<\/p>",
- "check": {
-  "answer": 42,
-  "tol": 0.05,
-  "unit": "hours",
-  "label": "Hours before midnight on December 31"
- },
- "steps": [
-  {
-   "title": "Find the fraction of cosmic history",
-   "body": "<p><code>66 million ÷ 13.8 billion = 6.6 × 10⁷ ÷ 1.38 × 10¹⁰ ≈ 0.0048<\/code><\/p><p>The extinction happened 0.48% of the way back from the present.<\/p>"
-  },
-  {
-   "title": "Convert that fraction of a year to days",
-   "body": "<p><code>0.0048 × 365 days ≈ 1.75 days<\/code><\/p>"
-  },
-  {
-   "title": "Convert days to hours",
-   "body": "<p><code>1.75 days × 24 hours/day ≈ 42 hours<\/code><\/p>"
-  },
-  {
-   "title": "Place it on the calendar",
-   "body": "<p>42 hours before midnight on December 31 is about 6 a.m. on December 30.<\/p>"
-  }
- ],
- "final": "<p>About 42 hours before the end of the year: early morning on December 30.<\/p>",
- "title": "The dinosaurs on the cosmic calendar"
-}</script>
-<script type="application/json" id="g-m1-sunsize-data">{
- "prompt": "<p>The Sun is 1.39 × 10⁶ km in diameter and 1.5 × 10⁸ km away. Use the small-angle formula to find its angular size in degrees.<\/p>",
- "check": {
-  "answer": 0.531,
-  "tol": 0.05,
-  "unit": "degrees",
-  "label": "Angular size of the Sun"
- },
- "steps": [
-  {
-   "title": "Write the formula",
-   "body": "<p><code>angular size (°) ≈ 57.3 × (diameter ÷ distance)<\/code><\/p><p>Both lengths must be in the same unit; here both are in km.<\/p>"
-  },
-  {
-   "title": "Divide diameter by distance",
-   "body": "<p><code>1.39 × 10⁶ ÷ 1.5 × 10⁸ = 0.93 × 10⁻² = 0.0093<\/code><\/p>"
-  },
-  {
-   "title": "Multiply by 57.3",
-   "body": "<p><code>57.3 × 0.0093 ≈ 0.53°<\/code><\/p>"
-  },
-  {
-   "title": "Compare with the Moon",
-   "body": "<p>The Moon came out to about 0.52° in the worked example. That near-match is why the Moon can just cover the Sun in a total solar eclipse.<\/p>"
-  }
- ],
- "final": "<p>About 0.53°, almost exactly the Moon’s angular size.<\/p>",
- "title": "How big does the Sun look?"
-}</script>
-<script type="application/json" id="g-m1-noon-data">{
- "prompt": "<p>How high above the horizon is the Sun at noon in Lincroft (latitude 40.3° N) on the December solstice?<\/p>",
- "check": {
-  "answer": 26.3,
-  "tol": 0.03,
-  "unit": "degrees",
-  "label": "Noon altitude"
- },
- "steps": [
-  {
-   "title": "Find the Sun’s declination",
-   "body": "<p>At the December solstice the Sun is as far south of the celestial equator as the axis tilt allows: declination −23.4°.<\/p>"
-  },
-  {
-   "title": "Write the noon-altitude rule",
-   "body": "<p><code>noon altitude = 90° − |latitude − declination|<\/code><\/p>"
-  },
-  {
-   "title": "Substitute",
-   "body": "<p><code>90° − |40.3° − (−23.4°)| = 90° − 63.7°<\/code><\/p>"
-  },
-  {
-   "title": "Finish and check",
-   "body": "<p><code>= 26.3°<\/code>. Check it in Simulation 1.4 by clicking “Dec solstice”; the readout should agree.<\/p>"
-  }
- ],
- "final": "<p>About 26° above the southern horizon, less than three fists at arm’s length.<\/p>",
- "title": "The winter noon Sun in New Jersey"
-}</script>
-<script type="application/json" id="g-m1-waning-data">{
- "prompt": "<p>The Moon is waning gibbous, about halfway between full moon and third quarter. About what time does it rise, and where is it in the sky at sunrise (6 a.m.)?<\/p>",
- "steps": [
-  {
-   "title": "Recall the anchor phases",
-   "body": "<p>A full moon rises around 6 p.m.; a third-quarter moon rises around midnight.<\/p>"
-  },
-  {
-   "title": "Interpolate",
-   "body": "<p>Halfway between full and third quarter means halfway between those rise times: about 9 p.m.<\/p>"
-  },
-  {
-   "title": "Find when it is highest",
-   "body": "<p>The Moon is highest about 6 hours after it rises: around 3 a.m., due south.<\/p>"
-  },
-  {
-   "title": "Place it at sunrise",
-   "body": "<p>At 6 a.m. it is 3 hours past its highest point, so it is partway down in the southwest. It sets about 9 a.m.<\/p>"
-  }
- ],
- "final": "<p>It rises around 9 p.m. and is in the southwest at sunrise. Check it in Simulation 1.5 at about 18 days.<\/p>",
- "title": "When does a waning gibbous Moon rise?"
-}</script>
+<script type="application/json" id="g-m1-sirius-data">{"prompt": "<p>Sirius, the brightest star in the night sky, is 8.6 light-years away. How far is that in kilometers? And in what year did the light you see from Sirius tonight leave the star?</p><p>Enter your distance in kilometers below. Type large numbers in e-notation: 8.1 × 10¹³ is <code>8.1e13</code>.</p>", "check": {"answer": 81400000000000.0, "tol": 0.05, "unit": "km", "label": "Distance to Sirius"}, "steps": [{"title": "List what you know", "body": "<p>Distance: 8.6 light-years. Conversion: 1 light-year = 9.46 × 10¹² km. You want kilometers, so light-years must cancel.</p>"}, {"title": "Set up the conversion", "body": "<p>Multiply the distance by the conversion factor:</p><p><code>8.6 ly × (9.46 × 10¹² km / 1 ly)</code></p><p>The “ly” units cancel, leaving km.</p>"}, {"title": "Multiply the front numbers, keep the power of ten", "body": "<p><code>8.6 × 9.46 = 81.4</code>, so the result is 81.4 × 10¹² km.</p>"}, {"title": "Put it in proper scientific notation", "body": "<p>Move the decimal one place left and raise the power by one: <code>81.4 × 10¹² = 8.1 × 10¹³ km</code>, about 81 trillion kilometers.</p>"}, {"title": "Find when the light left", "body": "<p>Light takes 8.6 years to travel 8.6 light-years, so subtract 8.6 years from the current year. In 2026 that gives about 2017.</p>"}], "final": "<p>About 8.1 × 10¹³ km. The light left Sirius roughly 8.6 years ago, around 2017.</p>", "title": "How far away is Sirius?", "concept": {"q": "Sirius is 8.6 light-years away. What does that tell you about the starlight you see tonight?", "choices": ["It left Sirius 8.6 hours ago", "It left Sirius about 8.6 years ago", "It left Sirius when the star formed", "It is traveling 8.6 times faster than normal light"], "answer": 1, "explain": "A light-year is the distance light travels in a year, so light from 8.6 light-years away has been traveling for 8.6 years. We see Sirius as it was, not as it is."}}</script>
+<script type="application/json" id="g-m1-saturn-data">{"prompt": "<p>In the 1-to-10-billion scale model, how far from the grapefruit Sun would you place Saturn? Saturn orbits at 9.5 AU, and 1 AU = 1.5 × 10¹¹ m.</p>", "check": {"answer": 142.5, "tol": 0.05, "unit": "m", "label": "Model distance"}, "steps": [{"title": "Convert the real distance to meters", "body": "<p><code>9.5 AU × 1.5 × 10¹¹ m/AU = 1.43 × 10¹² m</code></p>"}, {"title": "Apply the scale", "body": "<p>The model is 10 billion (10¹⁰) times smaller, so divide: <code>1.43 × 10¹² m ÷ 10¹⁰ = 1.43 × 10² m</code></p>"}, {"title": "Write it as an ordinary number", "body": "<p>1.43 × 10² m = 143 m, about one and a half football fields.</p>"}, {"title": "Check that it makes sense", "body": "<p>Earth (1 AU) is 15 m away in the model, and Saturn is 9.5 times farther: 9.5 × 15 m ≈ 143 m. The two methods agree.</p>"}], "final": "<p>About 143 meters from the grapefruit Sun.</p>", "title": "Where does Saturn go in the scale model?", "concept": {"q": "In a scale model with a grapefruit-sized Sun, Earth is about 15 m away. Saturn is about 10 times farther from the Sun than Earth. Where does Saturn go?", "choices": ["In the next town", "About 1.5 m away, across a table", "Roughly the length of a football field and a half away", "Right beside Earth"], "answer": 2, "explain": "Ten times Earth’s 15 m is about 150 m. The planets are tiny and very spread out compared with their sizes."}}</script>
+<script type="application/json" id="g-m1-dinos-data">{"prompt": "<p>The dinosaurs died out 66 million years ago. On the cosmic calendar, how many hours before the end of the year did that happen?</p>", "check": {"answer": 42, "tol": 0.05, "unit": "hours", "label": "Hours before midnight on December 31"}, "steps": [{"title": "Find the fraction of cosmic history", "body": "<p><code>66 million ÷ 13.8 billion = 6.6 × 10⁷ ÷ 1.38 × 10¹⁰ ≈ 0.0048</code></p><p>The extinction happened 0.48% of the way back from the present.</p>"}, {"title": "Convert that fraction of a year to days", "body": "<p><code>0.0048 × 365 days ≈ 1.75 days</code></p>"}, {"title": "Convert days to hours", "body": "<p><code>1.75 days × 24 hours/day ≈ 42 hours</code></p>"}, {"title": "Place it on the calendar", "body": "<p>42 hours before midnight on December 31 is about 6 a.m. on December 30.</p>"}], "final": "<p>About 42 hours before the end of the year: early morning on December 30.</p>", "title": "The dinosaurs on the cosmic calendar", "concept": {"q": "The whole history of the universe is squeezed into one calendar year. When did the dinosaurs die out?", "choices": ["Late on December 30, only about a day before the end", "In the last second before midnight", "In early January", "In the middle of the year"], "answer": 0, "explain": "Sixty-six million years is a tiny fraction of 13.8 billion years, so it lands on the calendar’s last couple of days. All of recorded history fits in the final seconds."}}</script>
+<script type="application/json" id="g-m1-sunsize-data">{"prompt": "<p>The Sun is 1.39 × 10⁶ km in diameter and 1.5 × 10⁸ km away. Use the small-angle formula to find its angular size in degrees.</p>", "check": {"answer": 0.531, "tol": 0.05, "unit": "degrees", "label": "Angular size of the Sun"}, "steps": [{"title": "Write the formula", "body": "<p><code>angular size (°) ≈ 57.3 × (diameter ÷ distance)</code></p><p>Both lengths must be in the same unit; here both are in km.</p>"}, {"title": "Divide diameter by distance", "body": "<p><code>1.39 × 10⁶ ÷ 1.5 × 10⁸ = 0.93 × 10⁻² = 0.0093</code></p>"}, {"title": "Multiply by 57.3", "body": "<p><code>57.3 × 0.0093 ≈ 0.53°</code></p>"}, {"title": "Compare with the Moon", "body": "<p>The Moon came out to about 0.52° in the worked example. That near-match is why the Moon can just cover the Sun in a total solar eclipse.</p>"}], "final": "<p>About 0.53°, almost exactly the Moon’s angular size.</p>", "title": "How big does the Sun look?", "concept": {"q": "The Sun is about 400 times wider than the Moon but also about 400 times farther away. How big do they look in our sky?", "choices": ["The Sun looks twice as big", "About the same size", "The Moon looks 400 times bigger", "The Sun looks 400 times bigger"], "answer": 1, "explain": "Being 400 times bigger and 400 times farther cancel out. That coincidence is why the Moon can just cover the Sun in a total solar eclipse."}}</script>
+<script type="application/json" id="g-m1-noon-data">{"prompt": "<p>How high above the horizon is the Sun at noon in Lincroft (latitude 40.3° N) on the December solstice?</p>", "check": {"answer": 26.3, "tol": 0.03, "unit": "degrees", "label": "Noon altitude"}, "steps": [{"title": "Find the Sun’s declination", "body": "<p>At the December solstice the Sun is as far south of the celestial equator as the axis tilt allows: declination −23.4°.</p>"}, {"title": "Write the noon-altitude rule", "body": "<p><code>noon altitude = 90° − |latitude − declination|</code></p>"}, {"title": "Substitute", "body": "<p><code>90° − |40.3° − (−23.4°)| = 90° − 63.7°</code></p>"}, {"title": "Finish and check", "body": "<p><code>= 26.3°</code>. Check it in Simulation 1.4 by clicking “Dec solstice”; the readout should agree.</p>"}], "final": "<p>About 26° above the southern horizon, less than three fists at arm’s length.</p>", "title": "The winter noon Sun in New Jersey", "concept": {"q": "How does the Sun’s noon height in New Jersey in December compare with June?", "choices": ["It is much lower in December", "It is directly overhead in December", "It is the same all year", "It is much higher in December"], "answer": 0, "explain": "In December the Northern Hemisphere tilts away from the Sun, so the noon Sun is low (about 26°) and days are short. In June it reaches about 73°."}}</script>
+<script type="application/json" id="g-m1-waning-data">{"prompt": "<p>The Moon is waning gibbous, about halfway between full moon and third quarter. About what time does it rise, and where is it in the sky at sunrise (6 a.m.)?</p>", "steps": [{"title": "Recall the anchor phases", "body": "<p>A full moon rises around 6 p.m.; a third-quarter moon rises around midnight.</p>"}, {"title": "Interpolate", "body": "<p>Halfway between full and third quarter means halfway between those rise times: about 9 p.m.</p>"}, {"title": "Find when it is highest", "body": "<p>The Moon is highest about 6 hours after it rises: around 3 a.m., due south.</p>"}, {"title": "Place it at sunrise", "body": "<p>At 6 a.m. it is 3 hours past its highest point, so it is partway down in the southwest. It sets about 9 a.m.</p>"}], "final": "<p>It rises around 9 p.m. and is in the southwest at sunrise. Check it in Simulation 1.5 at about 18 days.</p>", "title": "When does a waning gibbous Moon rise?", "concept": {"q": "A waning gibbous Moon is a little past full. When is it most easily seen in the sky?", "choices": ["Late evening through the morning after sunrise", "Only in the afternoon", "Only right at sunset", "All day and all night equally"], "answer": 0, "explain": "A full moon rises at sunset; each day after, the Moon rises about 50 minutes later. A waning gibbous Moon rises in mid to late evening and is still up in the west after sunrise."}}</script>
 <script type="application/json" id="label-m1-sky-data">{
  "targets": [
   "Zenith",

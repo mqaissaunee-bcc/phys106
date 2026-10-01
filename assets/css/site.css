@@ -1126,3 +1126,12 @@ a.week-card:hover { border-color: var(--accent); }
   .fs-table td, .fs-table th { padding: 2pt 4pt; }
   .formula-sheet section { break-inside: avoid; }
 }
+
+/* Math emphasis: concept-first guided problems */
+.emphasis-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: .75rem 0 0; padding: .5rem .8rem; border: 1px solid var(--rule); border-radius: .5rem; background: var(--surface-2); font-size: .95rem; }
+.emphasis-bar p { margin: 0; flex: 1 1 18rem; }
+.concept-q { border: 1px solid var(--rule); border-radius: .5rem; padding: .6rem .9rem; margin: 0 0 .5rem; }
+.concept-q legend { font-weight: 700; padding: 0 .25rem; }
+.concept-choice { display: flex; align-items: center; gap: .4rem; min-height: 40px; cursor: pointer; }
+.do-the-math { margin-top: .75rem; border-top: 1px dashed var(--rule); padding-top: .5rem; }
+.do-the-math > summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }

@@ -537,31 +537,7 @@
  ],
  "explain": "Density decreases outward: from metal to rock to air, and the air itself thins with height."
 }</script>
-<script type="application/json" id="g-m5-sav-data">{
- "prompt": "<p>For a sphere, surface area ÷ volume = 3 ÷ radius. Earth’s radius is 6,371 km and the Moon’s is 1,737 km. How many times more surface area per unit of volume does the Moon have?<\/p>",
- "check": {
-  "answer": 3.67,
-  "tol": 0.03,
-  "unit": "times",
-  "label": "Ratio"
- },
- "steps": [
-  {
-   "title": "Write the ratio for each world",
-   "body": "<p>Earth: <code>3 ÷ 6,371<\/code>. Moon: <code>3 ÷ 1,737<\/code>.<\/p>"
-  },
-  {
-   "title": "Divide Moon by Earth",
-   "body": "<p><code>(3 ÷ 1,737) ÷ (3 ÷ 6,371) = 6,371 ÷ 1,737 ≈ 3.67<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>Each unit of the Moon’s interior has 3.7 times as much surface through which to lose its heat, so it cooled several times faster. Its volcanism ended billions of years ago.<\/p>"
-  }
- ],
- "final": "<p>About 3.7 times more surface per unit volume.<\/p>",
- "title": "Why the Moon cooled faster"
-}</script>
+<script type="application/json" id="g-m5-sav-data">{"prompt": "<p>For a sphere, surface area ÷ volume = 3 ÷ radius. Earth’s radius is 6,371 km and the Moon’s is 1,737 km. How many times more surface area per unit of volume does the Moon have?</p>", "check": {"answer": 3.67, "tol": 0.03, "unit": "times", "label": "Ratio"}, "steps": [{"title": "Write the ratio for each world", "body": "<p>Earth: <code>3 ÷ 6,371</code>. Moon: <code>3 ÷ 1,737</code>.</p>"}, {"title": "Divide Moon by Earth", "body": "<p><code>(3 ÷ 1,737) ÷ (3 ÷ 6,371) = 6,371 ÷ 1,737 ≈ 3.67</code></p>"}, {"title": "Interpret", "body": "<p>Each unit of the Moon’s interior has 3.7 times as much surface through which to lose its heat, so it cooled several times faster. Its volcanism ended billions of years ago.</p>"}], "final": "<p>About 3.7 times more surface per unit volume.</p>", "title": "Why the Moon cooled faster", "concept": {"q": "Why did the small Moon cool off much faster than the large Earth?", "choices": ["The Moon is farther from the Sun", "Small worlds have more surface area compared with their volume, so heat escapes faster", "The Moon has no atmosphere to trap heat inside", "The Moon is made of colder rock"], "answer": 1, "explain": "Heat is stored in a world’s volume but escapes through its surface. Like a small potato cooling faster than a big one, the Moon lost its internal heat early."}}</script>
 <script type="application/json" id="tf-m5-active-data">{
  "labels": [
   "Active today",
@@ -611,85 +587,9 @@
  "observe": "<p>In the greenhouse simulation below, choose Venus and press “No greenhouse gases.” Then choose Earth and do the same. Compare the no-greenhouse temperatures.<\/p>",
  "explain": "<p>Venus’s thick, bright clouds reflect about 77% of sunlight back to space, far more than Earth’s 30%. Without a greenhouse effect it would be about −47 °C, colder than Earth’s −19 °C, despite being closer to the Sun. Its 465 °C surface is due entirely to its enormous carbon-dioxide atmosphere.<\/p>"
 }</script>
-<script type="application/json" id="g-m5-teq-data">{
- "prompt": "<p>A planet’s no-greenhouse temperature is T = 278 K × (reflection factor) ÷ √d, with d in AU. The reflection factor accounts for sunlight bounced back to space; for Earth, which reflects 30% of sunlight, it is 0.915. Find Earth’s no-greenhouse temperature.<\/p>",
- "check": {
-  "answer": 254,
-  "tol": 0.02,
-  "unit": "K",
-  "label": "No-greenhouse temperature"
- },
- "steps": [
-  {
-   "title": "Substitute the values",
-   "body": "<p><code>T = 278 K × 0.915 ÷ √1<\/code><\/p>"
-  },
-  {
-   "title": "Simplify",
-   "body": "<p>√1 = 1, so <code>T = 278 × 0.915 ≈ 254 K<\/code><\/p>"
-  },
-  {
-   "title": "Convert to Celsius and compare",
-   "body": "<p><code>254 − 273 = −19 °C<\/code>. Earth’s actual average is about 15 °C, so the natural greenhouse effect adds about 34 °C.<\/p>"
-  }
- ],
- "final": "<p>About 254 K (−19 °C).<\/p>",
- "title": "Earth without a greenhouse effect"
-}</script>
-<script type="application/json" id="g-m5-hspeed-data">{
- "prompt": "<p>The average speed of a gas particle is v = √(3kT ÷ m). For a hydrogen atom, m = 1.67 × 10⁻²⁷ kg; k = 1.38 × 10⁻²³. Find v in km/s at 1,000 K, the temperature of Earth’s upper atmosphere. Will Earth keep hydrogen? (Earth’s escape speed: 11.2 km/s)<\/p>",
- "check": {
-  "answer": 5.0,
-  "tol": 0.04,
-  "unit": "km/s",
-  "label": "Average speed"
- },
- "steps": [
-  {
-   "title": "Multiply the top",
-   "body": "<p><code>3 × 1.38 × 10⁻²³ × 1,000 = 4.14 × 10⁻²⁰<\/code><\/p>"
-  },
-  {
-   "title": "Divide by the mass",
-   "body": "<p><code>4.14 × 10⁻²⁰ ÷ 1.67 × 10⁻²⁷ ≈ 2.48 × 10⁷<\/code><\/p>"
-  },
-  {
-   "title": "Take the square root",
-   "body": "<p><code>√(2.48 × 10⁷) ≈ 4,980 m/s ≈ 5.0 km/s<\/code><\/p>"
-  },
-  {
-   "title": "Compare with the safe limit",
-   "body": "<p>One-sixth of 11.2 km/s is 1.9 km/s. Hydrogen’s average of 5.0 km/s is far above that, so Earth leaks hydrogen to space. That is why free hydrogen is so rare in our air.<\/p>"
-  }
- ],
- "final": "<p>About 5 km/s: too fast for Earth to hold onto hydrogen.<\/p>",
- "title": "How fast is a hydrogen atom?"
-}</script>
-<script type="application/json" id="g-m5-co2-data">{
- "prompt": "<p>Before the industrial era, Earth’s air held about 280 parts per million (ppm) of carbon dioxide. Today it holds more than 420 ppm. By what percentage has CO₂ increased?<\/p>",
- "check": {
-  "answer": 50,
-  "tol": 0.03,
-  "unit": "%",
-  "label": "Increase"
- },
- "steps": [
-  {
-   "title": "Find the change",
-   "body": "<p><code>420 − 280 = 140 ppm<\/code><\/p>"
-  },
-  {
-   "title": "Divide by the starting value",
-   "body": "<p><code>140 ÷ 280 = 0.50<\/code><\/p>"
-  },
-  {
-   "title": "Convert to a percentage",
-   "body": "<p><code>0.50 × 100 = 50%<\/code>. Humans have added half again as much CO₂ as the air held naturally, mostly since 1950.<\/p>"
-  }
- ],
- "final": "<p>About a 50% increase.<\/p>",
- "title": "How much has CO₂ increased?"
-}</script>
+<script type="application/json" id="g-m5-teq-data">{"prompt": "<p>A planet’s no-greenhouse temperature is T = 278 K × (reflection factor) ÷ √d, with d in AU. The reflection factor accounts for sunlight bounced back to space; for Earth, which reflects 30% of sunlight, it is 0.915. Find Earth’s no-greenhouse temperature.</p>", "check": {"answer": 254, "tol": 0.02, "unit": "K", "label": "No-greenhouse temperature"}, "steps": [{"title": "Substitute the values", "body": "<p><code>T = 278 K × 0.915 ÷ √1</code></p>"}, {"title": "Simplify", "body": "<p>√1 = 1, so <code>T = 278 × 0.915 ≈ 254 K</code></p>"}, {"title": "Convert to Celsius and compare", "body": "<p><code>254 − 273 = −19 °C</code>. Earth’s actual average is about 15 °C, so the natural greenhouse effect adds about 34 °C.</p>"}], "final": "<p>About 254 K (−19 °C).</p>", "title": "Earth without a greenhouse effect", "concept": {"q": "Without any greenhouse gases, what would Earth’s average temperature be?", "choices": ["Exactly 0 °C", "Much hotter, like Venus", "About the same as today", "Below freezing, so the oceans would freeze"], "answer": 3, "explain": "Without its natural greenhouse effect Earth would average about −19 °C. Greenhouse gases warm it to about 15 °C."}}</script>
+<script type="application/json" id="g-m5-hspeed-data">{"prompt": "<p>The average speed of a gas particle is v = √(3kT ÷ m). For a hydrogen atom, m = 1.67 × 10⁻²⁷ kg; k = 1.38 × 10⁻²³. Find v in km/s at 1,000 K, the temperature of Earth’s upper atmosphere. Will Earth keep hydrogen? (Earth’s escape speed: 11.2 km/s)</p>", "check": {"answer": 5.0, "tol": 0.04, "unit": "km/s", "label": "Average speed"}, "steps": [{"title": "Multiply the top", "body": "<p><code>3 × 1.38 × 10⁻²³ × 1,000 = 4.14 × 10⁻²⁰</code></p>"}, {"title": "Divide by the mass", "body": "<p><code>4.14 × 10⁻²⁰ ÷ 1.67 × 10⁻²⁷ ≈ 2.48 × 10⁷</code></p>"}, {"title": "Take the square root", "body": "<p><code>√(2.48 × 10⁷) ≈ 4,980 m/s ≈ 5.0 km/s</code></p>"}, {"title": "Compare with the safe limit", "body": "<p>One-sixth of 11.2 km/s is 1.9 km/s. Hydrogen’s average of 5.0 km/s is far above that, so Earth leaks hydrogen to space. That is why free hydrogen is so rare in our air.</p>"}], "final": "<p>About 5 km/s: too fast for Earth to hold onto hydrogen.</p>", "title": "How fast is a hydrogen atom?", "concept": {"q": "Why has Earth lost nearly all of its hydrogen gas but kept its nitrogen?", "choices": ["Earth never had any hydrogen", "Hydrogen reacts with sunlight to form nitrogen", "Nitrogen is heavier, so it sinks into the ground", "Light hydrogen molecules move fast enough to escape; heavier nitrogen moves too slowly"], "answer": 3, "explain": "At the same temperature, lighter molecules move faster. Some hydrogen molecules exceed Earth’s escape speed and leak away over time."}}</script>
+<script type="application/json" id="g-m5-co2-data">{"prompt": "<p>Before the industrial era, Earth’s air held about 280 parts per million (ppm) of carbon dioxide. Today it holds more than 420 ppm. By what percentage has CO₂ increased?</p>", "check": {"answer": 50, "tol": 0.03, "unit": "%", "label": "Increase"}, "steps": [{"title": "Find the change", "body": "<p><code>420 − 280 = 140 ppm</code></p>"}, {"title": "Divide by the starting value", "body": "<p><code>140 ÷ 280 = 0.50</code></p>"}, {"title": "Convert to a percentage", "body": "<p><code>0.50 × 100 = 50%</code>. Humans have added half again as much CO₂ as the air held naturally, mostly since 1950.</p>"}], "final": "<p>About a 50% increase.</p>", "title": "How much has CO₂ increased?", "concept": {"q": "Carbon dioxide in Earth’s air has risen from 280 to more than 420 parts per million since the 1800s. What is the expected effect?", "choices": ["A stronger greenhouse effect and a warmer climate", "A weaker greenhouse effect and a cooler climate", "No effect, because CO₂ is only a trace gas", "A thicker ozone layer"], "answer": 0, "explain": "CO₂ absorbs infrared light, so adding it strengthens the greenhouse effect. The increase is about 50%."}}</script>
 <script type="application/json" id="tf-m5-myths-data">[
  {
   "s": "Venus is the hottest planet because it is closest to the Sun.",
@@ -754,50 +654,8 @@
  ],
  "explain": "Jupiter has no solid surface or rocky crust: the gas simply gets denser with depth until it becomes liquid and then metallic."
 }</script>
-<script type="application/json" id="g-m5-res-data">{
- "prompt": "<p>Io orbits Jupiter every 1.77 days and Ganymede every 7.15 days. How many orbits does Io complete during one orbit of Ganymede?<\/p>",
- "check": {
-  "answer": 4,
-  "tol": 0.02,
-  "unit": "orbits",
-  "label": "Io orbits"
- },
- "steps": [
-  {
-   "title": "Divide the periods",
-   "body": "<p><code>7.15 days ÷ 1.77 days ≈ 4.04<\/code><\/p>"
-  },
-  {
-   "title": "Round and interpret",
-   "body": "<p>Io completes 4 orbits per Ganymede orbit. Europa (3.55 days) completes 2. The simple 1 : 2 : 4 pattern is the resonance.<\/p>"
-  }
- ],
- "final": "<p>4 orbits.<\/p>",
- "title": "Counting orbits in the resonance"
-}</script>
-<script type="application/json" id="g-m5-io-data">{
- "prompt": "<p>Io is only about the size of our Moon, which cooled billions of years ago. Explain, step by step, why Io is volcanically active today.<\/p>",
- "steps": [
-  {
-   "title": "Size alone predicts a dead world",
-   "body": "<p>A Moon-sized world should have lost its internal heat of formation long ago (Section 5.2).<\/p>"
-  },
-  {
-   "title": "Find another heat source",
-   "body": "<p>Io orbits very close to massive Jupiter, which raises strong tidal bulges in it.<\/p>"
-  },
-  {
-   "title": "Why the tides keep changing",
-   "body": "<p>The orbital resonance with Europa and Ganymede keeps Io’s orbit slightly elliptical, so its distance from Jupiter, and the size of its tidal bulge, changes constantly.<\/p>"
-  },
-  {
-   "title": "Flexing makes heat",
-   "body": "<p>The constant flexing creates friction inside Io, heating it enough to melt rock and power its volcanoes.<\/p>"
-  }
- ],
- "final": "<p>Tidal heating, maintained by orbital resonance, not leftover formation heat.<\/p>",
- "title": "Why does little Io have volcanoes?"
-}</script>
+<script type="application/json" id="g-m5-res-data">{"prompt": "<p>Io orbits Jupiter every 1.77 days and Ganymede every 7.15 days. How many orbits does Io complete during one orbit of Ganymede?</p>", "check": {"answer": 4, "tol": 0.02, "unit": "orbits", "label": "Io orbits"}, "steps": [{"title": "Divide the periods", "body": "<p><code>7.15 days ÷ 1.77 days ≈ 4.04</code></p>"}, {"title": "Round and interpret", "body": "<p>Io completes 4 orbits per Ganymede orbit. Europa (3.55 days) completes 2. The simple 1 : 2 : 4 pattern is the resonance.</p>"}], "final": "<p>4 orbits.</p>", "title": "Counting orbits in the resonance", "concept": {"q": "Io, Europa, and Ganymede orbit Jupiter in a 1 : 2 : 4 pattern. What does that repeating pattern do?", "choices": ["It makes the moons collide", "It has no effect", "It keeps the moons perfectly still", "It gives the moons regular tugs that keep their orbits slightly stretched"], "answer": 3, "explain": "Because the moons line up again and again, their small gravitational tugs add up, keeping Io’s orbit elongated so Jupiter’s tides keep flexing it."}}</script>
+<script type="application/json" id="g-m5-io-data">{"prompt": "<p>Io is only about the size of our Moon, which cooled billions of years ago. Explain, step by step, why Io is volcanically active today.</p>", "steps": [{"title": "Size alone predicts a dead world", "body": "<p>A Moon-sized world should have lost its internal heat of formation long ago (Section 5.2).</p>"}, {"title": "Find another heat source", "body": "<p>Io orbits very close to massive Jupiter, which raises strong tidal bulges in it.</p>"}, {"title": "Why the tides keep changing", "body": "<p>The orbital resonance with Europa and Ganymede keeps Io’s orbit slightly elliptical, so its distance from Jupiter, and the size of its tidal bulge, changes constantly.</p>"}, {"title": "Flexing makes heat", "body": "<p>The constant flexing creates friction inside Io, heating it enough to melt rock and power its volcanoes.</p>"}], "final": "<p>Tidal heating, maintained by orbital resonance, not leftover formation heat.</p>", "title": "Why does little Io have volcanoes?", "concept": {"q": "Io is only the size of our Moon, which is geologically dead. Why is Io covered in active volcanoes?", "choices": ["Jupiter’s changing tides flex and heat Io’s interior", "Io is much younger than the Moon", "Io has a thick greenhouse atmosphere", "Io is closer to the Sun"], "answer": 0, "explain": "Tidal heating, kept going by the orbital resonance, supplies heat that a small world would otherwise have lost long ago."}}</script>
 <script type="application/json" id="est-m5-europa-data">{
  "title": "Europa’s ocean vs. Earth’s",
  "q": "Europa’s subsurface ocean may be about 100 km deep. How does its volume compare with all of Earth’s oceans combined (1.33 × 10⁹ km³)?",

@@ -69,3 +69,57 @@
 .ready-fb.bad { color: var(--bad, #b42318); }
 .ready-result { margin-top: 1rem; }
 .ready-score { font-weight: 700; font-size: 1.1rem; }
+
+/* ---------- calculator views ---------- */
+.calc-views { display: flex; gap: .35rem; margin: 0 0 .4rem; }
+.calc-view { flex: 1; min-height: 40px; border-radius: .5rem; border: 1px solid var(--rule, #ccd); background: var(--surface, #fff); color: var(--ink, #111); font: inherit; font-size: .85rem; cursor: pointer; }
+.calc-view[aria-pressed="true"] { background: var(--accent, #2b5cd8); color: var(--accent-ink, #fff); border-color: transparent; }
+.calc-viewbox { border: 1px solid var(--rule, #ccd); border-radius: .5rem; padding: .4rem .5rem; margin: 0 0 .5rem; background: var(--bg, #fff); }
+.calc-viewbox[hidden] { display: none; }
+.calc-catrow { display: flex; align-items: center; gap: .3rem; font-size: .85rem; margin-bottom: .2rem; }
+.calc-cat { min-height: 36px; font: inherit; font-size: .85rem; border: 1px solid var(--rule, #ccd); border-radius: .4rem; background: var(--surface, #fff); color: var(--ink, #111); }
+.calc-magtext { font-size: .85rem; margin: .2rem 0; }
+.calc-explore { font-size: .8rem; }
+
+/* ---------- magnitude line ---------- */
+.mag-svg { width: 100%; height: auto; display: block; }
+.mag-axis { stroke: var(--ink, #111); stroke-width: 1.5; }
+.mag-tick { stroke: var(--muted, #555); stroke-width: 1; }
+.mag-lab { fill: var(--muted, #555); font-size: 10px; }
+.mag-dot { fill: var(--muted, #555); }
+.mag-dot.sel { fill: var(--accent, #2b5cd8); }
+.mag-mark { fill: var(--accent, #2b5cd8); }
+.mag-guess { stroke: var(--bad, #b42318); stroke-width: 3; stroke-dasharray: 4 3; }
+.mag-lead { stroke: var(--rule, #ccd); stroke-width: 1; }
+.mag-name { fill: var(--ink, #111); font-size: 11px; }
+.mag-name.sel { fill: var(--accent, #2b5cd8); font-weight: 700; }
+
+/* ---------- how many zeros ---------- */
+.zeros-row { display: flex; flex-wrap: wrap; gap: 2px; margin: .2rem 0; }
+.zc { display: inline-flex; flex-direction: column; align-items: center; min-width: 1.15rem; }
+.zd { display: block; width: 100%; text-align: center; font-family: var(--mono, ui-monospace, monospace); font-size: 1rem; font-weight: 700; padding: .1rem 0; border-radius: .25rem; border: 1px solid var(--rule, #ccd); }
+.zc.lead .zd { background: var(--accent, #2b5cd8); color: var(--accent-ink, #fff); border-color: transparent; }
+.zc.mant .zd { background: var(--surface-2, #eef); }
+.zc.point .zd { border-color: transparent; color: var(--bad, #b42318); min-width: .5rem; }
+.zp { font-size: .65rem; color: var(--muted, #555); min-height: .9em; }
+.zeros-cap { font-size: .85rem; margin: .2rem 0 0; }
+
+/* ---------- Orders of Magnitude Explorer ---------- */
+.mx-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+.mx-tab { min-height: 44px; padding: .3rem .9rem; border-radius: 999px; border: 1px solid var(--rule, #ccd); background: var(--surface-2, #eef); color: var(--ink, #111); font: inherit; cursor: pointer; }
+.mx-tab[aria-pressed="true"] { background: var(--accent, #2b5cd8); color: var(--accent-ink, #fff); border-color: transparent; }
+.mx-line { overflow-x: auto; border: 1px solid var(--rule, #ccd); border-radius: .5rem; background: var(--surface, #fff); padding: .25rem; }
+.mx-line .mag-svg { min-width: 720px; }
+.mx-detail { font-weight: 600; min-height: 1.4em; }
+.mx-items { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+.mx-item { min-height: 40px; padding: .25rem .7rem; border-radius: .5rem; border: 1px solid var(--rule, #ccd); background: var(--surface, #fff); color: var(--ink, #111); font: inherit; font-size: .9rem; cursor: pointer; }
+.mx-cmp { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.mx-cmp select { min-height: 40px; font: inherit; border: 1px solid var(--rule, #ccd); border-radius: .4rem; background: var(--surface, #fff); color: var(--ink, #111); max-width: 100%; }
+.mx-grow { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.mx-grow input[type=range] { flex: 1; min-width: 12rem; }
+.mx-gval { font-weight: 700; min-width: 5rem; }
+.mx-gfb.good { color: var(--good, #1a7f37); } .mx-gfb.bad { color: var(--bad, #b42318); }
+
+.wide-block { max-width: 72rem; margin: 0 auto; padding: 0 1rem 2rem; }
+.mx-line .mag-name { font-size: 13px; }
+.mx-line .mag-lab { font-size: 12px; }

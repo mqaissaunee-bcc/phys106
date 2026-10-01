@@ -584,64 +584,8 @@
  ],
  "explain": "The four jovian planets are all bigger than any terrestrial planet; even the smallest, Neptune, is almost four times Earth’s diameter."
 }</script>
-<script type="application/json" id="g-m4-saturn-data">{
- "prompt": "<p>Saturn has a mass of 5.68 × 10²⁶ kg and a radius of 58,200 km. What is its average density in g/cm³? (Water is 1 g/cm³ = 1,000 kg/m³.)<\/p>",
- "check": {
-  "answer": 0.69,
-  "tol": 0.05,
-  "unit": "g/cm³",
-  "label": "Density"
- },
- "steps": [
-  {
-   "title": "Find the volume of a sphere",
-   "body": "<p><code>V = (4/3)πr³<\/code> with r = 5.82 × 10⁷ m.<\/p>"
-  },
-  {
-   "title": "Cube the radius",
-   "body": "<p><code>(5.82 × 10⁷)³ = 1.97 × 10²³ m³<\/code>, so <code>V = 4.19 × 1.97 × 10²³ ≈ 8.26 × 10²³ m³<\/code><\/p>"
-  },
-  {
-   "title": "Divide mass by volume",
-   "body": "<p><code>5.68 × 10²⁶ kg ÷ 8.26 × 10²³ m³ ≈ 688 kg/m³<\/code><\/p>"
-  },
-  {
-   "title": "Convert to g/cm³",
-   "body": "<p>Divide by 1,000: about <code>0.69 g/cm³<\/code>, less than water. Given a large enough ocean, Saturn would float.<\/p>"
-  }
- ],
- "final": "<p>About 0.69 g/cm³, the lowest density of any planet.<\/p>",
- "title": "Would Saturn float?"
-}</script>
-<script type="application/json" id="g-m4-neptune-data">{
- "prompt": "<p>Neptune orbits the Sun at an average distance of 30.1 AU. Use Kepler’s third law (Module 2) to find the length of its year.<\/p>",
- "check": {
-  "answer": 165,
-  "tol": 0.03,
-  "unit": "years",
-  "label": "Orbital period"
- },
- "steps": [
-  {
-   "title": "Write the law",
-   "body": "<p><code>p² = a³<\/code>, with p in years and a in AU.<\/p>"
-  },
-  {
-   "title": "Cube the distance",
-   "body": "<p><code>30.1³ ≈ 27,270<\/code><\/p>"
-  },
-  {
-   "title": "Take the square root",
-   "body": "<p><code>√27,270 ≈ 165 years<\/code><\/p>"
-  },
-  {
-   "title": "Put it in perspective",
-   "body": "<p>Neptune was discovered in 1846 and completed its first full orbit since then only in 2011.<\/p>"
-  }
- ],
- "final": "<p>About 165 Earth years.<\/p>",
- "title": "How long is a year on Neptune?"
-}</script>
+<script type="application/json" id="g-m4-saturn-data">{"prompt": "<p>Saturn has a mass of 5.68 × 10²⁶ kg and a radius of 58,200 km. What is its average density in g/cm³? (Water is 1 g/cm³ = 1,000 kg/m³.)</p>", "check": {"answer": 0.69, "tol": 0.05, "unit": "g/cm³", "label": "Density"}, "steps": [{"title": "Find the volume of a sphere", "body": "<p><code>V = (4/3)πr³</code> with r = 5.82 × 10⁷ m.</p>"}, {"title": "Cube the radius", "body": "<p><code>(5.82 × 10⁷)³ = 1.97 × 10²³ m³</code>, so <code>V = 4.19 × 1.97 × 10²³ ≈ 8.26 × 10²³ m³</code></p>"}, {"title": "Divide mass by volume", "body": "<p><code>5.68 × 10²⁶ kg ÷ 8.26 × 10²³ m³ ≈ 688 kg/m³</code></p>"}, {"title": "Convert to g/cm³", "body": "<p>Divide by 1,000: about <code>0.69 g/cm³</code>, less than water. Given a large enough ocean, Saturn would float.</p>"}], "final": "<p>About 0.69 g/cm³, the lowest density of any planet.</p>", "title": "Would Saturn float?", "concept": {"q": "Saturn is huge but made mostly of hydrogen and helium. How does its density compare with water?", "choices": ["It is exactly as dense as water", "It is denser than Earth", "It is denser than rock", "It is less dense than water"], "answer": 3, "explain": "Density is mass divided by volume. Saturn’s light gases give it the lowest density of any planet, about 0.7 g/cm³, so in a large enough bathtub it would float."}}</script>
+<script type="application/json" id="g-m4-neptune-data">{"prompt": "<p>Neptune orbits the Sun at an average distance of 30.1 AU. Use Kepler’s third law (Module 2) to find the length of its year.</p>", "check": {"answer": 165, "tol": 0.03, "unit": "years", "label": "Orbital period"}, "steps": [{"title": "Write the law", "body": "<p><code>p² = a³</code>, with p in years and a in AU.</p>"}, {"title": "Cube the distance", "body": "<p><code>30.1³ ≈ 27,270</code></p>"}, {"title": "Take the square root", "body": "<p><code>√27,270 ≈ 165 years</code></p>"}, {"title": "Put it in perspective", "body": "<p>Neptune was discovered in 1846 and completed its first full orbit since then only in 2011.</p>"}], "final": "<p>About 165 Earth years.</p>", "title": "How long is a year on Neptune?", "concept": {"q": "Neptune is the farthest planet from the Sun. What do you expect about its year?", "choices": ["It is the shortest", "It changes randomly", "It is the same as Earth’s", "It is the longest of any planet"], "answer": 3, "explain": "Farther planets travel longer paths at slower speeds. Neptune takes about 165 Earth years to orbit once."}}</script>
 <script type="application/json" id="est-m4-jupiter-data">{
  "title": "Earths inside Jupiter",
  "q": "If Jupiter were a hollow shell, about how many Earths could fit inside it (ignoring gaps between them)?",
@@ -712,31 +656,7 @@
   "explain": "This difference reflects where each formed, inside or beyond the frost line."
  }
 ]</script>
-<script type="application/json" id="g-m4-signal-data">{
- "prompt": "<p>Neptune is about 30 AU from the Sun. When Earth and Neptune are on the same side of the Sun, they are about 29 AU apart. Light takes 499 seconds to travel 1 AU. How many hours does a radio command take to reach a spacecraft at Neptune?<\/p>",
- "check": {
-  "answer": 4.0,
-  "tol": 0.05,
-  "unit": "hours",
-  "label": "One-way signal time"
- },
- "steps": [
-  {
-   "title": "Find the travel time in seconds",
-   "body": "<p><code>29 AU × 499 s/AU ≈ 14,500 s<\/code><\/p>"
-  },
-  {
-   "title": "Convert to hours",
-   "body": "<p><code>14,500 s ÷ 3,600 s/h ≈ 4.0 hours<\/code><\/p>"
-  },
-  {
-   "title": "Think about what that means",
-   "body": "<p>A question and its answer take about 8 hours round trip. Outer solar system spacecraft must run on pre-loaded instructions; no one can steer them in real time.<\/p>"
-  }
- ],
- "final": "<p>About 4 hours each way.<\/p>",
- "title": "Talking to a spacecraft at Neptune"
-}</script>
+<script type="application/json" id="g-m4-signal-data">{"prompt": "<p>Neptune is about 30 AU from the Sun. When Earth and Neptune are on the same side of the Sun, they are about 29 AU apart. Light takes 499 seconds to travel 1 AU. How many hours does a radio command take to reach a spacecraft at Neptune?</p>", "check": {"answer": 4.0, "tol": 0.05, "unit": "hours", "label": "One-way signal time"}, "steps": [{"title": "Find the travel time in seconds", "body": "<p><code>29 AU × 499 s/AU ≈ 14,500 s</code></p>"}, {"title": "Convert to hours", "body": "<p><code>14,500 s ÷ 3,600 s/h ≈ 4.0 hours</code></p>"}, {"title": "Think about what that means", "body": "<p>A question and its answer take about 8 hours round trip. Outer solar system spacecraft must run on pre-loaded instructions; no one can steer them in real time.</p>"}], "final": "<p>About 4 hours each way.</p>", "title": "Talking to a spacecraft at Neptune", "concept": {"q": "Why can’t engineers steer a spacecraft at Neptune in real time with a joystick?", "choices": ["Radio signals take hours to get there and back", "Radio signals cannot travel through space", "The spacecraft moves too slowly", "Neptune blocks all radio signals"], "answer": 0, "explain": "Even at light speed, a signal takes about 4 hours to reach Neptune. Spacecraft must follow pre-loaded instructions."}}</script>
 <script type="application/json" id="poe-m4-spin-data">{
  "question": "A slowly rotating cloud of gas shrinks to one-tenth of its original size. What happens to its rotation?",
  "options": [
@@ -749,56 +669,8 @@
  "observe": "<p>In the collapsing-cloud simulation below, drag the size slider from 100% to 10% and read the spin rate.<\/p>",
  "explain": "<p>Angular momentum is conserved, and for a shrinking cloud the spin rate grows as one over the size squared: one-tenth the size means 10² = 100 times faster. That is why young stars spin rapidly and why their disks rotate quickly.<\/p>"
 }</script>
-<script type="application/json" id="g-m4-spinup-data">{
- "prompt": "<p>A cloud of gas rotates once every million years. It collapses to 1/100 of its original radius. Assuming its angular momentum stays the same, how many years does one rotation take afterward?<\/p>",
- "check": {
-  "answer": 100,
-  "tol": 0.03,
-  "unit": "years",
-  "label": "New rotation period"
- },
- "steps": [
-  {
-   "title": "The rule for a shrinking cloud",
-   "body": "<p>Spin rate grows as 1 ÷ (size)². Rotation period shrinks as (size)².<\/p>"
-  },
-  {
-   "title": "Square the size ratio",
-   "body": "<p><code>(1/100)² = 1/10,000<\/code><\/p>"
-  },
-  {
-   "title": "Apply it to the period",
-   "body": "<p><code>1,000,000 years × 1/10,000 = 100 years<\/code><\/p>"
-  }
- ],
- "final": "<p>About 100 years per rotation, 10,000 times faster than before. Further collapse into the Sun would speed it up far more; the young Sun later lost most of that spin to its disk and wind.<\/p>",
- "title": "How fast does the cloud spin?"
-}</script>
-<script type="application/json" id="g-m4-jupiterT-data">{
- "prompt": "<p>In a simple model of the solar nebula, the temperature was about T = 300 K ÷ √d, with d in AU. Estimate the temperature at Jupiter’s distance, 5.2 AU. Could water ice form there (it freezes below about 150 K in the nebula)?<\/p>",
- "check": {
-  "answer": 132,
-  "tol": 0.04,
-  "unit": "K",
-  "label": "Temperature"
- },
- "steps": [
-  {
-   "title": "Take the square root",
-   "body": "<p><code>√5.2 ≈ 2.28<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>300 K ÷ 2.28 ≈ 132 K<\/code><\/p>"
-  },
-  {
-   "title": "Compare with 150 K",
-   "body": "<p>132 K is colder than 150 K, so ice could freeze. Jupiter formed beyond the frost line, which is why it could grow a big core quickly.<\/p>"
-  }
- ],
- "final": "<p>About 130 K, cold enough for ice.<\/p>",
- "title": "Was Jupiter beyond the frost line?"
-}</script>
+<script type="application/json" id="g-m4-spinup-data">{"prompt": "<p>A cloud of gas rotates once every million years. It collapses to 1/100 of its original radius. Assuming its angular momentum stays the same, how many years does one rotation take afterward?</p>", "check": {"answer": 100, "tol": 0.03, "unit": "years", "label": "New rotation period"}, "steps": [{"title": "The rule for a shrinking cloud", "body": "<p>Spin rate grows as 1 ÷ (size)². Rotation period shrinks as (size)².</p>"}, {"title": "Square the size ratio", "body": "<p><code>(1/100)² = 1/10,000</code></p>"}, {"title": "Apply it to the period", "body": "<p><code>1,000,000 years × 1/10,000 = 100 years</code></p>"}], "final": "<p>About 100 years per rotation, 10,000 times faster than before. Further collapse into the Sun would speed it up far more; the young Sun later lost most of that spin to its disk and wind.</p>", "title": "How fast does the cloud spin?", "concept": {"q": "A slowly spinning cloud of gas shrinks to a much smaller size. What happens to its spin?", "choices": ["It stops spinning", "It spins much faster", "It spins more slowly", "Its spin stays the same"], "answer": 1, "explain": "Conservation of angular momentum: like a skater pulling in her arms, a shrinking cloud spins faster, which also flattens it into a disk."}}</script>
+<script type="application/json" id="g-m4-jupiterT-data">{"prompt": "<p>In a simple model of the solar nebula, the temperature was about T = 300 K ÷ √d, with d in AU. Estimate the temperature at Jupiter’s distance, 5.2 AU. Could water ice form there (it freezes below about 150 K in the nebula)?</p>", "check": {"answer": 132, "tol": 0.04, "unit": "K", "label": "Temperature"}, "steps": [{"title": "Take the square root", "body": "<p><code>√5.2 ≈ 2.28</code></p>"}, {"title": "Divide", "body": "<p><code>300 K ÷ 2.28 ≈ 132 K</code></p>"}, {"title": "Compare with 150 K", "body": "<p>132 K is colder than 150 K, so ice could freeze. Jupiter formed beyond the frost line, which is why it could grow a big core quickly.</p>"}], "final": "<p>About 130 K, cold enough for ice.</p>", "title": "Was Jupiter beyond the frost line?", "concept": {"q": "Why could ice freeze where Jupiter formed but not where Earth formed?", "choices": ["Jupiter’s gravity froze the gas", "Earth formed later, after the ice melted", "The young solar nebula was colder farther from the Sun", "There was no water near Earth"], "answer": 2, "explain": "Beyond the frost line, between Mars and Jupiter, it was cold enough for water, methane, and ammonia to freeze, giving the outer planets extra solid material."}}</script>
 <script type="application/json" id="order-m4-steps-data">{
  "items": [
   "An interstellar cloud of gas and dust begins to collapse",
@@ -824,31 +696,7 @@
  ],
  "model": "<p>The solar system formed from a disk of gas and dust that was hot near the young Sun and cold farther out. Close to the Sun, only metal and rock could condense into solid grains, and they made up less than 1% of the material, so the planets that grew there stayed small and rocky. Beyond the frost line, between Mars and Jupiter, it was cold enough for water, methane, and ammonia to freeze into ice, which provided much more solid material. Cores there grew to many Earth masses, big enough for their gravity to pull in hydrogen and helium gas, and they swelled into the giant jovian planets.<\/p>"
 }</script>
-<script type="application/json" id="g-m4-age-data">{
- "prompt": "<p>A volcanic rock contains potassium-40 and argon-40 in a ratio of 1 potassium atom for every 7 argon atoms (all the argon came from decay). The half-life of potassium-40 is 1.25 billion years. How old is the rock?<\/p>",
- "check": {
-  "answer": 3.75,
-  "tol": 0.02,
-  "unit": "billion years",
-  "label": "Age"
- },
- "steps": [
-  {
-   "title": "Find the fraction of parent left",
-   "body": "<p>1 parent for every 7 daughters means 1 out of 8 original atoms remains: 1/8.<\/p>"
-  },
-  {
-   "title": "Count the half-lives",
-   "body": "<p>1 → 1/2 → 1/4 → 1/8: that is 3 half-lives.<\/p>"
-  },
-  {
-   "title": "Multiply",
-   "body": "<p><code>3 × 1.25 billion years = 3.75 billion years<\/code><\/p>"
-  }
- ],
- "final": "<p>About 3.75 billion years old.<\/p>",
- "title": "Date a rock"
-}</script>
+<script type="application/json" id="g-m4-age-data">{"prompt": "<p>A volcanic rock contains potassium-40 and argon-40 in a ratio of 1 potassium atom for every 7 argon atoms (all the argon came from decay). The half-life of potassium-40 is 1.25 billion years. How old is the rock?</p>", "check": {"answer": 3.75, "tol": 0.02, "unit": "billion years", "label": "Age"}, "steps": [{"title": "Find the fraction of parent left", "body": "<p>1 parent for every 7 daughters means 1 out of 8 original atoms remains: 1/8.</p>"}, {"title": "Count the half-lives", "body": "<p>1 → 1/2 → 1/4 → 1/8: that is 3 half-lives.</p>"}, {"title": "Multiply", "body": "<p><code>3 × 1.25 billion years = 3.75 billion years</code></p>"}], "final": "<p>About 3.75 billion years old.</p>", "title": "Date a rock", "concept": {"q": "A rock has much more argon (the decay product) than potassium-40 (the parent). What can you conclude?", "choices": ["The rock is very young", "The rock contains no radioactive atoms", "The rock was formed from argon", "The rock is old: many half-lives have passed"], "answer": 3, "explain": "The parent decays into the daughter at a steady rate. The more daughter atoms compared with parent atoms, the more half-lives have passed."}}</script>
 <script type="application/json" id="quiz-module-04-data">[
  {
   "q": "Which of these is farthest from the Sun?",

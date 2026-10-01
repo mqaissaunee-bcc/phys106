@@ -569,31 +569,7 @@
  ],
  "explain": "Each rung is calibrated by the rung below it, so an error in a lower rung carries up the whole ladder."
 }</script>
-<script type="application/json" id="g-m12-ceph-data">{
- "prompt": "<p>A Cepheid in the Milky Way, 1,000 light-years away, has the same period as a Cepheid in a distant galaxy. The distant one appears 10,000 times dimmer. How far away is the galaxy, in light-years?<\/p>",
- "check": {
-  "answer": 100000,
-  "tol": 0.02,
-  "unit": "light-years",
-  "label": "Distance"
- },
- "steps": [
-  {
-   "title": "Same period, same luminosity",
-   "body": "<p>By Leavitt’s law, the two Cepheids have the same luminosity.<\/p>"
-  },
-  {
-   "title": "Use the inverse-square law",
-   "body": "<p>10,000 times dimmer means √10,000 = 100 times farther.<\/p>"
-  },
-  {
-   "title": "Multiply",
-   "body": "<p><code>100 × 1,000 ly = 100,000 ly<\/code><\/p>"
-  }
- ],
- "final": "<p>100,000 light-years, about the distance to the Large Magellanic Cloud’s neighborhood.<\/p>",
- "title": "Distance from a Cepheid"
-}</script>
+<script type="application/json" id="g-m12-ceph-data">{"prompt": "<p>A Cepheid in the Milky Way, 1,000 light-years away, has the same period as a Cepheid in a distant galaxy. The distant one appears 10,000 times dimmer. How far away is the galaxy, in light-years?</p>", "check": {"answer": 100000, "tol": 0.02, "unit": "light-years", "label": "Distance"}, "steps": [{"title": "Same period, same luminosity", "body": "<p>By Leavitt’s law, the two Cepheids have the same luminosity.</p>"}, {"title": "Use the inverse-square law", "body": "<p>10,000 times dimmer means √10,000 = 100 times farther.</p>"}, {"title": "Multiply", "body": "<p><code>100 × 1,000 ly = 100,000 ly</code></p>"}], "final": "<p>100,000 light-years, about the distance to the Large Magellanic Cloud’s neighborhood.</p>", "title": "Distance from a Cepheid", "concept": {"q": "A Cepheid with the same pulsation period as a nearby one looks much dimmer. What does that tell you?", "choices": ["It is younger", "It is less luminous", "It is much farther away", "It is closer"], "answer": 2, "explain": "Cepheids with the same period have the same luminosity (Leavitt’s law), so the dimmer one must be farther away."}}</script>
 <script type="application/json" id="poe-m12-center-data">{
  "question": "From the Milky Way, farther galaxies recede faster. What would an astronomer in a distant galaxy see?",
  "options": [
@@ -606,77 +582,9 @@
  "observe": "<p>In the expanding-universe model below, expand the space, then change the home galaxy and expand again.<\/p>",
  "explain": "<p>Uniform stretching makes every distance grow by the same factor, so every observer sees the same Hubble’s law. That is why expansion doesn’t imply that we, or anyone, are at the center.<\/p>"
 }</script>
-<script type="application/json" id="g-m12-dist-data">{
- "prompt": "<p>A galaxy recedes at 7,000 km/s. With H₀ = 70 km/s/Mpc, how far away is it, in megaparsecs?<\/p>",
- "check": {
-  "answer": 100,
-  "tol": 0.02,
-  "unit": "Mpc",
-  "label": "Distance"
- },
- "steps": [
-  {
-   "title": "Rearrange Hubble’s law",
-   "body": "<p><code>distance = velocity ÷ H₀<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>7,000 ÷ 70 = 100 Mpc<\/code><\/p>"
-  },
-  {
-   "title": "Convert",
-   "body": "<p><code>100 × 3.26 = 326 million light-years<\/code><\/p>"
-  }
- ],
- "final": "<p>100 Mpc, about 326 million light-years.<\/p>",
- "title": "Distance from Hubble’s law"
-}</script>
-<script type="application/json" id="g-m12-z-data">{
- "prompt": "<p>A galaxy’s spectral lines are shifted by z = 0.05 (5% longer wavelengths). For small redshifts, velocity ≈ z × c. How far away is it, with H₀ = 70 km/s/Mpc?<\/p>",
- "check": {
-  "answer": 214,
-  "tol": 0.03,
-  "unit": "Mpc",
-  "label": "Distance"
- },
- "steps": [
-  {
-   "title": "Find the velocity",
-   "body": "<p><code>0.05 × 300,000 km/s = 15,000 km/s<\/code><\/p>"
-  },
-  {
-   "title": "Apply Hubble’s law",
-   "body": "<p><code>15,000 ÷ 70 ≈ 214 Mpc<\/code>, about 700 million light-years.<\/p>"
-  }
- ],
- "final": "<p>About 214 Mpc.<\/p>",
- "title": "From redshift to distance"
-}</script>
-<script type="application/json" id="g-m12-age-data">{
- "prompt": "<p>Estimate the age of the universe as 1/H₀ with H₀ = 70 km/s/Mpc. (1 Mpc = 3.086 × 10¹⁹ km; 1 year = 3.16 × 10⁷ s.) Give your answer in billions of years.<\/p>",
- "check": {
-  "answer": 14.0,
-  "tol": 0.03,
-  "unit": "billion years",
-  "label": "Age"
- },
- "steps": [
-  {
-   "title": "Convert H₀ to \"per second\"",
-   "body": "<p><code>70 km/s ÷ 3.086 × 10¹⁹ km = 2.27 × 10⁻¹⁸ per second<\/code><\/p>"
-  },
-  {
-   "title": "Invert",
-   "body": "<p><code>1 ÷ 2.27 × 10⁻¹⁸ ≈ 4.4 × 10¹⁷ s<\/code><\/p>"
-  },
-  {
-   "title": "Convert to years",
-   "body": "<p><code>4.4 × 10¹⁷ ÷ 3.16 × 10⁷ ≈ 1.4 × 10¹⁰ years<\/code>, about 14 billion years.<\/p>"
-  }
- ],
- "final": "<p>About 14 billion years, close to the 13.8 billion from detailed models.<\/p>",
- "title": "The age of the universe from H₀"
-}</script>
+<script type="application/json" id="g-m12-dist-data">{"prompt": "<p>A galaxy recedes at 7,000 km/s. With H₀ = 70 km/s/Mpc, how far away is it, in megaparsecs?</p>", "check": {"answer": 100, "tol": 0.02, "unit": "Mpc", "label": "Distance"}, "steps": [{"title": "Rearrange Hubble’s law", "body": "<p><code>distance = velocity ÷ H₀</code></p>"}, {"title": "Divide", "body": "<p><code>7,000 ÷ 70 = 100 Mpc</code></p>"}, {"title": "Convert", "body": "<p><code>100 × 3.26 = 326 million light-years</code></p>"}], "final": "<p>100 Mpc, about 326 million light-years.</p>", "title": "Distance from Hubble’s law", "concept": {"q": "Galaxy A recedes twice as fast as galaxy B. According to Hubble’s law, how do their distances compare?", "choices": ["They are the same distance", "Speed says nothing about distance", "Galaxy A is half as far away", "Galaxy A is about twice as far away"], "answer": 3, "explain": "Hubble’s law: recession speed is proportional to distance, so twice the speed means about twice the distance."}}</script>
+<script type="application/json" id="g-m12-z-data">{"prompt": "<p>A galaxy’s spectral lines are shifted by z = 0.05 (5% longer wavelengths). For small redshifts, velocity ≈ z × c. How far away is it, with H₀ = 70 km/s/Mpc?</p>", "check": {"answer": 214, "tol": 0.03, "unit": "Mpc", "label": "Distance"}, "steps": [{"title": "Find the velocity", "body": "<p><code>0.05 × 300,000 km/s = 15,000 km/s</code></p>"}, {"title": "Apply Hubble’s law", "body": "<p><code>15,000 ÷ 70 ≈ 214 Mpc</code>, about 700 million light-years.</p>"}], "final": "<p>About 214 Mpc.</p>", "title": "From redshift to distance", "concept": {"q": "A galaxy has a larger redshift than another. What does that indicate?", "choices": ["It is hotter", "It is moving away faster and is farther away", "It is moving toward us", "It is closer"], "answer": 1, "explain": "A larger redshift means a faster recession, and by Hubble’s law a greater distance."}}</script>
+<script type="application/json" id="g-m12-age-data">{"prompt": "<p>Estimate the age of the universe as 1/H₀ with H₀ = 70 km/s/Mpc. (1 Mpc = 3.086 × 10¹⁹ km; 1 year = 3.16 × 10⁷ s.) Give your answer in billions of years.</p>", "check": {"answer": 14.0, "tol": 0.03, "unit": "billion years", "label": "Age"}, "steps": [{"title": "Convert H₀ to \"per second\"", "body": "<p><code>70 km/s ÷ 3.086 × 10¹⁹ km = 2.27 × 10⁻¹⁸ per second</code></p>"}, {"title": "Invert", "body": "<p><code>1 ÷ 2.27 × 10⁻¹⁸ ≈ 4.4 × 10¹⁷ s</code></p>"}, {"title": "Convert to years", "body": "<p><code>4.4 × 10¹⁷ ÷ 3.16 × 10⁷ ≈ 1.4 × 10¹⁰ years</code>, about 14 billion years.</p>"}], "final": "<p>About 14 billion years, close to the 13.8 billion from detailed models.</p>", "title": "The age of the universe from H₀", "concept": {"q": "If the universe had been expanding faster than astronomers think (a larger Hubble constant), how would its estimated age change?", "choices": ["It would be the same", "It would be older", "It would have no age", "It would be younger"], "answer": 3, "explain": "If galaxies are rushing apart faster, they reached their current distances in less time, so the universe would be younger."}}</script>
 <script type="application/json" id="exp-m12-hubble-data">{
  "title": "Hubble’s law",
  "prompt": "A friend hears that almost every galaxy is moving away from us and concludes that the Milky Way must be at the center of the universe. Explain why that isn’t so.",
@@ -722,56 +630,8 @@
   "explain": "Stars and galaxies are a small fraction; hot gas and especially dark matter dominate."
  }
 ]</script>
-<script type="application/json" id="g-m12-size-data">{
- "prompt": "<p>A quasar’s brightness doubles in 1 day. Light travels 2.6 × 10¹⁰ km in a day. Its light must come from a region no larger than that. How many AU is that? (1 AU = 1.5 × 10⁸ km)<\/p>",
- "check": {
-  "answer": 173,
-  "tol": 0.03,
-  "unit": "AU",
-  "label": "Maximum size"
- },
- "steps": [
-  {
-   "title": "Why a light-day?",
-   "body": "<p>A region can’t coordinate a change in brightness faster than light can cross it.<\/p>"
-  },
-  {
-   "title": "Convert",
-   "body": "<p><code>2.6 × 10¹⁰ ÷ 1.5 × 10⁸ ≈ 173 AU<\/code><\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>About 4 times the distance to Pluto: the power of a thousand galaxies from a region the size of a solar system.<\/p>"
-  }
- ],
- "final": "<p>At most about 170 AU across.<\/p>",
- "title": "How big is a quasar’s engine?"
-}</script>
-<script type="application/json" id="g-m12-feed-data">{
- "prompt": "<p>A quasar emits 10⁴⁰ watts. If accretion converts 10% of infalling mass to energy (E = 0.1 × mc²), how many kilograms per second must it swallow? Then convert to solar masses per year (1 year = 3.16 × 10⁷ s; 1 solar mass = 2 × 10³⁰ kg).<\/p>",
- "check": {
-  "answer": 17.6,
-  "tol": 0.05,
-  "unit": "solar masses per year",
-  "label": "Accretion rate"
- },
- "steps": [
-  {
-   "title": "Mass per second",
-   "body": "<p><code>m = L ÷ (0.1 c²) = 10⁴⁰ ÷ (0.1 × 9 × 10¹⁶) ≈ 1.1 × 10²⁴ kg/s<\/code><\/p>"
-  },
-  {
-   "title": "Per year",
-   "body": "<p><code>1.1 × 10²⁴ × 3.16 × 10⁷ ≈ 3.5 × 10³¹ kg/yr<\/code><\/p>"
-  },
-  {
-   "title": "In solar masses",
-   "body": "<p><code>3.5 × 10³¹ ÷ 2 × 10³⁰ ≈ 18 solar masses per year<\/code><\/p>"
-  }
- ],
- "final": "<p>About 18 Suns’ worth of gas every year.<\/p>",
- "title": "How much does a quasar eat?"
-}</script>
+<script type="application/json" id="g-m12-size-data">{"prompt": "<p>A quasar’s brightness doubles in 1 day. Light travels 2.6 × 10¹⁰ km in a day. Its light must come from a region no larger than that. How many AU is that? (1 AU = 1.5 × 10⁸ km)</p>", "check": {"answer": 173, "tol": 0.03, "unit": "AU", "label": "Maximum size"}, "steps": [{"title": "Why a light-day?", "body": "<p>A region can’t coordinate a change in brightness faster than light can cross it.</p>"}, {"title": "Convert", "body": "<p><code>2.6 × 10¹⁰ ÷ 1.5 × 10⁸ ≈ 173 AU</code></p>"}, {"title": "Compare", "body": "<p>About 4 times the distance to Pluto: the power of a thousand galaxies from a region the size of a solar system.</p>"}], "final": "<p>At most about 170 AU across.</p>", "title": "How big is a quasar’s engine?", "concept": {"q": "A quasar’s brightness changes noticeably within a single day. What does that tell us about its energy source?", "choices": ["It is small, no larger than the distance light travels in a day", "It is larger than a galaxy", "It is made of many separate stars", "It is very close to Earth"], "answer": 0, "explain": "A region can’t coordinate a change in brightness faster than light can cross it, so the engine must be about the size of a solar system."}}</script>
+<script type="application/json" id="g-m12-feed-data">{"prompt": "<p>A quasar emits 10⁴⁰ watts. If accretion converts 10% of infalling mass to energy (E = 0.1 × mc²), how many kilograms per second must it swallow? Then convert to solar masses per year (1 year = 3.16 × 10⁷ s; 1 solar mass = 2 × 10³⁰ kg).</p>", "check": {"answer": 17.6, "tol": 0.05, "unit": "solar masses per year", "label": "Accretion rate"}, "steps": [{"title": "Mass per second", "body": "<p><code>m = L ÷ (0.1 c²) = 10⁴⁰ ÷ (0.1 × 9 × 10¹⁶) ≈ 1.1 × 10²⁴ kg/s</code></p>"}, {"title": "Per year", "body": "<p><code>1.1 × 10²⁴ × 3.16 × 10⁷ ≈ 3.5 × 10³¹ kg/yr</code></p>"}, {"title": "In solar masses", "body": "<p><code>3.5 × 10³¹ ÷ 2 × 10³⁰ ≈ 18 solar masses per year</code></p>"}], "final": "<p>About 18 Suns’ worth of gas every year.</p>", "title": "How much does a quasar eat?", "concept": {"q": "What keeps a quasar shining so brightly?", "choices": ["Gas falling into a supermassive black hole", "Fusion in giant stars", "Reflected light from its galaxy", "Collisions between planets"], "answer": 0, "explain": "Gas spiraling in heats up and releases energy very efficiently; a bright quasar consumes several Suns’ worth of gas each year."}}</script>
 <script type="application/json" id="quiz-module-12-data">[
  {
   "q": "How did Edwin Hubble show in 1924 that Andromeda is a separate galaxy?",

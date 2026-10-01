@@ -38,6 +38,14 @@ A portable pair of files (reads its storage prefix from `<html data-store-prefix
 
 `formula-sheet.html` collects every formula and constant used in the course and prints on about two pages.
 
+## Math emphasis (Concepts or Calculations)
+
+Instructors choose the emphasis with a link. Post `.../phys106/?emphasis=concepts` (or add `?emphasis=concepts` to any page link) in Canvas, and each student's browser remembers it. In Concepts mode, each of the 80 guided problems opens with a reasoning question (multiple choice, with explanation), and the full calculation moves into an "Optional: do the math" panel. `?emphasis=calculations` restores the default. Students can switch with the bar under each module's summary line; the setting is included in My work backups. Concept questions live in `build/concepts.py` and are added to pages by `build/inject_concepts.py`. Run `build/build_all.sh` after any rebuild so they are not lost.
+
+## Orders of magnitude
+
+The calculator's **Magnitude line** view places any answer on a power-of-ten scale with landmarks for length, time, mass, or plain numbers. The **How many zeros** view writes the number out digit by digit and counts the places the decimal point moves. `orders-of-magnitude.html` is the full Explorer: landmark browsing, a two-object comparison, and a "Place it" estimation game.
+
 ## Publish with GitHub Desktop
 
 1. Create a new repository in GitHub Desktop and copy these files into it (keep `.nojekyll`).

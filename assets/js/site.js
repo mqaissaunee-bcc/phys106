@@ -50,6 +50,11 @@
 
   /* ---------- theme + text size ---------- */
   var prefs = load(PREFS_KEY, {});
+  (function () { // math emphasis: set by an instructor link (?emphasis=concepts or ?emphasis=calculations)
+    var q = null; try { q = new URLSearchParams(location.search).get('emphasis'); } catch (e) { q = null; }
+    if (q) { q = q.toLowerCase(); if (q === 'concepts' || q === 'concept') prefs.emphasis = 'concepts'; else if (q === 'calculations' || q === 'quantitative' || q === 'math') prefs.emphasis = 'quantitative'; save(PREFS_KEY, prefs); }
+  })();
+  function emphasis() { return prefs.emphasis === 'concepts' ? 'concepts' : 'quantitative'; }
   var THEMES = ['auto', 'light', 'dark', 'night'];
   var THEME_LABELS = { auto: 'Theme: auto', light: 'Theme: light', dark: 'Theme: dark', night: 'Theme: night (red)' };
   var themeBtn = document.getElementById('theme-btn');
@@ -742,6 +747,48 @@
   });
 
   /* ---------- label the diagram ---------- */
+  /* ---------- math emphasis: concept question first, calculation optional ---------- */
+  (function () {
+    var mode = emphasis(), meta = document.querySelector('.meta-row');
+    if (meta && document.querySelector('.guided[data-source]')) {
+      var bar = mk('div', 'emphasis-bar'); bar.setAttribute('role', 'note');
+      var txt = mk('p', null, mode === 'concepts' ? 'Math emphasis: Concepts. Each guided problem starts with a reasoning question; the full calculation is optional.' : 'Math emphasis: Concepts and calculations. Guided problems show the full calculation.');
+      var sw = btn(mode === 'concepts' ? 'Show calculations first' : 'Switch to concepts first');
+      sw.addEventListener('click', function () {
+        prefs.emphasis = mode === 'concepts' ? 'quantitative' : 'concepts'; save(PREFS_KEY, prefs);
+        try { if (location.search.indexOf('emphasis=') >= 0) history.replaceState(null, '', location.pathname + location.hash); } catch (e) { /* ignore */ }
+        location.reload();
+      });
+      bar.appendChild(txt); bar.appendChild(sw); meta.insertAdjacentElement('afterend', bar);
+    }
+    if (mode !== 'concepts') return;
+    Array.prototype.slice.call(document.querySelectorAll('.guided[data-source]')).forEach(function (root) {
+      var cfg = readCfg(root); if (!cfg || !cfg.concept) return;
+      var id = root.id, st = getWork(id), cst = getWork(id + '-concept'), c = cfg.concept;
+      var kids = Array.prototype.slice.call(root.childNodes);
+      var fs = mk('fieldset', 'concept-q'); var lg = mk('legend', null, c.q); fs.appendChild(lg);
+      c.choices.forEach(function (ch, i) {
+        var lab = mk('label', 'concept-choice'), r = mk('input'); r.type = 'radio'; r.name = id + '-concept'; r.value = String(i); if (cst.pick === i) r.checked = true;
+        lab.appendChild(r); lab.appendChild(document.createTextNode(' ' + ch)); fs.appendChild(lab);
+      });
+      var fb = mk('p', 'act-feedback'); fb.setAttribute('aria-live', 'polite');
+      var cb = btn('Check my reasoning', true);
+      function grade() {
+        var sel = fs.querySelector('input:checked'); if (!sel) { fb.textContent = 'Choose an answer first.'; fb.className = 'act-feedback'; return; }
+        var ok = +sel.value === c.answer; cst.pick = +sel.value; setWork(id + '-concept', cst);
+        fb.textContent = (ok ? '✓ Right. ' : '✗ Not quite: the answer is "' + c.choices[c.answer] + '." ') + c.explain;
+        fb.className = 'act-feedback ' + (ok ? 'good' : 'bad');
+      }
+      cb.addEventListener('click', grade);
+      var act = mk('div', 'act-actions'); act.appendChild(cb);
+      var det = mk('details', 'do-the-math'); var sum = mk('summary', null, 'Optional: do the math');
+      det.appendChild(sum); kids.forEach(function (k) { det.appendChild(k); });
+      if (st.work || st.ans || st.shown) det.open = true;
+      root.appendChild(fs); root.appendChild(act); root.appendChild(fb); root.appendChild(det);
+      if (cst.pick !== undefined) grade();
+    });
+  })();
+
   Array.prototype.slice.call(document.querySelectorAll('.label-activity[data-source]')).forEach(function (root) {
     var cfg = readCfg(root); if (!cfg) return;
     var id = root.id, st = getWork(id);

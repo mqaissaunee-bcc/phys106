@@ -537,118 +537,10 @@
  "observe": "<p>In the light-clock simulation below, set the speed to about 80% of light speed and run the clocks. Compare the tick counters.<\/p>",
  "explain": "<p>From your frame, the moving clock’s light follows a longer diagonal path at the same speed, so each tick takes longer. At 0.8c, γ = 1.67: the moving clock ticks 3 times for every 5 of yours.<\/p>"
 }</script>
-<script type="application/json" id="g-m7-gamma-data">{
- "prompt": "<p>Calculate γ for a spaceship moving at v = 0.8c.<\/p>",
- "check": {
-  "answer": 1.667,
-  "tol": 0.01,
-  "unit": "",
-  "label": "γ"
- },
- "steps": [
-  {
-   "title": "Square the speed ratio",
-   "body": "<p><code>(v/c)² = 0.8² = 0.64<\/code><\/p>"
-  },
-  {
-   "title": "Subtract from 1",
-   "body": "<p><code>1 − 0.64 = 0.36<\/code><\/p>"
-  },
-  {
-   "title": "Take the square root and invert",
-   "body": "<p><code>√0.36 = 0.6<\/code>, so <code>γ = 1 ÷ 0.6 ≈ 1.667<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>For every 1 hour on the ship’s clock, 1.67 hours pass on Earth, as measured from Earth.<\/p>"
-  }
- ],
- "final": "<p>γ ≈ 1.67.<\/p>",
- "title": "The Lorentz factor at 80% of light speed"
-}</script>
-<script type="application/json" id="g-m7-muon-data">{
- "prompt": "<p>A muon lives 2.2 microseconds (in its own frame) and moves at 0.998c, where γ ≈ 15.8. How far does it travel before decaying, as measured from the ground, in kilometers?<\/p>",
- "check": {
-  "answer": 10.4,
-  "tol": 0.04,
-  "unit": "km",
-  "label": "Distance"
- },
- "steps": [
-  {
-   "title": "Without relativity",
-   "body": "<p><code>0.998 × 3 × 10⁸ m/s × 2.2 × 10⁻⁶ s ≈ 659 m<\/code>: it would never reach the ground from 10 km up.<\/p>"
-  },
-  {
-   "title": "Stretch the lifetime",
-   "body": "<p>Seen from the ground its clock runs slow: <code>2.2 μs × 15.8 ≈ 34.8 μs<\/code><\/p>"
-  },
-  {
-   "title": "Recalculate the distance",
-   "body": "<p><code>0.998 × 3 × 10⁸ × 34.8 × 10⁻⁶ ≈ 10,400 m ≈ 10.4 km<\/code><\/p>"
-  },
-  {
-   "title": "The muon’s view",
-   "body": "<p>From the muon’s frame, its lifetime is normal but the atmosphere is contracted by 15.8 times, so the ground is only about 650 m away. Both views agree it arrives.<\/p>"
-  }
- ],
- "final": "<p>About 10.4 km, enough to reach the ground.<\/p>",
- "title": "How do muons reach the ground?"
-}</script>
-<script type="application/json" id="g-m7-emc2-data">{
- "prompt": "<p>How much energy is equivalent to 1 gram (0.001 kg) of mass? Give your answer in joules, in e-notation.<\/p>",
- "check": {
-  "answer": 90000000000000.0,
-  "tol": 0.03,
-  "unit": "J",
-  "label": "Energy"
- },
- "steps": [
-  {
-   "title": "Write the equation",
-   "body": "<p><code>E = mc²<\/code>, with m in kg and c = 3 × 10⁸ m/s.<\/p>"
-  },
-  {
-   "title": "Square c",
-   "body": "<p><code>c² = 9 × 10¹⁶ m²/s²<\/code><\/p>"
-  },
-  {
-   "title": "Multiply",
-   "body": "<p><code>0.001 × 9 × 10¹⁶ = 9 × 10¹³ J<\/code><\/p>"
-  },
-  {
-   "title": "Put it in context",
-   "body": "<p>That is about 21 kilotons of TNT, more than the atomic bomb dropped on Hiroshima, from a paper clip’s worth of mass.<\/p>"
-  }
- ],
- "final": "<p>9 × 10¹³ joules.<\/p>",
- "title": "The energy in one gram"
-}</script>
-<script type="application/json" id="g-m7-proxima-data">{
- "prompt": "<p>A ship travels to Proxima Centauri, 4.24 light-years away, at 0.9c (γ ≈ 2.29). How long does the one-way trip take according to the crew’s clocks?<\/p>",
- "check": {
-  "answer": 2.06,
-  "tol": 0.03,
-  "unit": "years",
-  "label": "Crew time"
- },
- "steps": [
-  {
-   "title": "Earth’s view of the trip",
-   "body": "<p><code>time = distance ÷ speed = 4.24 ly ÷ 0.9c ≈ 4.71 years<\/code><\/p>"
-  },
-  {
-   "title": "Apply time dilation",
-   "body": "<p>The crew’s clocks run slow by γ: <code>4.71 ÷ 2.29 ≈ 2.06 years<\/code><\/p>"
-  },
-  {
-   "title": "Check with length contraction",
-   "body": "<p>For the crew, the distance contracts to <code>4.24 ÷ 2.29 ≈ 1.85 ly<\/code>, and <code>1.85 ÷ 0.9 ≈ 2.06 years<\/code>. Same answer.<\/p>"
-  }
- ],
- "final": "<p>About 2.1 years for the crew, 4.7 years on Earth.<\/p>",
- "title": "A trip to Proxima Centauri"
-}</script>
+<script type="application/json" id="g-m7-gamma-data">{"prompt": "<p>Calculate γ for a spaceship moving at v = 0.8c.</p>", "check": {"answer": 1.667, "tol": 0.01, "unit": "", "label": "γ"}, "steps": [{"title": "Square the speed ratio", "body": "<p><code>(v/c)² = 0.8² = 0.64</code></p>"}, {"title": "Subtract from 1", "body": "<p><code>1 − 0.64 = 0.36</code></p>"}, {"title": "Take the square root and invert", "body": "<p><code>√0.36 = 0.6</code>, so <code>γ = 1 ÷ 0.6 ≈ 1.667</code></p>"}, {"title": "Interpret", "body": "<p>For every 1 hour on the ship’s clock, 1.67 hours pass on Earth, as measured from Earth.</p>"}], "final": "<p>γ ≈ 1.67.</p>", "title": "The Lorentz factor at 80% of light speed", "concept": {"q": "A spaceship flies past you at 80% of the speed of light. How does its clock look to you?", "choices": ["It ticks at the same rate", "It runs backward", "It ticks more slowly than yours", "It ticks faster than yours"], "answer": 2, "explain": "Time dilation: moving clocks run slow, as measured by an observer they move past. At 80% of light speed, the effect is noticeable, about 5 ticks of yours for every 3 of theirs."}}</script>
+<script type="application/json" id="g-m7-muon-data">{"prompt": "<p>A muon lives 2.2 microseconds (in its own frame) and moves at 0.998c, where γ ≈ 15.8. How far does it travel before decaying, as measured from the ground, in kilometers?</p>", "check": {"answer": 10.4, "tol": 0.04, "unit": "km", "label": "Distance"}, "steps": [{"title": "Without relativity", "body": "<p><code>0.998 × 3 × 10⁸ m/s × 2.2 × 10⁻⁶ s ≈ 659 m</code>: it would never reach the ground from 10 km up.</p>"}, {"title": "Stretch the lifetime", "body": "<p>Seen from the ground its clock runs slow: <code>2.2 μs × 15.8 ≈ 34.8 μs</code></p>"}, {"title": "Recalculate the distance", "body": "<p><code>0.998 × 3 × 10⁸ × 34.8 × 10⁻⁶ ≈ 10,400 m ≈ 10.4 km</code></p>"}, {"title": "The muon’s view", "body": "<p>From the muon’s frame, its lifetime is normal but the atmosphere is contracted by 15.8 times, so the ground is only about 650 m away. Both views agree it arrives.</p>"}], "final": "<p>About 10.4 km, enough to reach the ground.</p>", "title": "How do muons reach the ground?", "concept": {"q": "Muons made high in the atmosphere should decay before reaching the ground, yet many arrive. Why?", "choices": ["The atmosphere slows their decay chemically", "They travel faster than light", "They are made near the ground", "Moving so fast, their clocks run slow as seen from the ground"], "answer": 3, "explain": "Time dilation stretches their short lives enough for them to cover 10 km or more. From the muons’ point of view, the atmosphere is contracted instead."}}</script>
+<script type="application/json" id="g-m7-emc2-data">{"prompt": "<p>How much energy is equivalent to 1 gram (0.001 kg) of mass? Give your answer in joules, in e-notation.</p>", "check": {"answer": 90000000000000.0, "tol": 0.03, "unit": "J", "label": "Energy"}, "steps": [{"title": "Write the equation", "body": "<p><code>E = mc²</code>, with m in kg and c = 3 × 10⁸ m/s.</p>"}, {"title": "Square c", "body": "<p><code>c² = 9 × 10¹⁶ m²/s²</code></p>"}, {"title": "Multiply", "body": "<p><code>0.001 × 9 × 10¹⁶ = 9 × 10¹³ J</code></p>"}, {"title": "Put it in context", "body": "<p>That is about 21 kilotons of TNT, more than the atomic bomb dropped on Hiroshima, from a paper clip’s worth of mass.</p>"}], "final": "<p>9 × 10¹³ joules.</p>", "title": "The energy in one gram", "concept": {"q": "What does E = mc² say about a tiny amount of mass?", "choices": ["It is equivalent to an enormous amount of energy", "It can only be converted into light", "It has the same energy as a battery", "It contains no energy"], "answer": 0, "explain": "Because c² is so large, one gram of mass is equivalent to about the energy of an atomic bomb."}}</script>
+<script type="application/json" id="g-m7-proxima-data">{"prompt": "<p>A ship travels to Proxima Centauri, 4.24 light-years away, at 0.9c (γ ≈ 2.29). How long does the one-way trip take according to the crew’s clocks?</p>", "check": {"answer": 2.06, "tol": 0.03, "unit": "years", "label": "Crew time"}, "steps": [{"title": "Earth’s view of the trip", "body": "<p><code>time = distance ÷ speed = 4.24 ly ÷ 0.9c ≈ 4.71 years</code></p>"}, {"title": "Apply time dilation", "body": "<p>The crew’s clocks run slow by γ: <code>4.71 ÷ 2.29 ≈ 2.06 years</code></p>"}, {"title": "Check with length contraction", "body": "<p>For the crew, the distance contracts to <code>4.24 ÷ 2.29 ≈ 1.85 ly</code>, and <code>1.85 ÷ 0.9 ≈ 2.06 years</code>. Same answer.</p>"}], "final": "<p>About 2.1 years for the crew, 4.7 years on Earth.</p>", "title": "A trip to Proxima Centauri", "concept": {"q": "A crew travels to a star 4 light-years away at nearly light speed and immediately returns. Compared with people on Earth, the crew ages", "choices": ["less", "more", "exactly the same", "not at all"], "answer": 0, "explain": "The traveling crew changes direction at the star, so the situation isn’t symmetric. Their clocks record less time than Earth’s, which is the twin paradox."}}</script>
 <script type="application/json" id="exp-m7-gravity-data">{
  "title": "Einstein’s gravity",
  "prompt": "Explain to a friend how Einstein’s view of gravity differs from Newton’s, and give one piece of evidence that Einstein was right.",
@@ -675,31 +567,7 @@
  ],
  "explain": "More than a century of tests, and general relativity has passed them all."
 }</script>
-<script type="application/json" id="g-m7-gps-data">{
- "prompt": "<p>Uncorrected GPS clocks would gain 38 microseconds per day. Light travels 3 × 10⁸ m/s. How far off would a position be after one day, in kilometers?<\/p>",
- "check": {
-  "answer": 11.4,
-  "tol": 0.03,
-  "unit": "km",
-  "label": "Error"
- },
- "steps": [
-  {
-   "title": "Convert microseconds to seconds",
-   "body": "<p><code>38 μs = 38 × 10⁻⁶ s<\/code><\/p>"
-  },
-  {
-   "title": "Multiply by the speed of light",
-   "body": "<p><code>3 × 10⁸ m/s × 38 × 10⁻⁶ s = 11,400 m<\/code><\/p>"
-  },
-  {
-   "title": "Convert",
-   "body": "<p>11,400 m = 11.4 km, and it keeps growing every day.<\/p>"
-  }
- ],
- "final": "<p>About 11 km per day.<\/p>",
- "title": "How far off would GPS drift?"
-}</script>
+<script type="application/json" id="g-m7-gps-data">{"prompt": "<p>Uncorrected GPS clocks would gain 38 microseconds per day. Light travels 3 × 10⁸ m/s. How far off would a position be after one day, in kilometers?</p>", "check": {"answer": 11.4, "tol": 0.03, "unit": "km", "label": "Error"}, "steps": [{"title": "Convert microseconds to seconds", "body": "<p><code>38 μs = 38 × 10⁻⁶ s</code></p>"}, {"title": "Multiply by the speed of light", "body": "<p><code>3 × 10⁸ m/s × 38 × 10⁻⁶ s = 11,400 m</code></p>"}, {"title": "Convert", "body": "<p>11,400 m = 11.4 km, and it keeps growing every day.</p>"}], "final": "<p>About 11 km per day.</p>", "title": "How far off would GPS drift?", "concept": {"q": "If GPS satellites ignored relativity, what would happen?", "choices": ["The satellites would fall out of orbit", "Nothing noticeable would change", "GPS would become more accurate", "Position errors would build up by kilometers every day"], "answer": 3, "explain": "The satellites’ clocks run at a slightly different rate than clocks on the ground. Tiny time errors become large distance errors, because the signals travel at the speed of light."}}</script>
 <script type="application/json" id="tf-m7-which-data">{
  "labels": [
   "Special relativity",
@@ -738,31 +606,7 @@
   }
  ]
 }</script>
-<script type="application/json" id="g-m7-rs-data">{
- "prompt": "<p>Use R = 2GM ÷ c² to find the Schwarzschild radius of a black hole with the Sun’s mass (M = 2 × 10³⁰ kg; G = 6.67 × 10⁻¹¹; c = 3 × 10⁸ m/s). Give your answer in kilometers.<\/p>",
- "check": {
-  "answer": 2.96,
-  "tol": 0.03,
-  "unit": "km",
-  "label": "Radius"
- },
- "steps": [
-  {
-   "title": "Multiply the top",
-   "body": "<p><code>2 × 6.67 × 10⁻¹¹ × 2 × 10³⁰ = 2.67 × 10²⁰<\/code><\/p>"
-  },
-  {
-   "title": "Divide by c²",
-   "body": "<p><code>2.67 × 10²⁰ ÷ 9 × 10¹⁶ ≈ 2,960 m<\/code><\/p>"
-  },
-  {
-   "title": "Convert and compare",
-   "body": "<p>About 3 km. The Sun’s actual radius is 696,000 km, so it would have to be crushed 230,000 times smaller to become a black hole. It never will be (Module 10).<\/p>"
-  }
- ],
- "final": "<p>About 3 km.<\/p>",
- "title": "How big is a Sun-mass black hole?"
-}</script>
+<script type="application/json" id="g-m7-rs-data">{"prompt": "<p>Use R = 2GM ÷ c² to find the Schwarzschild radius of a black hole with the Sun’s mass (M = 2 × 10³⁰ kg; G = 6.67 × 10⁻¹¹; c = 3 × 10⁸ m/s). Give your answer in kilometers.</p>", "check": {"answer": 2.96, "tol": 0.03, "unit": "km", "label": "Radius"}, "steps": [{"title": "Multiply the top", "body": "<p><code>2 × 6.67 × 10⁻¹¹ × 2 × 10³⁰ = 2.67 × 10²⁰</code></p>"}, {"title": "Divide by c²", "body": "<p><code>2.67 × 10²⁰ ÷ 9 × 10¹⁶ ≈ 2,960 m</code></p>"}, {"title": "Convert and compare", "body": "<p>About 3 km. The Sun’s actual radius is 696,000 km, so it would have to be crushed 230,000 times smaller to become a black hole. It never will be (Module 10).</p>"}], "final": "<p>About 3 km.</p>", "title": "How big is a Sun-mass black hole?", "concept": {"q": "How big would the event horizon be if the Sun’s mass were squeezed into a black hole?", "choices": ["The size of the Sun today", "The size of Earth’s orbit", "Smaller than an atom", "About the size of a small town (3 km)"], "answer": 3, "explain": "The horizon radius is about 3 km for every solar mass. Ordinary stars are far larger than this, which is why they are not black holes."}}</script>
 <script type="application/json" id="label-m7-bh-data">{
  "targets": [
   "Singularity (center)",

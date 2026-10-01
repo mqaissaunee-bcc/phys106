@@ -481,31 +481,7 @@
   </div>
 </footer>
 
-<script type="application/json" id="g-m6-kirk-data">{
- "prompt": "<p>One of the largest Kirkwood gaps is where an asteroid would orbit exactly twice for each orbit of Jupiter (Jupiter’s period is 11.86 years). An asteroid at 3.28 AU from the Sun: what is its orbital period in years, and is it in that gap?<\/p>",
- "check": {
-  "answer": 5.94,
-  "tol": 0.02,
-  "unit": "years",
-  "label": "Period"
- },
- "steps": [
-  {
-   "title": "Use Kepler’s third law",
-   "body": "<p><code>p² = a³<\/code>, so first cube the distance: <code>3.28 × 3.28 × 3.28 ≈ 35.3<\/code><\/p>"
-  },
-  {
-   "title": "Take the square root",
-   "body": "<p><code>p = √35.3 ≈ 5.94 years<\/code><\/p>"
-  },
-  {
-   "title": "Compare with Jupiter",
-   "body": "<p>Half of Jupiter’s period is <code>11.86 ÷ 2 = 5.93 years<\/code>. The asteroid would orbit twice for each Jupiter orbit, so it sits right in the gap, and Jupiter’s repeated tugs would clear it out.<\/p>"
-  }
- ],
- "final": "<p>About 5.94 years: right in the 2-to-1 gap at 3.3 AU.<\/p>",
- "title": "Is this asteroid in the biggest Kirkwood gap?"
-}</script>
+<script type="application/json" id="g-m6-kirk-data">{"prompt": "<p>One of the largest Kirkwood gaps is where an asteroid would orbit exactly twice for each orbit of Jupiter (Jupiter’s period is 11.86 years). An asteroid at 3.28 AU from the Sun: what is its orbital period in years, and is it in that gap?</p>", "check": {"answer": 5.94, "tol": 0.02, "unit": "years", "label": "Period"}, "steps": [{"title": "Use Kepler’s third law", "body": "<p><code>p² = a³</code>, so first cube the distance: <code>3.28 × 3.28 × 3.28 ≈ 35.3</code></p>"}, {"title": "Take the square root", "body": "<p><code>p = √35.3 ≈ 5.94 years</code></p>"}, {"title": "Compare with Jupiter", "body": "<p>Half of Jupiter’s period is <code>11.86 ÷ 2 = 5.93 years</code>. The asteroid would orbit twice for each Jupiter orbit, so it sits right in the gap, and Jupiter’s repeated tugs would clear it out.</p>"}], "final": "<p>About 5.94 years: right in the 2-to-1 gap at 3.3 AU.</p>", "title": "Is this asteroid in the biggest Kirkwood gap?", "concept": {"q": "Why are there gaps in the asteroid belt at certain distances from the Sun?", "choices": ["Asteroids there would get repeated tugs from Jupiter that clear them out", "Those regions were always empty", "Asteroids there were destroyed by the Sun", "Mars pulls asteroids out of those regions"], "answer": 0, "explain": "An asteroid whose period is a simple fraction of Jupiter’s, such as one-half, meets Jupiter at the same point in orbit after orbit, and the repeated tugs push it out."}}</script>
 <script type="application/json" id="tf-m6-myths-data">[
  {
   "s": "A shooting star is a star falling out of the sky.",
@@ -557,35 +533,7 @@
  ],
  "explain": "Both tails point away from the Sun: the straight plasma tail pushed by the solar wind, the curved dust tail by sunlight."
 }</script>
-<script type="application/json" id="g-m6-energy-data">{
- "prompt": "<p>Estimate the kinetic energy of a 10-km-diameter asteroid (density 3,000 kg/m³) hitting Earth at 20 km/s. Give your answer in joules, in e-notation (for example, 3e23).<\/p>",
- "check": {
-  "answer": 3.1e+23,
-  "tol": 0.06,
-  "unit": "J",
-  "label": "Kinetic energy"
- },
- "steps": [
-  {
-   "title": "Find the volume",
-   "body": "<p>Radius 5,000 m: <code>V = (4/3)π(5,000)³ ≈ 5.24 × 10¹¹ m³<\/code><\/p>"
-  },
-  {
-   "title": "Find the mass",
-   "body": "<p><code>m = 3,000 × 5.24 × 10¹¹ ≈ 1.57 × 10¹⁵ kg<\/code><\/p>"
-  },
-  {
-   "title": "Apply ½mv²",
-   "body": "<p><code>0.5 × 1.57 × 10¹⁵ × (2 × 10⁴)² = 0.5 × 1.57 × 10¹⁵ × 4 × 10⁸ ≈ 3.1 × 10²³ J<\/code><\/p>"
-  },
-  {
-   "title": "Put it in context",
-   "body": "<p>One megaton of TNT is 4.2 × 10¹⁵ J, so this is about 75 million megatons, thousands of times more than all the world’s nuclear weapons combined.<\/p>"
-  }
- ],
- "final": "<p>About 3 × 10²³ joules.<\/p>",
- "title": "The energy of a dinosaur-killer"
-}</script>
+<script type="application/json" id="g-m6-energy-data">{"prompt": "<p>Estimate the kinetic energy of a 10-km-diameter asteroid (density 3,000 kg/m³) hitting Earth at 20 km/s. Give your answer in joules, in e-notation (for example, 3e23).</p>", "check": {"answer": 3.1e+23, "tol": 0.06, "unit": "J", "label": "Kinetic energy"}, "steps": [{"title": "Find the volume", "body": "<p>Radius 5,000 m: <code>V = (4/3)π(5,000)³ ≈ 5.24 × 10¹¹ m³</code></p>"}, {"title": "Find the mass", "body": "<p><code>m = 3,000 × 5.24 × 10¹¹ ≈ 1.57 × 10¹⁵ kg</code></p>"}, {"title": "Apply ½mv²", "body": "<p><code>0.5 × 1.57 × 10¹⁵ × (2 × 10⁴)² = 0.5 × 1.57 × 10¹⁵ × 4 × 10⁸ ≈ 3.1 × 10²³ J</code></p>"}, {"title": "Put it in context", "body": "<p>One megaton of TNT is 4.2 × 10¹⁵ J, so this is about 75 million megatons, thousands of times more than all the world’s nuclear weapons combined.</p>"}], "final": "<p>About 3 × 10²³ joules.</p>", "title": "The energy of a dinosaur-killer", "concept": {"q": "Which change would make an impact far more destructive: doubling the asteroid’s speed or doubling its size?", "choices": ["Neither would make a difference", "Doubling its speed (twice the mass)", "They would be equally destructive", "Doubling its size (8 times the mass)"], "answer": 3, "explain": "Doubling the size gives 8 times the mass (2 × 2 × 2) and so 8 times the energy. Doubling the speed gives 4 times the energy, because energy depends on speed times speed."}}</script>
 <script type="application/json" id="est-m6-count-data">{
  "title": "planets in the Milky Way",
  "q": "Roughly how many planets are there in our galaxy?",
@@ -610,60 +558,8 @@
  "reference": 300000000000.0,
  "explain": "<p>Surveys suggest nearly every star has planets, with more than one on average. With about 2 × 10¹¹ stars and 1–2 planets each, the Milky Way likely holds a few hundred billion planets, at least as many planets as stars.<\/p>"
 }</script>
-<script type="application/json" id="g-m6-51peg-data">{
- "prompt": "<p>51 Pegasi b orbits its Sun-like star at 0.052 AU. Using Kepler’s third law (for a Sun-mass star, p² = a³ with p in years and a in AU), how many days does one orbit take?<\/p>",
- "check": {
-  "answer": 4.33,
-  "tol": 0.03,
-  "unit": "days",
-  "label": "Orbital period"
- },
- "steps": [
-  {
-   "title": "Cube the distance",
-   "body": "<p><code>0.052 × 0.052 × 0.052 ≈ 0.000141<\/code> (1.41 × 10⁻⁴)<\/p>"
-  },
-  {
-   "title": "Take the square root",
-   "body": "<p><code>√0.000141 ≈ 0.0119 years<\/code><\/p>"
-  },
-  {
-   "title": "Convert years to days",
-   "body": "<p><code>0.0119 × 365 ≈ 4.3 days<\/code>. The measured period is 4.23 days.<\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>Mercury orbits at 0.39 AU in 88 days. This giant planet is about 8 times closer to its star than Mercury is to the Sun, so hot that it earned the name hot Jupiter.<\/p>"
-  }
- ],
- "final": "<p>About 4.3 days.<\/p>",
- "title": "How long is a year on 51 Pegasi b?"
-}</script>
-<script type="application/json" id="g-m6-wobble-data">{
- "prompt": "<p>For a Sun-like star, a planet causes a wobble of about 28.4 m/s × (planet mass in Jupiter masses) ÷ √(distance in AU). What wobble does Jupiter (1 Jupiter mass, 5.2 AU) cause?<\/p>",
- "check": {
-  "answer": 12.5,
-  "tol": 0.04,
-  "unit": "m/s",
-  "label": "Wobble"
- },
- "steps": [
-  {
-   "title": "Take the square root of the distance",
-   "body": "<p><code>√5.2 ≈ 2.28<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>28.4 × 1 ÷ 2.28 ≈ 12.5 m/s<\/code>, about the speed of a fast bicycle.<\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>Today’s best spectrographs measure wobbles below 1 m/s, so a Jupiter twin is detectable, though its 12-year period means years of observing.<\/p>"
-  }
- ],
- "final": "<p>About 12.5 m/s.<\/p>",
- "title": "How much does Jupiter wobble the Sun?"
-}</script>
+<script type="application/json" id="g-m6-51peg-data">{"prompt": "<p>51 Pegasi b orbits its Sun-like star at 0.052 AU. Using Kepler’s third law (for a Sun-mass star, p² = a³ with p in years and a in AU), how many days does one orbit take?</p>", "check": {"answer": 4.33, "tol": 0.03, "unit": "days", "label": "Orbital period"}, "steps": [{"title": "Cube the distance", "body": "<p><code>0.052 × 0.052 × 0.052 ≈ 0.000141</code> (1.41 × 10⁻⁴)</p>"}, {"title": "Take the square root", "body": "<p><code>√0.000141 ≈ 0.0119 years</code></p>"}, {"title": "Convert years to days", "body": "<p><code>0.0119 × 365 ≈ 4.3 days</code>. The measured period is 4.23 days.</p>"}, {"title": "Compare", "body": "<p>Mercury orbits at 0.39 AU in 88 days. This giant planet is about 8 times closer to its star than Mercury is to the Sun, so hot that it earned the name hot Jupiter.</p>"}], "final": "<p>About 4.3 days.</p>", "title": "How long is a year on 51 Pegasi b?", "concept": {"q": "51 Pegasi b is a giant planet orbiting far closer to its star than Mercury is to the Sun. What do you expect about its year?", "choices": ["It is about one Earth year", "It is extremely short, just days", "It is longer than Jupiter’s", "It has no year"], "answer": 1, "explain": "Close-in planets orbit fast on small orbits. 51 Pegasi b orbits in about 4 days, one reason these \"hot Jupiters\" were easy to find."}}</script>
+<script type="application/json" id="g-m6-wobble-data">{"prompt": "<p>For a Sun-like star, a planet causes a wobble of about 28.4 m/s × (planet mass in Jupiter masses) ÷ √(distance in AU). What wobble does Jupiter (1 Jupiter mass, 5.2 AU) cause?</p>", "check": {"answer": 12.5, "tol": 0.04, "unit": "m/s", "label": "Wobble"}, "steps": [{"title": "Take the square root of the distance", "body": "<p><code>√5.2 ≈ 2.28</code></p>"}, {"title": "Divide", "body": "<p><code>28.4 × 1 ÷ 2.28 ≈ 12.5 m/s</code>, about the speed of a fast bicycle.</p>"}, {"title": "Compare", "body": "<p>Today’s best spectrographs measure wobbles below 1 m/s, so a Jupiter twin is detectable, though its 12-year period means years of observing.</p>"}], "final": "<p>About 12.5 m/s.</p>", "title": "How much does Jupiter wobble the Sun?", "concept": {"q": "Which planet makes its star wobble the most?", "choices": ["A small planet close to its star", "A massive planet far from its star", "A small planet far from its star", "A massive planet close to its star"], "answer": 3, "explain": "A heavier planet pulls harder, and a close planet pulls harder and orbits faster. Both increase the star’s wobble."}}</script>
 <script type="application/json" id="poe-m6-transit-data">{
  "question": "A planet causes its star to dim by 0.25% during a transit. If an otherwise identical planet were twice as wide, how deep would its transit be?",
  "options": [
@@ -676,31 +572,7 @@
  "observe": "<p>In the transit simulation below, set the planet to 5.5 Earth radii and note the depth. Then double it to 11 Earth radii.<\/p>",
  "explain": "<p>The depth depends on the planet’s area, which grows as the square of its radius: twice as wide blocks 2² = 4 times as much light. That is also why Earth-size planets are so hard to find: Jupiter is 11 times wider than Earth, so its transit is about 120 times deeper.<\/p>"
 }</script>
-<script type="application/json" id="g-m6-depth-data">{
- "prompt": "<p>Earth’s radius is 6,371 km and the Sun’s is 696,000 km. By what fraction would Earth dim the Sun during a transit, as seen by a distant observer? Give your answer in parts per million (ppm).<\/p>",
- "check": {
-  "answer": 84,
-  "tol": 0.04,
-  "unit": "ppm",
-  "label": "Transit depth"
- },
- "steps": [
-  {
-   "title": "Find the radius ratio",
-   "body": "<p><code>6,371 ÷ 696,000 ≈ 0.00915<\/code><\/p>"
-  },
-  {
-   "title": "Square it",
-   "body": "<p><code>0.00915² ≈ 0.0000838<\/code><\/p>"
-  },
-  {
-   "title": "Convert to parts per million",
-   "body": "<p><code>0.0000838 × 1,000,000 ≈ 84 ppm<\/code>, a 0.0084% dip.<\/p>"
-  }
- ],
- "final": "<p>About 84 parts per million, like dimming a stadium floodlight by the glow of a single candle.<\/p>",
- "title": "How much does Earth dim the Sun?"
-}</script>
+<script type="application/json" id="g-m6-depth-data">{"prompt": "<p>Earth’s radius is 6,371 km and the Sun’s is 696,000 km. By what fraction would Earth dim the Sun during a transit, as seen by a distant observer? Give your answer in parts per million (ppm).</p>", "check": {"answer": 84, "tol": 0.04, "unit": "ppm", "label": "Transit depth"}, "steps": [{"title": "Find the radius ratio", "body": "<p><code>6,371 ÷ 696,000 ≈ 0.00915</code></p>"}, {"title": "Square it", "body": "<p><code>0.00915² ≈ 0.0000838</code></p>"}, {"title": "Convert to parts per million", "body": "<p><code>0.0000838 × 1,000,000 ≈ 84 ppm</code>, a 0.0084% dip.</p>"}], "final": "<p>About 84 parts per million, like dimming a stadium floodlight by the glow of a single candle.</p>", "title": "How much does Earth dim the Sun?", "concept": {"q": "Why is it so hard to detect an Earth-size planet crossing a Sun-like star?", "choices": ["Earth-size planets glow too brightly", "Earth blocks only a tiny fraction of the star’s light", "Earth-size planets never cross their stars", "Stars are too dim to measure"], "answer": 1, "explain": "The dip depends on the planet’s area compared with the star’s. Earth covers less than 0.01% of the Sun’s disk, so it takes very precise space telescopes."}}</script>
 <script type="application/json" id="tf-m6-methods-data">{
  "labels": [
   "Doppler method",
@@ -739,31 +611,7 @@
   }
  ]
 }</script>
-<script type="application/json" id="g-m6-hz-data">{
- "prompt": "<p>The habitable zone runs from about 0.95√L to 1.67√L AU, where L is the star’s luminosity (Sun = 1). Where is the outer edge for a star with one-quarter of the Sun’s luminosity?<\/p>",
- "check": {
-  "answer": 0.835,
-  "tol": 0.03,
-  "unit": "AU",
-  "label": "Outer edge"
- },
- "steps": [
-  {
-   "title": "Take the square root",
-   "body": "<p><code>√0.25 = 0.5<\/code><\/p>"
-  },
-  {
-   "title": "Find both edges",
-   "body": "<p>Inner: <code>0.95 × 0.5 ≈ 0.48 AU<\/code>. Outer: <code>1.67 × 0.5 ≈ 0.84 AU<\/code>.<\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>The whole zone lies inside Earth’s orbit. A planet at 1 AU from this star would be too cold for surface water.<\/p>"
-  }
- ],
- "final": "<p>The outer edge is about 0.84 AU.<\/p>",
- "title": "The habitable zone of a dim star"
-}</script>
+<script type="application/json" id="g-m6-hz-data">{"prompt": "<p>The habitable zone runs from about 0.95√L to 1.67√L AU, where L is the star’s luminosity (Sun = 1). Where is the outer edge for a star with one-quarter of the Sun’s luminosity?</p>", "check": {"answer": 0.835, "tol": 0.03, "unit": "AU", "label": "Outer edge"}, "steps": [{"title": "Take the square root", "body": "<p><code>√0.25 = 0.5</code></p>"}, {"title": "Find both edges", "body": "<p>Inner: <code>0.95 × 0.5 ≈ 0.48 AU</code>. Outer: <code>1.67 × 0.5 ≈ 0.84 AU</code>.</p>"}, {"title": "Interpret", "body": "<p>The whole zone lies inside Earth’s orbit. A planet at 1 AU from this star would be too cold for surface water.</p>"}], "final": "<p>The outer edge is about 0.84 AU.</p>", "title": "The habitable zone of a dim star", "concept": {"q": "How does the habitable zone of a dim red star compare with the Sun’s?", "choices": ["It is much farther from the star", "It is much closer to the star", "Dim stars have no habitable zone", "It is at the same distance"], "answer": 1, "explain": "A dim star gives off less energy, so a planet must be closer to receive enough warmth for liquid water."}}</script>
 <script type="application/json" id="order-m6-history-data">{
  "items": [
   "First exoplanets found, orbiting a dead star (a pulsar), 1992",

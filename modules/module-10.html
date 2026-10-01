@@ -490,31 +490,7 @@
  "observe": "<p>In the simulation below, set a 10 K cloud of 3 solar masses at 10,000 particles per cm³. Then raise the temperature to 40 K.<\/p>",
  "explain": "<p>Warmer gas pushes back harder. The minimum mass grows with the temperature ratio times its square root: 4 times hotter means 4 × √4 = 8 times more mass needed. The warmed cloud is stable. Stars form in the coldest clouds for this reason.<\/p>"
 }</script>
-<script type="application/json" id="g-m10-jeans-data">{
- "prompt": "<p>At 10 K and 10,000 particles per cm³, the minimum mass for collapse is about 2 solar masses. For a warmer cloud, multiply by the temperature ratio times its square root. What is the minimum mass at 40 K and the same density?<\/p>",
- "check": {
-  "answer": 16,
-  "tol": 0.03,
-  "unit": "solar masses",
-  "label": "Jeans mass"
- },
- "steps": [
-  {
-   "title": "Find the temperature ratio",
-   "body": "<p><code>40 K ÷ 10 K = 4<\/code><\/p>"
-  },
-  {
-   "title": "Multiply the ratio by its square root",
-   "body": "<p><code>4 × √4 = 4 × 2 = 8<\/code><\/p>"
-  },
-  {
-   "title": "Multiply",
-   "body": "<p><code>2 × 8 = 16 solar masses<\/code><\/p>"
-  }
- ],
- "final": "<p>16 solar masses.<\/p>",
- "title": "How much more mass does a warm cloud need?"
-}</script>
+<script type="application/json" id="g-m10-jeans-data">{"prompt": "<p>At 10 K and 10,000 particles per cm³, the minimum mass for collapse is about 2 solar masses. For a warmer cloud, multiply by the temperature ratio times its square root. What is the minimum mass at 40 K and the same density?</p>", "check": {"answer": 16, "tol": 0.03, "unit": "solar masses", "label": "Jeans mass"}, "steps": [{"title": "Find the temperature ratio", "body": "<p><code>40 K ÷ 10 K = 4</code></p>"}, {"title": "Multiply the ratio by its square root", "body": "<p><code>4 × √4 = 4 × 2 = 8</code></p>"}, {"title": "Multiply", "body": "<p><code>2 × 8 = 16 solar masses</code></p>"}], "final": "<p>16 solar masses.</p>", "title": "How much more mass does a warm cloud need?", "concept": {"q": "A cold gas cloud is just barely able to collapse into stars. What happens if it warms up?", "choices": ["Nothing changes", "It collapses faster", "It stops collapsing, because warmer gas pushes back harder", "It explodes"], "answer": 2, "explain": "Warmer gas has more pressure, so a warm cloud needs much more mass to collapse. Stars form in the coldest clouds."}}</script>
 <script type="application/json" id="tf-m10-myths-data">[
  {
   "s": "Most stars are born alone, as the Sun appears to be now.",
@@ -599,56 +575,8 @@
  ],
  "explain": "About 12 billion years in all, 10 billion of them on the main sequence."
 }</script>
-<script type="application/json" id="g-m10-pn-data">{
- "prompt": "<p>A planetary nebula has a radius of 0.5 light-year, and its gas expands at 20 km/s. Roughly how many years ago did the gas leave the star? (1 light-year = 9.46 × 10¹² km; 1 year = 3.16 × 10⁷ s)<\/p>",
- "check": {
-  "answer": 7500,
-  "tol": 0.04,
-  "unit": "years",
-  "label": "Age"
- },
- "steps": [
-  {
-   "title": "Convert the radius to kilometers",
-   "body": "<p><code>0.5 × 9.46 × 10¹² = 4.73 × 10¹² km<\/code><\/p>"
-  },
-  {
-   "title": "Divide by the speed",
-   "body": "<p><code>4.73 × 10¹² km ÷ 20 km/s ≈ 2.4 × 10¹¹ s<\/code><\/p>"
-  },
-  {
-   "title": "Convert to years",
-   "body": "<p><code>2.4 × 10¹¹ ÷ 3.16 × 10⁷ ≈ 7,500 years<\/code>, the blink of an eye in a star’s life.<\/p>"
-  }
- ],
- "final": "<p>About 7,500 years.<\/p>",
- "title": "How old is a planetary nebula?"
-}</script>
-<script type="application/json" id="g-m10-giant-data">{
- "prompt": "<p>As a red giant, the Sun may reach about 200 times its current radius of 696,000 km. How large is that in AU (1 AU = 1.5 × 10⁸ km)? Would it reach Earth’s current orbit?<\/p>",
- "check": {
-  "answer": 0.93,
-  "tol": 0.03,
-  "unit": "AU",
-  "label": "Radius"
- },
- "steps": [
-  {
-   "title": "Multiply",
-   "body": "<p><code>200 × 696,000 km = 1.39 × 10⁸ km<\/code><\/p>"
-  },
-  {
-   "title": "Convert to AU",
-   "body": "<p><code>1.39 × 10⁸ ÷ 1.5 × 10⁸ ≈ 0.93 AU<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>That is just inside Earth’s current orbit, past Mercury (0.39 AU) and Venus (0.72 AU). Since Earth’s orbit will also move outward as the Sun loses mass, it is a close call.<\/p>"
-  }
- ],
- "final": "<p>About 0.93 AU, nearly to Earth’s orbit.<\/p>",
- "title": "How big will the Sun get?"
-}</script>
+<script type="application/json" id="g-m10-pn-data">{"prompt": "<p>A planetary nebula has a radius of 0.5 light-year, and its gas expands at 20 km/s. Roughly how many years ago did the gas leave the star? (1 light-year = 9.46 × 10¹² km; 1 year = 3.16 × 10⁷ s)</p>", "check": {"answer": 7500, "tol": 0.04, "unit": "years", "label": "Age"}, "steps": [{"title": "Convert the radius to kilometers", "body": "<p><code>0.5 × 9.46 × 10¹² = 4.73 × 10¹² km</code></p>"}, {"title": "Divide by the speed", "body": "<p><code>4.73 × 10¹² km ÷ 20 km/s ≈ 2.4 × 10¹¹ s</code></p>"}, {"title": "Convert to years", "body": "<p><code>2.4 × 10¹¹ ÷ 3.16 × 10⁷ ≈ 7,500 years</code>, the blink of an eye in a star’s life.</p>"}], "final": "<p>About 7,500 years.</p>", "title": "How old is a planetary nebula?", "concept": {"q": "Compared with a star’s whole life, how long does a planetary nebula last?", "choices": ["Forever", "About as long as the star’s whole life", "Billions of years", "A very short time, only thousands of years"], "answer": 3, "explain": "Its gas expands and fades into space within tens of thousands of years, a blink compared with the star’s 10-billion-year life."}}</script>
+<script type="application/json" id="g-m10-giant-data">{"prompt": "<p>As a red giant, the Sun may reach about 200 times its current radius of 696,000 km. How large is that in AU (1 AU = 1.5 × 10⁸ km)? Would it reach Earth’s current orbit?</p>", "check": {"answer": 0.93, "tol": 0.03, "unit": "AU", "label": "Radius"}, "steps": [{"title": "Multiply", "body": "<p><code>200 × 696,000 km = 1.39 × 10⁸ km</code></p>"}, {"title": "Convert to AU", "body": "<p><code>1.39 × 10⁸ ÷ 1.5 × 10⁸ ≈ 0.93 AU</code></p>"}, {"title": "Interpret", "body": "<p>That is just inside Earth’s current orbit, past Mercury (0.39 AU) and Venus (0.72 AU). Since Earth’s orbit will also move outward as the Sun loses mass, it is a close call.</p>"}], "final": "<p>About 0.93 AU, nearly to Earth’s orbit.</p>", "title": "How big will the Sun get?", "concept": {"q": "When the Sun becomes a red giant, how big will it get?", "choices": ["About as large as Earth’s orbit", "About twice its current size", "Larger than the whole solar system", "Smaller than it is now"], "answer": 0, "explain": "It may reach about 200 times its current radius, engulfing Mercury and Venus and possibly reaching Earth’s orbit."}}</script>
 <script type="application/json" id="label-m10-onion-data">{
  "targets": [
   "Hydrogen",
@@ -670,56 +598,8 @@
  ],
  "explain": "Heavier elements lie deeper, where it is hotter. Elements heavier than iron are made mainly in explosive events, not in these layers."
 }</script>
-<script type="application/json" id="g-m10-mc2-data">{
- "prompt": "<p>Fusing hydrogen into helium converts 0.7% of the mass into energy. How much energy does fusing 1 kg of hydrogen release? (c² = 9 × 10¹⁶ m²/s²) Give your answer in e-notation.<\/p>",
- "check": {
-  "answer": 630000000000000.0,
-  "tol": 0.03,
-  "unit": "J",
-  "label": "Energy"
- },
- "steps": [
-  {
-   "title": "Find the mass converted",
-   "body": "<p><code>0.007 × 1 kg = 0.007 kg<\/code><\/p>"
-  },
-  {
-   "title": "Apply E = mc²",
-   "body": "<p><code>0.007 × 9 × 10¹⁶ = 6.3 × 10¹⁴ J<\/code><\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>Burning 1 kg of gasoline releases about 4.6 × 10⁷ J, over 10 million times less.<\/p>"
-  }
- ],
- "final": "<p>6.3 × 10¹⁴ joules per kilogram.<\/p>",
- "title": "The energy in hydrogen fusion"
-}</script>
-<script type="application/json" id="g-m10-life-data">{
- "prompt": "<p>The Sun’s core holds about 10% of its mass, 2 × 10²⁹ kg, available for fusion; 0.7% of that becomes energy. The Sun’s luminosity is 3.8 × 10²⁶ W. How many billion years can it shine? (1 year = 3.16 × 10⁷ s)<\/p>",
- "check": {
-  "answer": 10.5,
-  "tol": 0.05,
-  "unit": "billion years",
-  "label": "Lifetime"
- },
- "steps": [
-  {
-   "title": "Energy available",
-   "body": "<p><code>0.007 × 2 × 10²⁹ × 9 × 10¹⁶ ≈ 1.26 × 10⁴⁴ J<\/code><\/p>"
-  },
-  {
-   "title": "Divide by the luminosity",
-   "body": "<p><code>1.26 × 10⁴⁴ ÷ 3.8 × 10²⁶ ≈ 3.3 × 10¹⁷ s<\/code><\/p>"
-  },
-  {
-   "title": "Convert to years",
-   "body": "<p><code>3.3 × 10¹⁷ ÷ 3.16 × 10⁷ ≈ 1.05 × 10¹⁰ years<\/code>, about 10 billion years.<\/p>"
-  }
- ],
- "final": "<p>About 10 billion years.<\/p>",
- "title": "The Sun’s fuel supply"
-}</script>
+<script type="application/json" id="g-m10-mc2-data">{"prompt": "<p>Fusing hydrogen into helium converts 0.7% of the mass into energy. How much energy does fusing 1 kg of hydrogen release? (c² = 9 × 10¹⁶ m²/s²) Give your answer in e-notation.</p>", "check": {"answer": 630000000000000.0, "tol": 0.03, "unit": "J", "label": "Energy"}, "steps": [{"title": "Find the mass converted", "body": "<p><code>0.007 × 1 kg = 0.007 kg</code></p>"}, {"title": "Apply E = mc²", "body": "<p><code>0.007 × 9 × 10¹⁶ = 6.3 × 10¹⁴ J</code></p>"}, {"title": "Compare", "body": "<p>Burning 1 kg of gasoline releases about 4.6 × 10⁷ J, over 10 million times less.</p>"}], "final": "<p>6.3 × 10¹⁴ joules per kilogram.</p>", "title": "The energy in hydrogen fusion", "concept": {"q": "How does hydrogen fusion compare with burning fuel like gasoline?", "choices": ["Burning releases more energy", "Fusion releases millions of times more energy per kilogram", "They release about the same energy", "Fusion releases no energy"], "answer": 1, "explain": "Fusion converts 0.7% of the mass into energy; chemical burning converts only a tiny fraction of a millionth of a percent."}}</script>
+<script type="application/json" id="g-m10-life-data">{"prompt": "<p>The Sun’s core holds about 10% of its mass, 2 × 10²⁹ kg, available for fusion; 0.7% of that becomes energy. The Sun’s luminosity is 3.8 × 10²⁶ W. How many billion years can it shine? (1 year = 3.16 × 10⁷ s)</p>", "check": {"answer": 10.5, "tol": 0.05, "unit": "billion years", "label": "Lifetime"}, "steps": [{"title": "Energy available", "body": "<p><code>0.007 × 2 × 10²⁹ × 9 × 10¹⁶ ≈ 1.26 × 10⁴⁴ J</code></p>"}, {"title": "Divide by the luminosity", "body": "<p><code>1.26 × 10⁴⁴ ÷ 3.8 × 10²⁶ ≈ 3.3 × 10¹⁷ s</code></p>"}, {"title": "Convert to years", "body": "<p><code>3.3 × 10¹⁷ ÷ 3.16 × 10⁷ ≈ 1.05 × 10¹⁰ years</code>, about 10 billion years.</p>"}], "final": "<p>About 10 billion years.</p>", "title": "The Sun’s fuel supply", "concept": {"q": "Why can the Sun shine steadily for about 10 billion years?", "choices": ["Its core holds an enormous supply of hydrogen fuel for fusion", "It absorbs energy from space", "It burns coal", "It is slowly shrinking"], "answer": 0, "explain": "Only the core fuses, but even a fraction of the Sun’s hydrogen stores enough energy to last billions of years at its current output."}}</script>
 <script type="application/json" id="exp-m10-iron-data">{
  "title": "why iron ends fusion",
  "prompt": "Explain why a massive star can fuse elements up to iron but no further, and what happens once its core is iron.",
@@ -733,31 +613,7 @@
  ],
  "model": "<p>Fusion releases energy only when it makes nuclei more tightly bound, and binding energy per particle rises from hydrogen up to a peak at iron. So fusing lighter elements toward iron powers the star, but iron is the most tightly bound nucleus of all: fusing it would absorb energy rather than release it. Once a massive star’s core turns to iron, it has no way to generate the energy and pressure that hold it up against its enormous gravity. The core collapses in less than a second, and the rebound blows the star apart as a supernova.<\/p>"
 }</script>
-<script type="application/json" id="g-m10-crab-data">{
- "prompt": "<p>Chinese astronomers recorded the supernova that made the Crab Nebula in the year 1054. The Crab is about 6,500 light-years away. In what year did the star actually explode? Enter the number of years BCE.<\/p>",
- "check": {
-  "answer": 5446,
-  "tol": 0.01,
-  "unit": "BCE",
-  "label": "Year of explosion"
- },
- "steps": [
-  {
-   "title": "Recall lookback time",
-   "body": "<p>Light takes 6,500 years to travel 6,500 light-years (Module 1).<\/p>"
-  },
-  {
-   "title": "Subtract",
-   "body": "<p><code>1054 − 6,500 = −5,446<\/code>, meaning 5,446 BCE.<\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>The explosion happened while the first farming villages were spreading across the Middle East; its light arrived in 1054 CE.<\/p>"
-  }
- ],
- "final": "<p>About 5,446 BCE (with uncertainty from the distance).<\/p>",
- "title": "When did the Crab supernova really happen?"
-}</script>
+<script type="application/json" id="g-m10-crab-data">{"prompt": "<p>Chinese astronomers recorded the supernova that made the Crab Nebula in the year 1054. The Crab is about 6,500 light-years away. In what year did the star actually explode? Enter the number of years BCE.</p>", "check": {"answer": 5446, "tol": 0.01, "unit": "BCE", "label": "Year of explosion"}, "steps": [{"title": "Recall lookback time", "body": "<p>Light takes 6,500 years to travel 6,500 light-years (Module 1).</p>"}, {"title": "Subtract", "body": "<p><code>1054 − 6,500 = −5,446</code>, meaning 5,446 BCE.</p>"}, {"title": "Interpret", "body": "<p>The explosion happened while the first farming villages were spreading across the Middle East; its light arrived in 1054 CE.</p>"}], "final": "<p>About 5,446 BCE (with uncertainty from the distance).</p>", "title": "When did the Crab supernova really happen?", "concept": {"q": "Chinese astronomers saw the Crab supernova in 1054, and the Crab is about 6,500 light-years away. When did the star actually explode?", "choices": ["About 65 years before 1054", "About 6,500 years before 1054", "About 6,500 years after 1054", "In 1054"], "answer": 1, "explain": "Its light took about 6,500 years to reach us, so the explosion happened thousands of years before it was seen."}}</script>
 <script type="application/json" id="est-m10-body-data">{
  "title": "star stuff in your body",
  "q": "How many kilograms of your body were made inside stars (everything except the hydrogen, which came from the Big Bang)?",

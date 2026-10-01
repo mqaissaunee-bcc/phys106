@@ -484,102 +484,10 @@
  "observe": "<p>In the simulation below, slowly increase the white dwarf’s mass from 0.6 to 1.4 solar masses and watch its radius.<\/p>",
  "explain": "<p>More mass means stronger gravity, which compresses the electrons into less space; degeneracy pressure grows only as they are packed tighter. So massive white dwarfs are smaller, and near 1.4 solar masses they shrink dramatically before degeneracy pressure fails.<\/p>"
 }</script>
-<script type="application/json" id="g-m11-wd-data">{
- "prompt": "<p>A white dwarf has 1 solar mass (2 × 10³⁰ kg) and Earth’s radius (6.4 × 10⁶ m). What is its average density in kg/m³? Give it in e-notation.<\/p>",
- "check": {
-  "answer": 1800000000.0,
-  "tol": 0.06,
-  "unit": "kg/m³",
-  "label": "Density"
- },
- "steps": [
-  {
-   "title": "Find the volume",
-   "body": "<p><code>V = (4/3)π(6.4 × 10⁶)³ ≈ 1.1 × 10²¹ m³<\/code><\/p>"
-  },
-  {
-   "title": "Divide mass by volume",
-   "body": "<p><code>2 × 10³⁰ ÷ 1.1 × 10²¹ ≈ 1.8 × 10⁹ kg/m³<\/code><\/p>"
-  },
-  {
-   "title": "A teaspoon",
-   "body": "<p>A teaspoon (5 × 10⁻⁶ m³) would hold about 9,000 kg: several tons, about the weight of an elephant or two.<\/p>"
-  }
- ],
- "final": "<p>About 1.8 × 10⁹ kg/m³, nearly 2 million times denser than water.<\/p>",
- "title": "How dense is a white dwarf?"
-}</script>
-<script type="application/json" id="g-m11-candle-data">{
- "prompt": "<p>Two white dwarf supernovae have the same luminosity. One looks 10,000 times dimmer than the other. How many times farther away is it?<\/p>",
- "check": {
-  "answer": 100,
-  "tol": 0.02,
-  "unit": "times farther",
-  "label": "Distance ratio"
- },
- "steps": [
-  {
-   "title": "Recall the inverse-square law",
-   "body": "<p>Brightness ∝ 1 ÷ distance², so distance ∝ 1 ÷ √brightness.<\/p>"
-  },
-  {
-   "title": "Apply it",
-   "body": "<p><code>√10,000 = 100<\/code><\/p>"
-  }
- ],
- "final": "<p>100 times farther away.<\/p>",
- "title": "Distance from a standard candle"
-}</script>
-<script type="application/json" id="g-m11-ns-data">{
- "prompt": "<p>A neutron star has 1.4 solar masses (2.8 × 10³⁰ kg) and a radius of 10 km. What is its density in kg/m³? Give it in e-notation.<\/p>",
- "check": {
-  "answer": 6.7e+17,
-  "tol": 0.06,
-  "unit": "kg/m³",
-  "label": "Density"
- },
- "steps": [
-  {
-   "title": "Find the volume",
-   "body": "<p><code>V = (4/3)π(10⁴ m)³ ≈ 4.19 × 10¹² m³<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>2.8 × 10³⁰ ÷ 4.19 × 10¹² ≈ 6.7 × 10¹⁷ kg/m³<\/code><\/p>"
-  },
-  {
-   "title": "A teaspoon",
-   "body": "<p><code>6.7 × 10¹⁷ × 5 × 10⁻⁶ ≈ 3 × 10¹² kg<\/code>, billions of tons, about the mass of a mountain.<\/p>"
-  }
- ],
- "final": "<p>About 7 × 10¹⁷ kg/m³, as dense as an atomic nucleus.<\/p>",
- "title": "How dense is a neutron star?"
-}</script>
-<script type="application/json" id="g-m11-crab-data">{
- "prompt": "<p>The Crab pulsar has a radius of about 10 km and spins 30 times per second. How fast is a point on its equator moving, in km/s?<\/p>",
- "check": {
-  "answer": 1885,
-  "tol": 0.03,
-  "unit": "km/s",
-  "label": "Speed"
- },
- "steps": [
-  {
-   "title": "Find the circumference",
-   "body": "<p><code>2π × 10 km ≈ 62.8 km<\/code><\/p>"
-  },
-  {
-   "title": "Multiply by the spin rate",
-   "body": "<p><code>62.8 km × 30 per second ≈ 1,885 km/s<\/code><\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>About 0.6% of the speed of light, and the fastest pulsars spin more than 20 times faster.<\/p>"
-  }
- ],
- "final": "<p>About 1,900 km/s.<\/p>",
- "title": "How fast does the Crab pulsar spin?"
-}</script>
+<script type="application/json" id="g-m11-wd-data">{"prompt": "<p>A white dwarf has 1 solar mass (2 × 10³⁰ kg) and Earth’s radius (6.4 × 10⁶ m). What is its average density in kg/m³? Give it in e-notation.</p>", "check": {"answer": 1800000000.0, "tol": 0.06, "unit": "kg/m³", "label": "Density"}, "steps": [{"title": "Find the volume", "body": "<p><code>V = (4/3)π(6.4 × 10⁶)³ ≈ 1.1 × 10²¹ m³</code></p>"}, {"title": "Divide mass by volume", "body": "<p><code>2 × 10³⁰ ÷ 1.1 × 10²¹ ≈ 1.8 × 10⁹ kg/m³</code></p>"}, {"title": "A teaspoon", "body": "<p>A teaspoon (5 × 10⁻⁶ m³) would hold about 9,000 kg: several tons, about the weight of an elephant or two.</p>"}], "final": "<p>About 1.8 × 10⁹ kg/m³, nearly 2 million times denser than water.</p>", "title": "How dense is a white dwarf?", "concept": {"q": "A white dwarf has about the Sun’s mass packed into a ball the size of Earth. What is its material like?", "choices": ["Lighter than water", "Mostly empty space like a gas", "About as dense as rock", "Incredibly dense: a teaspoon weighs tons"], "answer": 3, "explain": "The same mass in a far smaller volume means a far higher density, about a million times that of water."}}</script>
+<script type="application/json" id="g-m11-candle-data">{"prompt": "<p>Two white dwarf supernovae have the same luminosity. One looks 10,000 times dimmer than the other. How many times farther away is it?</p>", "check": {"answer": 100, "tol": 0.02, "unit": "times farther", "label": "Distance ratio"}, "steps": [{"title": "Recall the inverse-square law", "body": "<p>Brightness ∝ 1 ÷ distance², so distance ∝ 1 ÷ √brightness.</p>"}, {"title": "Apply it", "body": "<p><code>√10,000 = 100</code></p>"}], "final": "<p>100 times farther away.</p>", "title": "Distance from a standard candle", "concept": {"q": "Two identical white dwarf supernovae appear, one much dimmer than the other. What can astronomers conclude?", "choices": ["The dimmer one is closer", "The dimmer one is less powerful", "Nothing about distance", "The dimmer one is much farther away"], "answer": 3, "explain": "Because they have the same luminosity, the difference in brightness reveals distance. That makes them standard candles."}}</script>
+<script type="application/json" id="g-m11-ns-data">{"prompt": "<p>A neutron star has 1.4 solar masses (2.8 × 10³⁰ kg) and a radius of 10 km. What is its density in kg/m³? Give it in e-notation.</p>", "check": {"answer": 6.7e+17, "tol": 0.06, "unit": "kg/m³", "label": "Density"}, "steps": [{"title": "Find the volume", "body": "<p><code>V = (4/3)π(10⁴ m)³ ≈ 4.19 × 10¹² m³</code></p>"}, {"title": "Divide", "body": "<p><code>2.8 × 10³⁰ ÷ 4.19 × 10¹² ≈ 6.7 × 10¹⁷ kg/m³</code></p>"}, {"title": "A teaspoon", "body": "<p><code>6.7 × 10¹⁷ × 5 × 10⁻⁶ ≈ 3 × 10¹² kg</code>, billions of tons, about the mass of a mountain.</p>"}], "final": "<p>About 7 × 10¹⁷ kg/m³, as dense as an atomic nucleus.</p>", "title": "How dense is a neutron star?", "concept": {"q": "How does a neutron star’s density compare with a white dwarf’s?", "choices": ["Less dense", "Far denser, like an atomic nucleus", "Neutron stars have no density", "About the same"], "answer": 1, "explain": "A neutron star squeezes more than the Sun’s mass into a city-sized ball, far smaller than a white dwarf, so it is millions of times denser."}}</script>
+<script type="application/json" id="g-m11-crab-data">{"prompt": "<p>The Crab pulsar has a radius of about 10 km and spins 30 times per second. How fast is a point on its equator moving, in km/s?</p>", "check": {"answer": 1885, "tol": 0.03, "unit": "km/s", "label": "Speed"}, "steps": [{"title": "Find the circumference", "body": "<p><code>2π × 10 km ≈ 62.8 km</code></p>"}, {"title": "Multiply by the spin rate", "body": "<p><code>62.8 km × 30 per second ≈ 1,885 km/s</code></p>"}, {"title": "Compare", "body": "<p>About 0.6% of the speed of light, and the fastest pulsars spin more than 20 times faster.</p>"}], "final": "<p>About 1,900 km/s.</p>", "title": "How fast does the Crab pulsar spin?", "concept": {"q": "Why does the Crab pulsar spin about 30 times per second?", "choices": ["It is powered by a motor-like magnetic field", "Its core spun up as it collapsed from star size to city size", "The supernova blast pushed it into spinning", "Nearby stars make it rotate"], "answer": 1, "explain": "Conservation of angular momentum: shrinking a spinning object makes it spin much faster, just as with a skater or a collapsing cloud."}}</script>
 <script type="application/json" id="tf-m11-which-data">{
  "labels": [
   "White dwarf",
@@ -708,31 +616,7 @@
   "explain": "They are density waves that stars and gas move through."
  }
 ]</script>
-<script type="application/json" id="g-m11-gal-data">{
- "prompt": "<p>The Sun orbits the galactic center at about 1.6 × 10⁹ AU with a period of 2.3 × 10⁸ years. Using M = a³ ÷ p² (solar masses, AU, years), how much mass lies inside the Sun’s orbit? Give it in e-notation.<\/p>",
- "check": {
-  "answer": 77000000000.0,
-  "tol": 0.06,
-  "unit": "solar masses",
-  "label": "Mass"
- },
- "steps": [
-  {
-   "title": "Cube the distance",
-   "body": "<p><code>(1.6 × 10⁹)³ ≈ 4.1 × 10²⁷<\/code><\/p>"
-  },
-  {
-   "title": "Square the period",
-   "body": "<p><code>(2.3 × 10⁸)² ≈ 5.3 × 10¹⁶<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>4.1 × 10²⁷ ÷ 5.3 × 10¹⁶ ≈ 7.7 × 10¹⁰ solar masses<\/code>, roughly 100 billion Suns.<\/p>"
-  }
- ],
- "final": "<p>About 8 × 10¹⁰ solar masses.<\/p>",
- "title": "Weigh the inner Milky Way"
-}</script>
+<script type="application/json" id="g-m11-gal-data">{"prompt": "<p>The Sun orbits the galactic center at about 1.6 × 10⁹ AU with a period of 2.3 × 10⁸ years. Using M = a³ ÷ p² (solar masses, AU, years), how much mass lies inside the Sun’s orbit? Give it in e-notation.</p>", "check": {"answer": 77000000000.0, "tol": 0.06, "unit": "solar masses", "label": "Mass"}, "steps": [{"title": "Cube the distance", "body": "<p><code>(1.6 × 10⁹)³ ≈ 4.1 × 10²⁷</code></p>"}, {"title": "Square the period", "body": "<p><code>(2.3 × 10⁸)² ≈ 5.3 × 10¹⁶</code></p>"}, {"title": "Divide", "body": "<p><code>4.1 × 10²⁷ ÷ 5.3 × 10¹⁶ ≈ 7.7 × 10¹⁰ solar masses</code>, roughly 100 billion Suns.</p>"}], "final": "<p>About 8 × 10¹⁰ solar masses.</p>", "title": "Weigh the inner Milky Way", "concept": {"q": "How can astronomers weigh the part of the Milky Way inside the Sun’s orbit?", "choices": ["By counting every star", "From the size and period of the Sun’s orbit around the galactic center", "By measuring the Milky Way’s color", "By measuring the Sun’s brightness"], "answer": 1, "explain": "Orbital motion reveals the mass inside the orbit, the same method used to weigh the Sun from Earth’s orbit."}}</script>
 <script type="application/json" id="exp-m11-dm-data">{
  "title": "dark matter in the Milky Way",
  "prompt": "Explain how astronomers conclude that the Milky Way contains a lot of dark matter, even though no one has seen it.",
@@ -746,35 +630,7 @@
  ],
  "model": "<p>The speed of an orbit tells you how much mass is inside it, just as Earth’s speed reveals the Sun’s mass. Most of the Milky Way’s visible stars and gas are concentrated toward the center, so stars and gas far out should orbit more slowly, the way outer planets do. Instead, the rotation curve stays nearly flat far beyond the visible disk, so there must be much more mass out there pulling on them. Since we can’t see it, we call it dark matter; it seems to make up about 90% of the galaxy’s mass, spread in a huge halo.<\/p>"
 }</script>
-<script type="application/json" id="g-m11-sgra-data">{
- "prompt": "<p>The star S2 orbits Sagittarius A* with an average distance of about 1,000 AU and a period of 16 years. Using M = a³ ÷ p², find the central mass in solar masses. Give it in e-notation.<\/p>",
- "check": {
-  "answer": 3900000.0,
-  "tol": 0.04,
-  "unit": "solar masses",
-  "label": "Mass"
- },
- "steps": [
-  {
-   "title": "Cube the distance",
-   "body": "<p><code>1,000³ = 10⁹<\/code><\/p>"
-  },
-  {
-   "title": "Square the period",
-   "body": "<p><code>16² = 256<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>10⁹ ÷ 256 ≈ 3.9 × 10⁶ solar masses<\/code><\/p>"
-  },
-  {
-   "title": "Why a black hole?",
-   "body": "<p>S2 comes within about 120 AU of it, so all that mass is packed into a region smaller than our solar system, too small and dark for a star cluster.<\/p>"
-  }
- ],
- "final": "<p>About 4 million solar masses.<\/p>",
- "title": "Weigh the central black hole"
-}</script>
+<script type="application/json" id="g-m11-sgra-data">{"prompt": "<p>The star S2 orbits Sagittarius A* with an average distance of about 1,000 AU and a period of 16 years. Using M = a³ ÷ p², find the central mass in solar masses. Give it in e-notation.</p>", "check": {"answer": 3900000.0, "tol": 0.04, "unit": "solar masses", "label": "Mass"}, "steps": [{"title": "Cube the distance", "body": "<p><code>1,000³ = 10⁹</code></p>"}, {"title": "Square the period", "body": "<p><code>16² = 256</code></p>"}, {"title": "Divide", "body": "<p><code>10⁹ ÷ 256 ≈ 3.9 × 10⁶ solar masses</code></p>"}, {"title": "Why a black hole?", "body": "<p>S2 comes within about 120 AU of it, so all that mass is packed into a region smaller than our solar system, too small and dark for a star cluster.</p>"}], "final": "<p>About 4 million solar masses.</p>", "title": "Weigh the central black hole", "concept": {"q": "The star S2 orbits the galaxy’s center every 16 years on a small, fast orbit. What must be at the center?", "choices": ["Nothing; S2 orbits empty space", "A cloud of gas", "A very massive, compact object: a black hole of about 4 million Suns", "A single ordinary star"], "answer": 2, "explain": "A fast orbit on a small path requires enormous mass in a tiny region. Only a supermassive black hole fits."}}</script>
 <script type="application/json" id="quiz-module-11-data">[
  {
   "q": "A white dwarf is about the size of",

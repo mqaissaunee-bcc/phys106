@@ -586,31 +586,7 @@
   </div>
 </footer>
 
-<script type="application/json" id="g-m3-accel-data">{
- "prompt": "<p>A car goes from 0 to 27 m/s (about 60 mph) in 9 seconds. What is its average acceleration, and how does that compare with <em>g<\/em>?<\/p>",
- "check": {
-  "answer": 3,
-  "tol": 0.04,
-  "unit": "m/s²",
-  "label": "Acceleration"
- },
- "steps": [
-  {
-   "title": "Write the definition",
-   "body": "<p><code>acceleration = change in velocity ÷ time<\/code><\/p>"
-  },
-  {
-   "title": "Substitute",
-   "body": "<p><code>(27 m/s − 0 m/s) ÷ 9 s = 3 m/s²<\/code><\/p><p>The velocity grows by 3 m/s every second.<\/p>"
-  },
-  {
-   "title": "Compare with g",
-   "body": "<p><code>3 ÷ 9.8 ≈ 0.31<\/code>, so about 0.3<em>g<\/em>. A falling rock gains speed more than three times as fast as this car.<\/p>"
-  }
- ],
- "final": "<p>3 m/s², about 0.3<em>g<\/em>.<\/p>",
- "title": "How hard does a car accelerate?"
-}</script>
+<script type="application/json" id="g-m3-accel-data">{"prompt": "<p>A car goes from 0 to 27 m/s (about 60 mph) in 9 seconds. What is its average acceleration, and how does that compare with <em>g</em>?</p>", "check": {"answer": 3, "tol": 0.04, "unit": "m/s²", "label": "Acceleration"}, "steps": [{"title": "Write the definition", "body": "<p><code>acceleration = change in velocity ÷ time</code></p>"}, {"title": "Substitute", "body": "<p><code>(27 m/s − 0 m/s) ÷ 9 s = 3 m/s²</code></p><p>The velocity grows by 3 m/s every second.</p>"}, {"title": "Compare with g", "body": "<p><code>3 ÷ 9.8 ≈ 0.31</code>, so about 0.3<em>g</em>. A falling rock gains speed more than three times as fast as this car.</p>"}], "final": "<p>3 m/s², about 0.3<em>g</em>.</p>", "title": "How hard does a car accelerate?", "concept": {"q": "A car speeds up from 0 to 60 mph in 9 seconds. A falling rock speeds up by about 22 mph every second. Which accelerates faster?", "choices": ["Neither accelerates", "They are the same", "The car", "The falling rock"], "answer": 3, "explain": "The car gains about 6.7 mph each second; gravity adds about 22 mph each second. Free fall is a strong acceleration, about 1g."}}</script>
 <script type="application/json" id="tf-m3-motion-data">[
  {
   "s": "A spacecraft coasting between planets needs its engine running to keep moving.",
@@ -668,83 +644,9 @@
  "reference": 4.2e+22,
  "explain": "<p>3.8 × 10²⁶ J ÷ 9,000 J ≈ 4 × 10²² batteries, more batteries than there are stars in the Milky Way, a hundred billion times over. The Sun gets that energy from converting mass to energy (E = mc²), about 4 million tonnes of it every second (Module 9).<\/p>"
 }</script>
-<script type="application/json" id="g-m3-sunmass-data">{
- "prompt": "<p>Earth orbits the Sun at a = 1.5 × 10¹¹ m with a period p = 1 year = 3.16 × 10⁷ s. Using G = 6.67 × 10⁻¹¹ and Newton’s version of Kepler’s third law (Earth’s own mass is negligible), find the Sun’s mass in kilograms. Type it as e-notation, such as 2e30.<\/p>",
- "check": {
-  "answer": 2e+30,
-  "tol": 0.06,
-  "unit": "kg",
-  "label": "Mass of the Sun"
- },
- "steps": [
-  {
-   "title": "Solve for the mass",
-   "body": "<p><code>M = 4π² a³ ÷ (G p²)<\/code><\/p>"
-  },
-  {
-   "title": "Cube the distance",
-   "body": "<p><code>a³ = (1.5 × 10¹¹)³ = 3.375 × 10³³ m³<\/code><\/p>"
-  },
-  {
-   "title": "Square the period and multiply by G",
-   "body": "<p><code>p² = (3.16 × 10⁷)² = 1.0 × 10¹⁵ s²<\/code>; <code>G p² = 6.67 × 10⁻¹¹ × 1.0 × 10¹⁵ = 6.67 × 10⁴<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>4π² × 3.375 × 10³³ = 1.33 × 10³⁵<\/code>; <code>1.33 × 10³⁵ ÷ 6.67 × 10⁴ ≈ 2.0 × 10³⁰ kg<\/code><\/p>"
-  }
- ],
- "final": "<p>About 2 × 10³⁰ kg, some 333,000 times Earth’s mass.<\/p>",
- "title": "Weigh the Sun"
-}</script>
-<script type="application/json" id="g-m3-moonpull-data">{
- "prompt": "<p>The Moon is about 60 times farther from Earth’s center than you are (60 Earth radii). If gravity follows the inverse-square law, how strong is Earth’s gravitational acceleration at the Moon’s distance? (g at the surface = 9.8 m/s²)<\/p>",
- "check": {
-  "answer": 0.00272,
-  "tol": 0.05,
-  "unit": "m/s²",
-  "label": "Acceleration at the Moon"
- },
- "steps": [
-  {
-   "title": "How much weaker?",
-   "body": "<p>60 times the distance means gravity is weaker by 60² = 3,600.<\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>9.8 m/s² ÷ 3,600 ≈ 0.0027 m/s²<\/code><\/p>"
-  },
-  {
-   "title": "What Newton noticed",
-   "body": "<p>From the Moon’s orbit (radius and 27.3-day period) Newton calculated the acceleration it must have to stay on its curved path, and it matched this number. The same gravity explains apples and the Moon.<\/p>"
-  }
- ],
- "final": "<p>About 0.0027 m/s², matching the Moon’s actual orbital acceleration.<\/p>",
- "title": "Newton’s Moon test"
-}</script>
-<script type="application/json" id="g-m3-tide-data">{
- "prompt": "<p>Tonight the Moon is full. Will the tides at the Jersey Shore this week be larger or smaller than usual? Reason it out step by step.<\/p>",
- "steps": [
-  {
-   "title": "Where is the Moon?",
-   "body": "<p>At full moon, the Moon is on the opposite side of Earth from the Sun.<\/p>"
-  },
-  {
-   "title": "Where are the tidal bulges?",
-   "body": "<p>The Moon raises bulges on the Earth–Moon line. The Sun raises smaller bulges on the Earth–Sun line.<\/p>"
-  },
-  {
-   "title": "Compare the two lines",
-   "body": "<p>At full moon the Sun, Earth, and Moon are in a straight line, so the Sun’s bulges line up with the Moon’s.<\/p>"
-  },
-  {
-   "title": "Conclude",
-   "body": "<p>The bulges add together: higher high tides and lower low tides. That is a spring tide.<\/p>"
-  }
- ],
- "final": "<p>Larger than usual: spring tides happen at both new and full moon.<\/p>",
- "title": "Spring or neap tide?"
-}</script>
+<script type="application/json" id="g-m3-sunmass-data">{"prompt": "<p>Earth orbits the Sun at a = 1.5 × 10¹¹ m with a period p = 1 year = 3.16 × 10⁷ s. Using G = 6.67 × 10⁻¹¹ and Newton’s version of Kepler’s third law (Earth’s own mass is negligible), find the Sun’s mass in kilograms. Type it as e-notation, such as 2e30.</p>", "check": {"answer": 2e+30, "tol": 0.06, "unit": "kg", "label": "Mass of the Sun"}, "steps": [{"title": "Solve for the mass", "body": "<p><code>M = 4π² a³ ÷ (G p²)</code></p>"}, {"title": "Cube the distance", "body": "<p><code>a³ = (1.5 × 10¹¹)³ = 3.375 × 10³³ m³</code></p>"}, {"title": "Square the period and multiply by G", "body": "<p><code>p² = (3.16 × 10⁷)² = 1.0 × 10¹⁵ s²</code>; <code>G p² = 6.67 × 10⁻¹¹ × 1.0 × 10¹⁵ = 6.67 × 10⁴</code></p>"}, {"title": "Divide", "body": "<p><code>4π² × 3.375 × 10³³ = 1.33 × 10³⁵</code>; <code>1.33 × 10³⁵ ÷ 6.67 × 10⁴ ≈ 2.0 × 10³⁰ kg</code></p>"}], "final": "<p>About 2 × 10³⁰ kg, some 333,000 times Earth’s mass.</p>", "title": "Weigh the Sun", "concept": {"q": "If the Sun were more massive and Earth stayed at the same distance, what would happen to Earth’s year?", "choices": ["It would be shorter, because Earth would have to orbit faster", "It would stay the same", "Earth would stop orbiting", "It would be longer"], "answer": 0, "explain": "Stronger gravity requires a faster orbit to keep from falling in. That link between orbital speed and mass is how astronomers weigh the Sun."}}</script>
+<script type="application/json" id="g-m3-moonpull-data">{"prompt": "<p>The Moon is about 60 times farther from Earth’s center than you are (60 Earth radii). If gravity follows the inverse-square law, how strong is Earth’s gravitational acceleration at the Moon’s distance? (g at the surface = 9.8 m/s²)</p>", "check": {"answer": 0.00272, "tol": 0.05, "unit": "m/s²", "label": "Acceleration at the Moon"}, "steps": [{"title": "How much weaker?", "body": "<p>60 times the distance means gravity is weaker by 60² = 3,600.</p>"}, {"title": "Divide", "body": "<p><code>9.8 m/s² ÷ 3,600 ≈ 0.0027 m/s²</code></p>"}, {"title": "What Newton noticed", "body": "<p>From the Moon’s orbit (radius and 27.3-day period) Newton calculated the acceleration it must have to stay on its curved path, and it matched this number. The same gravity explains apples and the Moon.</p>"}], "final": "<p>About 0.0027 m/s², matching the Moon’s actual orbital acceleration.</p>", "title": "Newton’s Moon test", "concept": {"q": "The Moon is 60 times farther from Earth’s center than you are. How strong is Earth’s gravity there?", "choices": ["Much weaker: about 1/3,600 as strong", "About 1/60 as strong", "The same as on the ground", "Zero"], "answer": 0, "explain": "Gravity follows the inverse-square law: 60 times farther means 60 × 60 = 3,600 times weaker. Newton used this to show that the same gravity holds the Moon in orbit."}}</script>
+<script type="application/json" id="g-m3-tide-data">{"prompt": "<p>Tonight the Moon is full. Will the tides at the Jersey Shore this week be larger or smaller than usual? Reason it out step by step.</p>", "steps": [{"title": "Where is the Moon?", "body": "<p>At full moon, the Moon is on the opposite side of Earth from the Sun.</p>"}, {"title": "Where are the tidal bulges?", "body": "<p>The Moon raises bulges on the Earth–Moon line. The Sun raises smaller bulges on the Earth–Sun line.</p>"}, {"title": "Compare the two lines", "body": "<p>At full moon the Sun, Earth, and Moon are in a straight line, so the Sun’s bulges line up with the Moon’s.</p>"}, {"title": "Conclude", "body": "<p>The bulges add together: higher high tides and lower low tides. That is a spring tide.</p>"}], "final": "<p>Larger than usual: spring tides happen at both new and full moon.</p>", "title": "Spring or neap tide?", "concept": {"q": "The Moon is full this week. What kind of tides should the Jersey Shore have?", "choices": ["Tides only at night", "Larger than usual (spring tides)", "No tides at all", "Smaller than usual (neap tides)"], "answer": 1, "explain": "At full and new moon the Sun, Earth, and Moon line up, so the Sun’s and Moon’s tidal effects add together."}}</script>
 <script type="application/json" id="exp-m3-float-data">{
  "title": "why astronauts float",
  "prompt": "A friend says astronauts float on the Space Station “because there’s no gravity in space.” Explain what is really going on.",
@@ -770,31 +672,7 @@
  ],
  "explain": "Longest wavelength also means lowest frequency and lowest-energy photons, so this list also runs from least to most energetic."
 }</script>
-<script type="application/json" id="g-m3-fm-data">{
- "prompt": "<p>An FM radio station broadcasts at 100 MHz (100 million waves per second). What is the wavelength of its radio waves, in meters?<\/p>",
- "check": {
-  "answer": 3,
-  "tol": 0.03,
-  "unit": "m",
-  "label": "Wavelength"
- },
- "steps": [
-  {
-   "title": "Rearrange λ × f = c",
-   "body": "<p><code>λ = c ÷ f<\/code><\/p>"
-  },
-  {
-   "title": "Use consistent units",
-   "body": "<p><code>c = 3 × 10⁸ m/s<\/code>, <code>f = 100 MHz = 1 × 10⁸ per second<\/code><\/p>"
-  },
-  {
-   "title": "Divide",
-   "body": "<p><code>3 × 10⁸ ÷ 1 × 10⁸ = 3 m<\/code><\/p>"
-  }
- ],
- "final": "<p>About 3 meters, taller than a person. Visible light waves are about 5 million times shorter.<\/p>",
- "title": "The wavelength of a radio station"
-}</script>
+<script type="application/json" id="g-m3-fm-data">{"prompt": "<p>An FM radio station broadcasts at 100 MHz (100 million waves per second). What is the wavelength of its radio waves, in meters?</p>", "check": {"answer": 3, "tol": 0.03, "unit": "m", "label": "Wavelength"}, "steps": [{"title": "Rearrange λ × f = c", "body": "<p><code>λ = c ÷ f</code></p>"}, {"title": "Use consistent units", "body": "<p><code>c = 3 × 10⁸ m/s</code>, <code>f = 100 MHz = 1 × 10⁸ per second</code></p>"}, {"title": "Divide", "body": "<p><code>3 × 10⁸ ÷ 1 × 10⁸ = 3 m</code></p>"}], "final": "<p>About 3 meters, taller than a person. Visible light waves are about 5 million times shorter.</p>", "title": "The wavelength of a radio station", "concept": {"q": "How do radio waves compare with visible light?", "choices": ["Radio waves are a kind of sound", "Radio waves have shorter wavelengths", "Both are light, but radio waves have much longer wavelengths", "Radio waves travel slower than light"], "answer": 2, "explain": "All electromagnetic waves travel at the speed of light. FM radio waves are about 3 meters long; visible light waves are less than a thousandth of a millimeter."}}</script>
 <script type="application/json" id="tf-m3-spectra-data">{
  "labels": [
   "Emission lines",
@@ -845,60 +723,8 @@
  "observe": "<p>In the thermal radiation simulation below, set the temperature to 3,000 K and note the peak wavelength. Then slide to 12,000 K and watch the peak and the star’s color.<\/p>",
  "explain": "<p>By Wien’s law, the peak wavelength is inversely proportional to temperature: four times hotter means a peak at one-quarter the wavelength, moving from the infrared (about 970 nm) into the ultraviolet (about 240 nm). The hot star still emits infrared light, more of it than the cool star in fact, but its peak and its color shift toward blue.<\/p>"
 }</script>
-<script type="application/json" id="g-m3-wien-data">{
- "prompt": "<p>Betelgeuse, the red supergiant in Orion, has a surface temperature of about 3,500 K. At what wavelength does its light peak? Is that in the visible range?<\/p>",
- "check": {
-  "answer": 829,
-  "tol": 0.03,
-  "unit": "nm",
-  "label": "Peak wavelength"
- },
- "steps": [
-  {
-   "title": "Write Wien’s law",
-   "body": "<p><code>peak λ (nm) ≈ 2,900,000 ÷ T<\/code><\/p>"
-  },
-  {
-   "title": "Substitute",
-   "body": "<p><code>2,900,000 ÷ 3,500 ≈ 829 nm<\/code><\/p>"
-  },
-  {
-   "title": "Interpret",
-   "body": "<p>Visible light runs from about 400 to 700 nm, so 829 nm is in the near infrared. Betelgeuse emits most of its light where our eyes can’t see; the visible part is weighted toward red, so it looks orange-red.<\/p>"
-  }
- ],
- "final": "<p>About 830 nm, in the infrared, which is why Betelgeuse looks reddish.<\/p>",
- "title": "The peak of Betelgeuse"
-}</script>
-<script type="application/json" id="g-m3-doppler-data">{
- "prompt": "<p>Hydrogen’s red line has a laboratory wavelength of 656.3 nm. In a star’s spectrum it appears at 656.8 nm. How fast is the star moving, and in which direction?<\/p>",
- "check": {
-  "answer": 229,
-  "tol": 0.04,
-  "unit": "km/s",
-  "label": "Speed"
- },
- "steps": [
-  {
-   "title": "Find the shift",
-   "body": "<p><code>656.8 − 656.3 = +0.5 nm<\/code>. Positive means longer wavelength: a redshift.<\/p>"
-  },
-  {
-   "title": "Find the fractional shift",
-   "body": "<p><code>0.5 ÷ 656.3 = 0.000762<\/code><\/p>"
-  },
-  {
-   "title": "Multiply by the speed of light",
-   "body": "<p><code>0.000762 × 300,000 km/s ≈ 229 km/s<\/code><\/p>"
-  },
-  {
-   "title": "State the direction",
-   "body": "<p>Redshift means the star is moving away from us.<\/p>"
-  }
- ],
- "final": "<p>About 230 km/s away from us.<\/p>",
- "title": "How fast is the star moving?"
-}</script>
+<script type="application/json" id="g-m3-wien-data">{"prompt": "<p>Betelgeuse, the red supergiant in Orion, has a surface temperature of about 3,500 K. At what wavelength does its light peak? Is that in the visible range?</p>", "check": {"answer": 829, "tol": 0.03, "unit": "nm", "label": "Peak wavelength"}, "steps": [{"title": "Write Wien’s law", "body": "<p><code>peak λ (nm) ≈ 2,900,000 ÷ T</code></p>"}, {"title": "Substitute", "body": "<p><code>2,900,000 ÷ 3,500 ≈ 829 nm</code></p>"}, {"title": "Interpret", "body": "<p>Visible light runs from about 400 to 700 nm, so 829 nm is in the near infrared. Betelgeuse emits most of its light where our eyes can’t see; the visible part is weighted toward red, so it looks orange-red.</p>"}], "final": "<p>About 830 nm, in the infrared, which is why Betelgeuse looks reddish.</p>", "title": "The peak of Betelgeuse", "concept": {"q": "Betelgeuse looks reddish and the Sun looks yellow-white. What does that tell you?", "choices": ["Betelgeuse is closer than the Sun", "Betelgeuse is hotter than the Sun", "Betelgeuse is younger than the Sun", "Betelgeuse is cooler than the Sun"], "answer": 3, "explain": "Wien’s law: cooler objects glow at longer, redder wavelengths. Betelgeuse is about 3,500 K; the Sun is about 5,800 K."}}</script>
+<script type="application/json" id="g-m3-doppler-data">{"prompt": "<p>Hydrogen’s red line has a laboratory wavelength of 656.3 nm. In a star’s spectrum it appears at 656.8 nm. How fast is the star moving, and in which direction?</p>", "check": {"answer": 229, "tol": 0.04, "unit": "km/s", "label": "Speed"}, "steps": [{"title": "Find the shift", "body": "<p><code>656.8 − 656.3 = +0.5 nm</code>. Positive means longer wavelength: a redshift.</p>"}, {"title": "Find the fractional shift", "body": "<p><code>0.5 ÷ 656.3 = 0.000762</code></p>"}, {"title": "Multiply by the speed of light", "body": "<p><code>0.000762 × 300,000 km/s ≈ 229 km/s</code></p>"}, {"title": "State the direction", "body": "<p>Redshift means the star is moving away from us.</p>"}], "final": "<p>About 230 km/s away from us.</p>", "title": "How fast is the star moving?", "concept": {"q": "A star’s spectral lines are shifted slightly toward the red. What does that mean?", "choices": ["The star is moving away from us", "The star is getting bigger", "The star is moving toward us", "The star is cooling down"], "answer": 0, "explain": "Motion away stretches light waves (a redshift); motion toward us compresses them (a blueshift). The size of the shift gives the speed."}}</script>
 <script type="application/json" id="label-m3-scope-data">{
  "targets": [
   "Incoming starlight",
@@ -918,35 +744,7 @@
  ],
  "explain": "The primary mirror gathers light and brings it toward a focus; a small secondary mirror redirects it out the side to the eyepiece or camera. The aperture, the diameter of the primary mirror, sets both light-gathering power and resolution."
 }</script>
-<script type="application/json" id="g-m3-hubble-data">{
- "prompt": "<p>What is the diffraction-limited angular resolution of the Hubble Space Telescope (aperture 2.4 m) in green light (wavelength 500 nm = 5 × 10⁻⁷ m)?<\/p>",
- "check": {
-  "answer": 0.052,
-  "tol": 0.05,
-  "unit": "arcseconds",
-  "label": "Resolution"
- },
- "steps": [
-  {
-   "title": "Write the formula",
-   "body": "<p><code>resolution ≈ 250,000 × λ ÷ D<\/code>, with λ and D in the same units (meters).<\/p>"
-  },
-  {
-   "title": "Substitute",
-   "body": "<p><code>250,000 × 5 × 10⁻⁷ ÷ 2.4<\/code><\/p>"
-  },
-  {
-   "title": "Calculate",
-   "body": "<p><code>250,000 × 5 × 10⁻⁷ = 0.125<\/code>; <code>0.125 ÷ 2.4 ≈ 0.052″<\/code><\/p>"
-  },
-  {
-   "title": "Compare",
-   "body": "<p>That is about 1,000 times sharper than your eye’s 60″. From the ground, turbulent air blurs images to about 0.5–1″, which is one reason Hubble was put in space.<\/p>"
-  }
- ],
- "final": "<p>About 0.05 arcsecond.<\/p>",
- "title": "Hubble’s sharpness"
-}</script>
+<script type="application/json" id="g-m3-hubble-data">{"prompt": "<p>What is the diffraction-limited angular resolution of the Hubble Space Telescope (aperture 2.4 m) in green light (wavelength 500 nm = 5 × 10⁻⁷ m)?</p>", "check": {"answer": 0.052, "tol": 0.05, "unit": "arcseconds", "label": "Resolution"}, "steps": [{"title": "Write the formula", "body": "<p><code>resolution ≈ 250,000 × λ ÷ D</code>, with λ and D in the same units (meters).</p>"}, {"title": "Substitute", "body": "<p><code>250,000 × 5 × 10⁻⁷ ÷ 2.4</code></p>"}, {"title": "Calculate", "body": "<p><code>250,000 × 5 × 10⁻⁷ = 0.125</code>; <code>0.125 ÷ 2.4 ≈ 0.052″</code></p>"}, {"title": "Compare", "body": "<p>That is about 1,000 times sharper than your eye’s 60″. From the ground, turbulent air blurs images to about 0.5–1″, which is one reason Hubble was put in space.</p>"}], "final": "<p>About 0.05 arcsecond.</p>", "title": "Hubble’s sharpness", "concept": {"q": "Why can a bigger telescope see finer details?", "choices": ["It uses brighter light", "A larger opening has sharper resolution", "It magnifies more", "It is closer to the stars"], "answer": 1, "explain": "Resolution improves as the telescope’s diameter grows. That is why astronomers keep building larger telescopes and linking them together."}}</script>
 <script type="application/json" id="quiz-module-03-data">[
  {
   "q": "A car rounds a curve at a constant 50 km/h. Is it accelerating?",

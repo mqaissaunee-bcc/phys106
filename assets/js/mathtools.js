@@ -108,7 +108,7 @@
     var d = mk('details', 'refresher'); d.setAttribute('data-refresher', kind);
     var s = mk('summary', null, kind === 'small' ? 'Quick refresher: very small numbers in scientific notation' : 'Quick refresher: scientific notation for very large numbers');
     var body = mk('div', 'refresher-body'); body.innerHTML = kind === 'small' ? SMALLNUM : LARGE;
-    var more = mk('p', 'refresher-more'); var a = mk('a', null, 'More practice in the Math toolkit'); a.href = root() + 'math-toolkit.html#sci'; more.appendChild(a); body.appendChild(more);
+    var more = mk('p', 'refresher-more'); var a = mk('a', null, 'More practice in the Math toolkit'); a.href = root() + 'math-toolkit.html#sci'; more.appendChild(a); more.appendChild(document.createTextNode(' · ')); var a2 = mk('a', null, 'See sizes on the Orders of Magnitude Explorer'); a2.href = root() + 'orders-of-magnitude.html'; more.appendChild(a2); body.appendChild(more);
     d.appendChild(s); d.appendChild(body); return d;
   }
   var POS = /× 10[¹²³⁴⁵⁶⁷⁸⁹][⁰¹²³⁴⁵⁶⁷⁸⁹]*/, NEG = /× 10⁻[⁰¹²³⁴⁵⁶⁷⁸⁹]+/;
@@ -176,6 +176,151 @@
     });
   }
 
+
+  /* ================= orders of magnitude: landmarks, magnitude line, zeros view ================= */
+  var LANDMARKS = {
+    length: { unit: 'm', label: 'Length (meters)', lo: -16, hi: 27, items: [[1.7e-15, 'A proton'], [1e-10, 'An atom'], [1e-7, 'A virus'], [8e-6, 'A red blood cell'], [1e-4, 'The width of a hair'], [1.7, 'A person'], [100, 'A football field'], [8.8e3, 'Mount Everest\u2019s height'], [1.27e7, 'Earth\u2019s diameter'], [3.84e8, 'Earth to the Moon'], [1.39e9, 'The Sun\u2019s diameter'], [1.5e11, 'Earth to the Sun (1 AU)'], [4.5e12, 'The Sun to Neptune'], [9.46e15, 'One light-year'], [4.0e16, 'The nearest star'], [9.5e20, 'The Milky Way\u2019s width'], [2.4e22, 'The distance to Andromeda'], [8.8e26, 'The observable universe']] },
+    time: { unit: 's', label: 'Time (seconds)', lo: -1, hi: 18, items: [[0.3, 'A blink of an eye'], [60, 'One minute'], [499, 'Sunlight\u2019s trip to Earth'], [8.64e4, 'One day'], [3.16e7, 'One year'], [2.5e9, 'A human lifetime'], [1.6e11, 'Recorded history (5,000 years)'], [9.5e12, 'Modern humans (300,000 years)'], [2.1e15, 'Since the dinosaurs died (66 million years)'], [7.3e15, 'One lap of the Sun around the galaxy'], [1.45e17, 'The age of Earth'], [4.35e17, 'The age of the universe']] },
+    mass: { unit: 'kg', label: 'Mass (kilograms)', lo: -31, hi: 54, items: [[9.1e-31, 'An electron'], [1.67e-27, 'A proton'], [1e-6, 'A grain of sand'], [0.145, 'A baseball'], [70, 'A person'], [1500, 'A car'], [1.5e5, 'A blue whale'], [6e9, 'The Great Pyramid'], [7.3e22, 'The Moon'], [6e24, 'Earth'], [1.9e27, 'Jupiter'], [2e30, 'The Sun'], [8.5e36, 'Sagittarius A* (4 million Suns)'], [2e42, 'The Milky Way, with dark matter'], [1.5e53, 'Ordinary matter in the observable universe']] },
+    number: { unit: '', label: 'Just the number', lo: -3, hi: 28, items: [[1, 'One'], [1e3, 'One thousand'], [1e6, 'One million'], [8.1e9, 'People on Earth'], [2e11, 'Stars in the Milky Way'], [1e12, 'One trillion'], [3.7e13, 'Cells in your body'], [1e22, 'Stars in the observable universe (at least)'], [7e27, 'Atoms in your body']] }
+  };
+  function lc(n) { return n.replace(/^(A|An|The) /, function (m) { return m.toLowerCase(); }); }
+  function landmarkText(v, cat) { var L = LANDMARKS[cat]; return fmtSci(v, 2) + (L.unit ? ' ' + L.unit : ''); }
+  function neighbors(v, cat) {
+    var items = LANDMARKS[cat].items.slice().sort(function (a, b) { return a[0] - b[0]; }), below = null, above = null;
+    items.forEach(function (it) { if (it[0] <= v) below = it; else if (!above) above = it; });
+    return [below, above];
+  }
+  function sv(tag, attrs, parent) { var e = document.createElementNS('http://www.w3.org/2000/svg', tag); Object.keys(attrs || {}).forEach(function (k) { e.setAttribute(k, attrs[k]); }); if (parent) parent.appendChild(e); return e; }
+  function magLine(cat, value, opt) {
+    opt = opt || {}; var L = LANDMARKS[cat], W = opt.width || 330, H = opt.labels ? 170 : 74, X0 = 14, X1 = W - 14, Y = opt.labels ? 88 : 36;
+    function xe(e) { return X0 + (Math.min(L.hi, Math.max(L.lo, e)) - L.lo) / (L.hi - L.lo) * (X1 - X0); }
+    var svg = sv('svg', { viewBox: '0 0 ' + W + ' ' + H, 'class': 'mag-svg', role: 'img', 'aria-hidden': opt.ariaLabel ? 'false' : 'true' });
+    if (opt.ariaLabel) sv('title', {}, svg).textContent = opt.ariaLabel;
+    sv('line', { x1: X0, y1: Y, x2: X1, y2: Y, 'class': 'mag-axis' }, svg);
+    var step = (L.hi - L.lo) > 40 ? 10 : 5;
+    for (var e = Math.ceil(L.lo); e <= L.hi; e++) {
+      var major = e % step === 0;
+      sv('line', { x1: xe(e), y1: Y - (major ? 6 : 3), x2: xe(e), y2: Y + (major ? 6 : 3), 'class': 'mag-tick' }, svg);
+      if (major) { var t = sv('text', { x: xe(e), y: Y + 20, 'class': 'mag-lab', 'text-anchor': 'middle' }, svg); t.textContent = '10' + sup(e); }
+    }
+    L.items.forEach(function (it, i) {
+      var x = xe(Math.log10(it[0])), sel = opt.selected && opt.selected.indexOf(it[1]) >= 0;
+      sv('circle', { cx: x, cy: Y, r: sel ? 6 : 3.5, 'class': sel ? 'mag-dot sel' : 'mag-dot' }, svg);
+      if (opt.labels) {
+        var up = i % 2 === 0, ty = up ? Y - 16 - (i % 4 === 0 ? 0 : 14) : Y + 36 + (i % 4 === 1 ? 0 : 14);
+        sv('line', { x1: x, y1: Y, x2: x, y2: up ? ty + 4 : ty - 11, 'class': 'mag-lead' }, svg);
+        var tl = sv('text', { x: x, y: ty, 'class': sel ? 'mag-name sel' : 'mag-name', 'text-anchor': x > W - 90 ? 'end' : x < 60 ? 'start' : 'middle' }, svg); tl.textContent = it[1].replace(/^(A|An|The) /, '');
+      }
+    });
+    if (value !== null && value !== undefined && value > 0 && isFinite(value)) {
+      var le = Math.log10(value), x = xe(le);
+      sv('polygon', { points: (x - 7) + ',' + (Y - 20) + ' ' + (x + 7) + ',' + (Y - 20) + ' ' + x + ',' + (Y - 8), 'class': 'mag-mark' }, svg);
+      if (le < L.lo || le > L.hi) { var o = sv('text', { x: x, y: Y - 24, 'class': 'mag-lab', 'text-anchor': 'middle' }, svg); o.textContent = le < L.lo ? '◄ smaller' : 'larger ►'; }
+    }
+    if (opt.guess !== undefined && opt.guess !== null) { var gx = xe(opt.guess); sv('line', { x1: gx, y1: Y - 18, x2: gx, y2: Y + 18, 'class': 'mag-guess' }, svg); }
+    return svg;
+  }
+  function magText(v, cat) {
+    if (!(v > 0) || !isFinite(v)) return 'The magnitude line shows positive numbers only.';
+    var e = Math.floor(Math.log10(v)), nb = neighbors(v, cat), parts = ['Order of magnitude: about 10' + sup(e) + '.'];
+    var near = [nb[0], nb[1]].filter(function (x) { return x && Math.abs(Math.log10(v / x[0])) < 0.05; })[0];
+    if (near) parts.push('About the same as ' + lc(near[1]) + ' (' + landmarkText(near[0], cat) + ').');
+    else if (nb[0] && nb[1]) parts.push('Between ' + lc(nb[0][1]) + ' (' + landmarkText(nb[0][0], cat) + ') and ' + lc(nb[1][1]) + ' (' + landmarkText(nb[1][0], cat) + ').');
+    else if (nb[0]) parts.push('Larger than ' + lc(nb[0][1]) + ' (' + landmarkText(nb[0][0], cat) + ').');
+    else if (nb[1]) parts.push('Smaller than ' + lc(nb[1][1]) + ' (' + landmarkText(nb[1][0], cat) + ').');
+    return parts.join(' ');
+  }
+  function zerosView(v) {
+    var wrap = mk('div', 'zeros');
+    if (!isFinite(v) || v === 0) { wrap.appendChild(mk('p', null, 'Enter a nonzero number.')); return wrap; }
+    var a = Math.abs(v), p = sciParts(a, 3), m = p[0], e = p[1], md = trim(String(m)).replace('.', ''), cells = [];
+    if (e > 30 || e < -12) { wrap.appendChild(mk('p', null, fmtSci(a, 3) + ' is too long to draw digit by digit: that is ' + (e > 0 ? e + ' places to the right' : -e + ' places to the left') + ' of the first digit. The magnitude line shows its size better.')); return wrap; }
+    if (e >= 0) {
+      var len = Math.max(e + 1, md.length);
+      for (var i = 0; i < len; i++) cells.push({ d: i < md.length ? md[i] : '0', kind: i === 0 ? 'lead' : (i < md.length ? 'mant' : 'zero'), place: i >= 1 && i <= e ? i : null });
+      cells.splice(e + 1, 0, { d: len > e + 1 ? '.' : '', kind: 'point' });
+    } else {
+      cells.push({ d: '0', kind: 'zero0' }, { d: '.', kind: 'point' });
+      for (var j = 1; j < -e; j++) cells.push({ d: '0', kind: 'zero', place: j });
+      for (var k = 0; k < md.length; k++) cells.push({ d: md[k], kind: k === 0 ? 'lead' : 'mant', place: k === 0 ? -e : null });
+    }
+    var row = mk('div', 'zeros-row'); row.setAttribute('aria-hidden', 'true');
+    cells.forEach(function (c) { if (c.kind === 'point' && !c.d) return; var b = mk('span', 'zc ' + c.kind); b.appendChild(mk('span', 'zd', c.d)); b.appendChild(mk('span', 'zp', c.place ? String(c.place) : '')); row.appendChild(b); });
+    var zeros = e >= 0 ? Math.max(0, e - (md.length - 1)) : -e - 1;
+    var cap = mk('p', 'zeros-cap', (e >= 0 ? trim(String(m)) + ' × 10' + sup(e) + ': the decimal point moves ' + e + ' place' + (e === 1 ? '' : 's') + ' to the right, adding ' + zeros + ' zero' + (zeros === 1 ? '' : 's') + '.' : trim(String(m)) + ' × 10' + sup(e) + ': the decimal point moves ' + (-e) + ' places to the left, with ' + zeros + ' zero' + (zeros === 1 ? '' : 's') + ' after the decimal point.') + ' Small numbers under each box count the places.');
+    var sr = mk('p', 'sr-only', 'Written out: ' + cells.map(function (c) { return c.d; }).join(''));
+    wrap.appendChild(row); wrap.appendChild(cap); wrap.appendChild(sr);
+    return wrap;
+  }
+  window.MathTools.magLine = magLine; window.MathTools.LANDMARKS = LANDMARKS;
+
+  /* ================= Orders of Magnitude Explorer page ================= */
+  function buildExplorer(rootEl) {
+    var KEY = PREFIX + 'magnitude-v1', rec = load(KEY, { best: 0 }), cat = 'length', sel = [], game = null, streak = 0;
+    var tabs = mk('div', 'mx-tabs'); tabs.setAttribute('role', 'group'); tabs.setAttribute('aria-label', 'Choose what to measure');
+    ['length', 'time', 'mass', 'number'].forEach(function (c) { var b = mk('button', 'mx-tab', LANDMARKS[c].label); b.type = 'button'; b.setAttribute('data-cat', c); b.addEventListener('click', function () { cat = c; sel = []; newGame(); render(); }); tabs.appendChild(b); });
+    var lineBox = mk('div', 'mx-line'); lineBox.tabIndex = 0; lineBox.setAttribute('role', 'region'); lineBox.setAttribute('aria-label', 'Magnitude line (scroll sideways on small screens)');
+    var list = mk('div', 'mx-list'); var listH = mk('h3', null, 'Landmarks'); var listUl = mk('ul', 'mx-items');
+    var detail = mk('p', 'mx-detail'); detail.setAttribute('aria-live', 'polite');
+    var cmpH = mk('h3', null, 'Compare two'); var cmp = mk('div', 'mx-cmp'); var sa = mk('select'), sb = mk('select'); sa.setAttribute('aria-label', 'First object'); sb.setAttribute('aria-label', 'Second object');
+    var cmpOut = mk('p', 'mx-cmp-out'); cmpOut.setAttribute('aria-live', 'polite'); cmp.appendChild(sa); cmp.appendChild(mk('span', null, ' compared with ')); cmp.appendChild(sb);
+    var gameH = mk('h3', null, 'Place it: estimation game'); var gq = mk('p', 'mx-gq'); var glab = mk('label', null, 'Your estimate: '); var gin = mk('input'); gin.type = 'range'; gin.id = 'mx-guess'; glab.setAttribute('for', 'mx-guess');
+    var gval = mk('output', 'mx-gval'); var gbtn = mk('button', 'btn-primary', 'Check'); gbtn.type = 'button'; var gnext = mk('button', null, 'New object'); gnext.type = 'button'; var gfb = mk('p', 'mx-gfb'); gfb.setAttribute('aria-live', 'polite'); var gscore = mk('p', 'mx-gscore');
+    var grow = mk('div', 'mx-grow'); grow.appendChild(glab); grow.appendChild(gin); grow.appendChild(gval);
+    var gact = mk('div', 'act-actions'); gact.appendChild(gbtn); gact.appendChild(gnext);
+    list.appendChild(listH); list.appendChild(listUl);
+    [tabs, lineBox, detail, list, cmpH, cmp, cmpOut, gameH, gq, grow, gact, gfb, gscore].forEach(function (x) { rootEl.appendChild(x); });
+    function nm(it) { return it[1]; }
+    function describe(it) { var L = LANDMARKS[cat], v = it[0], w = words(v); return it[1] + ': ' + landmarkText(v, cat) + (w ? ' (' + w + (L.unit ? ' ' + L.unit : '') + ')' : '') + '.'; }
+    function fillSelect(s, idx) { s.innerHTML = ''; LANDMARKS[cat].items.forEach(function (it, i) { var o = mk('option', null, it[1]); o.value = String(i); s.appendChild(o); }); s.value = String(idx); }
+    function compare() {
+      var A = LANDMARKS[cat].items[+sa.value], B = LANDMARKS[cat].items[+sb.value]; if (!A || !B) return;
+      var r = A[0] / B[0], big = r >= 1 ? A : B, small = r >= 1 ? B : A, ratio = big[0] / small[0], pw = Math.log10(ratio);
+      cmpOut.textContent = ratio < 1.5 ? A[1] + ' and ' + lc(B[1]) + ' are about the same.' : big[1] + ' is about ' + (ratio < 1e4 ? commas(trim(String(Number(ratio.toPrecision(2))))) : fmtSci(ratio, 2)) + ' times ' + (cat === 'time' ? 'longer than' : cat === 'mass' ? 'heavier than' : cat === 'length' ? 'larger than' : 'more than') + ' ' + lc(small[1]) + ': ' + (pw < 1 ? 'less than one power of ten.' : 'about ' + Math.round(pw) + ' power' + (Math.round(pw) === 1 ? '' : 's') + ' of ten.');
+      sel = [A[1], B[1]]; drawLine();
+    }
+    function drawLine() {
+      lineBox.innerHTML = '';
+      var guess = game && !game.done && game.touched ? parseFloat(gin.value) : null, val = game && game.done ? game.item[0] : null;
+      lineBox.appendChild(magLine(cat, val, { width: 900, labels: true, selected: sel, guess: guess, ariaLabel: 'Magnitude line for ' + LANDMARKS[cat].label.toLowerCase() + ', from 10 to the ' + LANDMARKS[cat].lo + ' to 10 to the ' + LANDMARKS[cat].hi + ', with ' + LANDMARKS[cat].items.length + ' landmarks listed below.' }));
+    }
+    function newGame() {
+      var items = LANDMARKS[cat].items, it = items[Math.floor(Math.random() * items.length)];
+      game = { item: it, done: false };
+      gin.min = String(LANDMARKS[cat].lo); gin.max = String(LANDMARKS[cat].hi); gin.step = '1'; gin.value = String(Math.round((LANDMARKS[cat].lo + LANDMARKS[cat].hi) / 2));
+      gq.textContent = 'Where does this go? ' + it[1] + (LANDMARKS[cat].unit ? ' (in ' + LANDMARKS[cat].label.toLowerCase().replace(/^\w+ \(|\)$/g, '') + ')' : '') + '. Slide to your estimate, then check.';
+      gfb.textContent = ''; updGuess();
+    }
+    function updGuess() { gval.textContent = '10' + sup(gin.value) + (LANDMARKS[cat].unit ? ' ' + LANDMARKS[cat].unit : ''); gin.setAttribute('aria-valuetext', '10 to the ' + gin.value + (LANDMARKS[cat].unit ? ' ' + LANDMARKS[cat].unit : '')); drawLine(); }
+    gin.addEventListener('input', function () { if (game) game.touched = true; updGuess(); });
+    gbtn.addEventListener('click', function () {
+      if (!game || game.done) return;
+      var truth = Math.log10(game.item[0]), off = Math.round(parseFloat(gin.value) - truth); game.done = true;
+      var ok = Math.abs(off) <= 1; streak = ok ? streak + 1 : 0; if (streak > rec.best) { rec.best = streak; save(KEY, rec); }
+      gfb.textContent = (ok ? '✓ ' + (off === 0 ? 'Right on the power of ten. ' : 'Within one power of ten. ') : '✗ ') + game.item[1] + ' is ' + landmarkText(game.item[0], cat) + '. ' + (off === 0 ? '' : 'Your estimate was ' + Math.abs(off) + ' power' + (Math.abs(off) === 1 ? '' : 's') + ' of ten (' + (Math.abs(off) < 7 ? commas(String(Math.pow(10, Math.abs(off)))) : '10' + sup(Math.abs(off))) + ' times) too ' + (off > 0 ? 'large.' : 'small.'));
+      gfb.className = 'mx-gfb ' + (ok ? 'good' : 'bad');
+      gscore.textContent = 'Streak: ' + streak + '. Best: ' + rec.best + '.';
+      sel = [game.item[1]]; drawLine();
+    });
+    gnext.addEventListener('click', function () { sel = []; newGame(); gin.focus(); });
+    sa.addEventListener('change', compare); sb.addEventListener('change', compare);
+    function render() {
+      Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-cat') === cat)); });
+      listUl.innerHTML = '';
+      LANDMARKS[cat].items.forEach(function (it) {
+        var li = mk('li'), b = mk('button', 'mx-item', it[1]); b.type = 'button';
+        b.addEventListener('click', function () { sel = [it[1]]; detail.textContent = describe(it); drawLine(); });
+        li.appendChild(b); listUl.appendChild(li);
+      });
+      detail.textContent = 'Select a landmark to see its size.';
+      var n = LANDMARKS[cat].items.length; fillSelect(sa, n - 1); fillSelect(sb, Math.max(0, Math.floor(n / 2)));
+      compare();
+      gscore.textContent = 'Streak: ' + streak + '. Best: ' + rec.best + '.';
+    }
+    newGame(); render();
+  }
+
   /* ================= calculator panel ================= */
   function buildCalc() {
     var tools = document.querySelector('.topbar .tools'); if (!tools) return;
@@ -191,6 +336,13 @@
     var input = mk('input', 'calc-expr'); input.id = 'calc-expr'; input.type = 'text'; input.autocomplete = 'off'; input.spellcheck = false; input.setAttribute('inputmode', 'decimal'); input.placeholder = 'e.g. 3×10^8 ÷ 1.5';
     var out = mk('output', 'calc-out', '0'); out.setAttribute('for', 'calc-expr'); out.setAttribute('aria-live', 'polite');
     var wordsEl = mk('p', 'calc-words');
+    var viewRow = mk('div', 'calc-views');
+    var vLine = mk('button', 'calc-view', 'Magnitude line'); vLine.type = 'button';
+    var vZero = mk('button', 'calc-view', 'How many zeros'); vZero.type = 'button';
+    var catSel = mk('select', 'calc-cat'); catSel.setAttribute('aria-label', 'What the number measures');
+    ['number', 'length', 'time', 'mass'].forEach(function (c) { var o = mk('option', null, LANDMARKS[c].label); o.value = c; catSel.appendChild(o); });
+    viewRow.appendChild(vLine); viewRow.appendChild(vZero);
+    var viewBox = mk('div', 'calc-viewbox'); viewBox.setAttribute('aria-live', 'polite');
     var pad = mk('div', 'calc-pad');
     var KEYS = [
       ['clear', 'Clear', 'clear'], ['del', 'Delete', 'delete'], ['(', '(', 'open parenthesis'], [')', ')', 'close parenthesis'], ['^', '^', 'power (the ^ key)'],
@@ -213,10 +365,26 @@
     var clearH = mk('button', 'calc-clearh', 'Clear history'); clearH.type = 'button';
     acts.appendChild(toNotes); acts.appendChild(clearH);
     var help = mk('p', 'calc-help'); help.innerHTML = 'Keys match the TI-30XS. Type e8 or ×10^8 for × 10⁸. <a href="' + root() + 'math-toolkit.html#sci">Scientific notation help</a>';
-    [head, lab, input, out, wordsEl, pad, histH, hist, acts, help].forEach(function (x) { panel.appendChild(x); });
+    [head, lab, input, out, wordsEl, viewRow, viewBox, pad, histH, hist, acts, help].forEach(function (x) { panel.appendChild(x); });
     document.body.appendChild(panel);
 
-    function show(v) { out.textContent = st.mode === 'sci' ? fmtSci(v, 6) : fmtNorm(v); var w = words(v); wordsEl.textContent = w ? 'In words: ' + w : ''; }
+    function renderView() {
+      viewBox.innerHTML = '';
+      vLine.setAttribute('aria-pressed', String(st.view === 'line')); vZero.setAttribute('aria-pressed', String(st.view === 'zeros'));
+      if (!st.view || ans === null) { viewBox.hidden = true; return; }
+      viewBox.hidden = false;
+      if (st.view === 'line') {
+        var c = st.cat || 'number'; catSel.value = c;
+        var r = mk('div', 'calc-catrow'); var cl = mk('span', null, 'Compare with: '); r.appendChild(cl); r.appendChild(catSel); viewBox.appendChild(r);
+        viewBox.appendChild(magLine(c, Math.abs(ans)));
+        viewBox.appendChild(mk('p', 'calc-magtext', magText(Math.abs(ans), c)));
+        var ex = mk('a', 'calc-explore', 'Open the Orders of Magnitude Explorer'); ex.href = root() + 'orders-of-magnitude.html'; viewBox.appendChild(ex);
+      } else viewBox.appendChild(zerosView(ans));
+    }
+    function show(v) { out.textContent = st.mode === 'sci' ? fmtSci(v, 6) : fmtNorm(v); var w = words(v); wordsEl.textContent = w ? 'In words: ' + w : ''; renderView(); }
+    vLine.addEventListener('click', function () { st.view = st.view === 'line' ? null : 'line'; save(CALC_KEY, st); renderView(); });
+    vZero.addEventListener('click', function () { st.view = st.view === 'zeros' ? null : 'zeros'; save(CALC_KEY, st); renderView(); });
+    catSel.addEventListener('change', function () { st.cat = catSel.value; save(CALC_KEY, st); renderView(); });
     function renderMode() { modeB.textContent = st.mode === 'sci' ? 'Display: SCI' : 'Display: normal'; modeB.setAttribute('aria-label', 'Display mode ' + (st.mode === 'sci' ? 'scientific' : 'normal') + '. Switch mode.'); }
     function renderHist() {
       hist.innerHTML = '';
@@ -256,7 +424,7 @@
       var rows = st.hist.slice(-8).map(function (h) { return '<li><code>' + h.e.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + ' = ' + fmtSci(h.v, 6) + '</code></li>'; }).join('');
       window.PHYS106Notes.add('<h3>Calculator work</h3><ol>' + rows + '</ol>', 'Calculator');
     });
-    renderMode(); renderHist(); if (ans !== null) show(ans);
+    renderMode(); renderHist(); if (ans !== null) show(ans); else renderView();
   }
 
   /* ================= readiness check ================= */
@@ -305,6 +473,7 @@
     placeRefreshers();
     numberWords();
     Array.prototype.forEach.call(document.querySelectorAll('.readiness[data-source]'), buildReadiness);
+    Array.prototype.forEach.call(document.querySelectorAll('.mag-explorer'), buildExplorer);
     Array.prototype.forEach.call(document.querySelectorAll('button[data-print]'), function (b) { b.addEventListener('click', function () { window.print(); }); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
