@@ -46,6 +46,10 @@ Instructors choose the emphasis with a link. Post `.../phys106/?emphasis=concept
 
 The calculator's **Magnitude line** view places any answer on a power-of-ten scale with landmarks for length, time, mass, or plain numbers. The **How many zeros** view writes the number out digit by digit and counts the places the decimal point moves. `orders-of-magnitude.html` is the full Explorer: landmark browsing, a two-object comparison, and a "Place it" estimation game.
 
+## External simulations ("Explore further")
+
+Nineteen free external simulations, each with a few guided things to try, are placed at the end of the reading section they support. Sixteen are from PhET (University of Colorado Boulder) and Columbia University's HTML5 ports of the University of Nebraska–Lincoln astronomy simulations. Two link to the Nebraska HTML5 collection page for its H-R Diagram, Stellar Evolution, and Hubble's Law simulators. The list and placements live in `build/explore.py`, which `build_all.sh` runs after every build. Check that the links still load each term.
+
 ## Publish with GitHub Desktop
 
 1. Create a new repository in GitHub Desktop and copy these files into it (keep `.nojekyll`).
