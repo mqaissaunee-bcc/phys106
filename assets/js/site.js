@@ -769,7 +769,7 @@
     root.appendChild(meta);
     if (cfg.chapters && cfg.chapters.length) {
       var ch = mk('details', 'video-chapters'); ch.appendChild(mk('summary', null, 'Chapters'));
-      var ol = mk('ol'); cfg.chapters.forEach(function (c) { var li = mk('li'); li.appendChild(mk('span', 'video-time', c[0])); li.appendChild(document.createTextNode(' ' + c[1])); ol.appendChild(li); });
+      var ol = mk('ol'); cfg.chapters.forEach(function (c) { var li = mk('li'); if (c[0]) { li.appendChild(mk('span', 'video-time', c[0])); li.appendChild(document.createTextNode(' ')); } li.appendChild(document.createTextNode(c[1])); ol.appendChild(li); });
       ch.appendChild(ol); root.appendChild(ch);
     }
     if (cfg.transcript) {
@@ -781,7 +781,7 @@
       nb.addEventListener('click', function () {
         var esc = function (t) { return String(t).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); };
         var h = '<h3>' + esc(cfg.title) + '</h3>' + (cfg.description ? '<p>' + esc(cfg.description) + '</p>' : '') +
-          (cfg.chapters && cfg.chapters.length ? '<ol>' + cfg.chapters.map(function (c) { return '<li>' + esc(c[0]) + ' ' + esc(c[1]) + '</li>'; }).join('') + '</ol>' : '') +
+          (cfg.chapters && cfg.chapters.length ? '<ol>' + cfg.chapters.map(function (c) { return '<li>' + (c[0] ? esc(c[0]) + ' ' : '') + esc(c[1]) + '</li>'; }).join('') + '</ol>' : '') +
           '<p><a href="' + esc(cfg.page) + '">Watch on Screencast.com</a></p>';
         if (window.PHYS106Notes) window.PHYS106Notes.add(h, 'Overview video');
       });
