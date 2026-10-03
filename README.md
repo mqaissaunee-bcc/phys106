@@ -48,7 +48,11 @@ The calculator's **Magnitude line** view places any answer on a power-of-ten sca
 
 ## External simulations ("Explore further")
 
-Nineteen free external simulations, each with a few guided things to try, are placed at the end of the reading section they support. Sixteen are from PhET (University of Colorado Boulder) and Columbia University's HTML5 ports of the University of Nebraska–Lincoln astronomy simulations. Two link to the Nebraska HTML5 collection page for its H-R Diagram, Stellar Evolution, and Hubble's Law simulators. The list and placements live in `build/explore.py`, which `build_all.sh` runs after every build. Check that the links still load each term.
+Twenty free external simulations, each with a few guided things to try, are placed at the end of the reading section they support; the module plan tables and `simulations.html` link to all of them. Most are from PhET (University of Colorado Boulder) and Columbia University's HTML5 ports of the University of Nebraska–Lincoln astronomy simulations. Two link to the Nebraska HTML5 collection page for its H-R Diagram, Stellar Evolution, and Hubble's Law simulators. The list and placements live in `build/explore.py`, which `build_all.sh` runs after every build. Check that the links still load each term.
+
+## Hiding the top bar
+
+The ▴ button at the end of the top bar hides the whole bar for more reading room; a small "▾ Menu" tab in the top-right corner brings it back. The choice is remembered (saved with the other display preferences) and applied before the page draws. Below 1180 px wide, the menu links fold behind the "Menu" button so the bar stays on one row.
 
 ## Publish with GitHub Desktop
 

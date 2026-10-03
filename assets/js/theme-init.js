@@ -5,6 +5,9 @@
     if (prefs.theme && prefs.theme !== 'auto') {
       document.documentElement.setAttribute('data-theme', prefs.theme);
     }
+    if (prefs.topbar === 'hidden') {
+      document.documentElement.setAttribute('data-topbar', 'hidden');
+    }
     if (prefs.scale) {
       document.documentElement.style.setProperty('--scale', String(prefs.scale));
     }

@@ -747,6 +747,29 @@
   });
 
   /* ---------- label the diagram ---------- */
+  /* ---------- hide / show the top bar for more reading room ---------- */
+  (function () {
+    var bar = document.querySelector('.topbar'); if (!bar) return;
+    var tools = bar.querySelector('.tools') || bar.querySelector('.topbar-inner') || bar;
+    var hide = mk('button', 'topbar-hide'); hide.type = 'button';
+    hide.innerHTML = '<span aria-hidden="true">▴</span><span class="topbar-hide-text"> Hide menu</span>';
+    hide.setAttribute('aria-label', 'Hide the top menu bar for more reading room'); hide.title = 'Hide the menu bar';
+    tools.appendChild(hide);
+    var show = mk('button', 'topbar-restore'); show.type = 'button';
+    show.innerHTML = '<span aria-hidden="true">▾</span> Menu';
+    show.setAttribute('aria-label', 'Show the top menu bar'); show.title = 'Show the menu bar';
+    document.body.insertBefore(show, document.body.firstChild.nextSibling);
+    function set(hidden) {
+      if (hidden) document.documentElement.setAttribute('data-topbar', 'hidden'); else document.documentElement.removeAttribute('data-topbar');
+      prefs.topbar = hidden ? 'hidden' : 'shown'; save(PREFS_KEY, prefs);
+      show.setAttribute('aria-expanded', String(!hidden)); hide.setAttribute('aria-expanded', String(!hidden));
+    }
+    hide.addEventListener('click', function () { set(true); show.focus(); });
+    show.addEventListener('click', function () { set(false); hide.focus(); });
+    var h = document.documentElement.getAttribute('data-topbar') === 'hidden';
+    show.setAttribute('aria-expanded', String(!h)); hide.setAttribute('aria-expanded', String(!h));
+  })();
+
   /* ---------- module overview video: click to load, chapters, transcript, add to notes ---------- */
   Array.prototype.slice.call(document.querySelectorAll('.video-panel[data-source]')).forEach(function (root) {
     var cfg = readCfg(root); if (!cfg || !cfg.src) return;
