@@ -747,6 +747,51 @@
   });
 
   /* ---------- label the diagram ---------- */
+  /* ---------- module overview video: click to load, chapters, transcript, add to notes ---------- */
+  Array.prototype.slice.call(document.querySelectorAll('.video-panel[data-source]')).forEach(function (root) {
+    var cfg = readCfg(root); if (!cfg || !cfg.src) return;
+    var title = mk('p', 'video-title', cfg.title); root.appendChild(title);
+    if (cfg.description) root.appendChild(mk('p', 'video-desc', cfg.description));
+    var frame = mk('div', 'video-frame');
+    var play = mk('button', 'video-play'); play.type = 'button';
+    play.setAttribute('aria-label', 'Play video: ' + cfg.title + ' (loads the player from Screencast.com)');
+    play.innerHTML = '<span class="video-play-icon" aria-hidden="true"></span><span class="video-play-text">Play video</span><span class="video-play-note">Loads from Screencast.com</span>';
+    frame.appendChild(play); root.appendChild(frame);
+    play.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = cfg.src; f.title = cfg.title; f.setAttribute('allow', 'autoplay; fullscreen'); f.setAttribute('allowfullscreen', ''); f.setAttribute('loading', 'lazy');
+      frame.innerHTML = ''; frame.appendChild(f); frame.classList.add('loaded'); f.focus();
+    });
+    var meta = mk('p', 'video-meta');
+    meta.appendChild(document.createTextNode('Captions: use the CC button in the player. This video was created with AI tools (NotebookLM) from this module\u2019s content. '));
+    var a = mk('a', null, 'Open on Screencast.com'); a.href = cfg.page; a.target = '_blank'; a.rel = 'noopener';
+    var sr = mk('span', 'sr-only', ' (opens in a new tab)'); a.appendChild(sr); meta.appendChild(a);
+    root.appendChild(meta);
+    if (cfg.chapters && cfg.chapters.length) {
+      var ch = mk('details', 'video-chapters'); ch.appendChild(mk('summary', null, 'Chapters'));
+      var ol = mk('ol'); cfg.chapters.forEach(function (c) { var li = mk('li'); li.appendChild(mk('span', 'video-time', c[0])); li.appendChild(document.createTextNode(' ' + c[1])); ol.appendChild(li); });
+      ch.appendChild(ol); root.appendChild(ch);
+    }
+    if (cfg.transcript) {
+      var tr = mk('details', 'video-transcript'); tr.appendChild(mk('summary', null, 'Transcript'));
+      cfg.transcript.split(/\n\s*\n/).forEach(function (para) { tr.appendChild(mk('p', null, para.trim())); }); root.appendChild(tr);
+    }
+    {
+      var nb = btn('Add video summary to notes');
+      nb.addEventListener('click', function () {
+        var esc = function (t) { return String(t).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); };
+        var h = '<h3>' + esc(cfg.title) + '</h3>' + (cfg.description ? '<p>' + esc(cfg.description) + '</p>' : '') +
+          (cfg.chapters && cfg.chapters.length ? '<ol>' + cfg.chapters.map(function (c) { return '<li>' + esc(c[0]) + ' ' + esc(c[1]) + '</li>'; }).join('') + '</ol>' : '') +
+          '<p><a href="' + esc(cfg.page) + '">Watch on Screencast.com</a></p>';
+        if (window.PHYS106Notes) window.PHYS106Notes.add(h, 'Overview video');
+      });
+      var act = mk('div', 'act-actions'); act.appendChild(nb); root.appendChild(act);
+      act.hidden = true; // shown once the notes panel has loaded
+      var reveal = function () { act.hidden = !window.PHYS106Notes; };
+      if (document.readyState === 'complete') reveal(); else window.addEventListener('load', reveal);
+    }
+  });
+
   /* ---------- math emphasis: concept question first, calculation optional ---------- */
   (function () {
     var mode = emphasis(), meta = document.querySelector('.meta-row');

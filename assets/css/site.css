@@ -1135,3 +1135,24 @@ a.week-card:hover { border-color: var(--accent); }
 .concept-choice { display: flex; align-items: center; gap: .4rem; min-height: 40px; cursor: pointer; }
 .do-the-math { margin-top: .75rem; border-top: 1px dashed var(--rule); padding-top: .5rem; }
 .do-the-math > summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+
+/* Module overview video */
+.video-panel { max-width: 52rem; margin: 1.25rem auto 1.5rem; padding: 1rem 1.25rem; border: 1px solid var(--rule); border-radius: .75rem; background: var(--surface); }
+.video-panel h2 { margin: 0 0 .25rem; font-size: 1.2rem; }
+.video-title { font-weight: 700; margin: 0; }
+.video-desc { margin: .25rem 0 .75rem; color: var(--muted); }
+.video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: .5rem; overflow: hidden; background: #0b1020; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-play { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem;
+  background: radial-gradient(ellipse at center, #1d2a52 0%, #0b1020 70%); color: #fff; font: inherit; }
+.video-play:hover .video-play-icon, .video-play:focus-visible .video-play-icon { transform: scale(1.06); }
+.video-play-icon { width: 4.5rem; height: 4.5rem; border-radius: 50%; background: var(--accent); position: relative; transition: transform .15s; }
+.video-play-icon::after { content: ''; position: absolute; left: 1.75rem; top: 1.35rem; border-style: solid; border-width: .9rem 0 .9rem 1.5rem; border-color: transparent transparent transparent var(--accent-ink); }
+.video-play-text { font-size: 1.1rem; font-weight: 700; }
+.video-play-note { font-size: .85rem; opacity: .8; }
+.video-meta { font-size: .9rem; color: var(--muted); margin: .6rem 0 0; }
+.video-chapters, .video-transcript { margin-top: .6rem; }
+.video-chapters summary, .video-transcript summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.video-time { font-family: var(--mono, ui-monospace, monospace); color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .video-play-icon { transition: none; } }
+@media print { .video-frame { display: none; } }
