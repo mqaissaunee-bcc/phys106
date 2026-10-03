@@ -258,8 +258,16 @@
   function add(html, label) {
     var block = sanitize(html) + '<p class="note-src">From ' + esc(label || MOD_TITLE) + ', ' + esc(new Date().toLocaleDateString()) + '</p><p><br></p>';
     var go = function () {
-      ed.insertAdjacentHTML('beforeend', block);
+      var tmp = document.createElement('div'); tmp.innerHTML = block;
+      var added = Array.prototype.slice.call(tmp.childNodes);
+      added.forEach(function (n) { ed.appendChild(n); });
       saveNow();
+      var first = added.filter(function (n) { return n.nodeType === 1; })[0];
+      if (first) {
+        try { first.scrollIntoView({ block: 'nearest', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); } catch (e) { first.scrollIntoView(); }
+        added.forEach(function (n) { if (n.nodeType === 1) n.classList.add('note-new'); });
+        window.setTimeout(function () { added.forEach(function (n) { if (n.nodeType === 1) { n.classList.remove('note-new'); if (!n.className) n.removeAttribute('class'); } }); }, 1800);
+      }
       toggle.classList.add('pulse');
       window.setTimeout(function () { toggle.classList.remove('pulse'); }, 900);
       announce('Added to your ' + MOD_LABEL + ' notes.');

@@ -1156,3 +1156,7 @@ a.week-card:hover { border-color: var(--accent); }
 .video-time { font-family: var(--mono, ui-monospace, monospace); color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .video-play-icon { transition: none; } }
 @media print { .video-frame { display: none; } }
+
+/* Briefly highlight items just added to notes */
+.notes-editor .note-new { background: color-mix(in srgb, var(--accent) 18%, transparent); transition: background 1.2s; border-radius: .25rem; }
+@media (prefers-reduced-motion: reduce) { .notes-editor .note-new { transition: none; } }
