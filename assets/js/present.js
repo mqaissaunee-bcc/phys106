@@ -17,6 +17,8 @@
 
   var CONFIG = {
     storageKey: 'phys106-present-v1',
+    instructorOnly: true,                  // false = Present buttons for everyone
+    instructorParam: 'instructor',
     onlyIf: '.reading-section',            // run only on pages that have this
     contentRoot: 'main',
     containers: ['.reading-layout', '.reading-body'],   // walk into these
@@ -70,6 +72,23 @@
   };
 
   var C = Object.assign({}, CONFIG, window.PRESENT_CONFIG || {});
+
+  /* ---------- textbook version vs. presentation version ----------
+     Students get the textbook: no Present buttons. A browser becomes the
+     presentation version once it visits the instructor page (body has
+     data-present-instructor) or any page with ?instructor=on; ?instructor=off
+     turns it back off. Links with ?present=N open a deck either way. */
+  function readStore() { try { return JSON.parse(localStorage.getItem(C.storageKey)) || {}; } catch (e) { return {}; } }
+  function writeStore(patch) { var s = Object.assign(readStore(), patch); try { localStorage.setItem(C.storageKey, JSON.stringify(s)); } catch (e) { /* storage off */ } return s; }
+  (function () {
+    var v = new URLSearchParams(location.search).get(C.instructorParam);
+    if (document.body && document.body.hasAttribute('data-present-instructor')) writeStore({ instructor: true });
+    if (v != null) writeStore({ instructor: !/^(0|off|false|no)$/i.test(v) });
+  })();
+  window.PresentMode = {
+    isOn: function () { return !C.instructorOnly || !!readStore().instructor; },
+    setOn: function (on) { writeStore({ instructor: !!on }); }
+  };
   if (!document.querySelector(C.onlyIf)) return;
 
   /* ---------- small helpers ---------- */
@@ -900,7 +919,7 @@
   function boot() {
     var q = new URLSearchParams(location.search);
     presenter = q.get('pm') === 'presenter';
-    if (!presenter) addLaunchers();
+    if (!presenter && window.PresentMode.isOn()) addLaunchers();
     var n = parseInt(q.get('present'), 10);
     if (n >= 1 || presenter) {
       deck = buildDeck();

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentation version | PHYS 106 Astronomy</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/mathtools.css">
+<script src="assets/js/theme-init.js"></script>
+<style>
+  .pi-intro { padding-top: var(--space-5, 2rem); }
+  .pi-grid { list-style: none; margin: 0 0 var(--space-5, 2rem); padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: var(--space-3, 1rem); }
+  .pi-card { display: flex; flex-direction: column; gap: .35rem; padding: var(--space-3, 1rem); background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; }
+  .pi-card .wk { font-family: var(--font-ui); font-size: .85rem; font-weight: 700; color: var(--accent-2); }
+  .pi-card .wk-title { font-weight: 700; font-size: 1.1rem; line-height: 1.25; }
+  .pi-card .wk-topics { color: var(--muted); font-size: .92rem; flex: 1; }
+  .pi-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+  .pi-actions .btn { font-size: .9rem; padding: .45rem .8rem; }
+  .pi-device { border-top: 1px solid var(--rule); padding-top: var(--space-4, 1.5rem); }
+</style>
+</head>
+<body data-present-instructor>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="6" fill="currentColor"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+      <span>PHYS 106 <span class="brand-sub">Astronomy</span></span>
+    </a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Site">
+      <ul><li><a href="index.html">Modules</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="syllabus.html">Syllabus</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="math-toolkit.html">Math toolkit</a></li><li><a href="simulations.html">Simulations</a></li><li><a href="my-work.html">My work</a></li></ul>
+    </nav>
+    <div class="tools">
+      <button type="button" id="text-smaller" aria-label="Decrease text size">A−</button>
+      <button type="button" id="text-larger" aria-label="Increase text size">A+</button>
+      <button type="button" id="theme-btn">Theme: auto</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <section class="prose pi-intro" aria-labelledby="pi-h">
+    <p class="course-code">PHYS 106, for instructors</p>
+    <h1 id="pi-h">Presentation version</h1>
+    <p class="lede">Teach from the modules in class. Each module turns into slides you can step through with a presentation clicker, and the simulations and activities still work on the slides, so you can run them in front of the class.</p>
+    <p>Students use the regular site, which is the textbook version: the same pages without the Present buttons. Opening this page turns the Present buttons on in this browser, so on the computer you teach from, every module page will show them.</p>
+  </section>
+
+  <section aria-labelledby="pi-mods-h">
+    <h2 id="pi-mods-h">Present a module</h2>
+    <h3 class="part-heading">First half: our sky and our solar system</h3>
+    <ul class="pi-grid">
+      <li class="pi-card">
+        <span class="wk">Module 1</span>
+        <span class="wk-title">Our Place in the Universe</span>
+        <span class="wk-topics">Cosmic address, scale of space and time, the sky from Earth, seasons, Moon phases and eclipses</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-01.html?present=1">Present</a><a class="btn" href="modules/module-01.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 2</span>
+        <span class="wk-title">The Science of Astronomy</span>
+        <span class="wk-topics">Ancient astronomy, the Copernican revolution, Kepler and Galileo, how science works, timekeeping and navigation</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-02.html?present=1">Present</a><a class="btn" href="modules/module-02.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 3</span>
+        <span class="wk-title">Motion, Gravity, Light, and Telescopes</span>
+        <span class="wk-topics">Newton’s laws, orbits and gravity, energy, the nature of light and spectra, how telescopes work</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-03.html?present=1">Present</a><a class="btn" href="modules/module-03.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 4</span>
+        <span class="wk-title">The Solar System and Its Origin</span>
+        <span class="wk-topics">A tour of the planets, patterns in the solar system, the nebular theory, the frost line</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-04.html?present=1">Present</a><a class="btn" href="modules/module-04.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 5</span>
+        <span class="wk-title">Worlds Up Close</span>
+        <span class="wk-topics">Planetary geology, planetary atmospheres, the jovian planets and their moons</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-05.html?present=1">Present</a><a class="btn" href="modules/module-05.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 6</span>
+        <span class="wk-title">Small Bodies and Other Planetary Systems</span>
+        <span class="wk-topics">Asteroids, comets, dwarf planets, detecting exoplanets, midterm review</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-06.html?present=1">Present</a><a class="btn" href="modules/module-06.html">Open the reading</a></span>
+      </li>
+    </ul>
+    <h3 class="part-heading">Second half: stars, galaxies, and the cosmos</h3>
+    <ul class="pi-grid">
+      <li class="pi-card">
+        <span class="wk">Module 7</span>
+        <span class="wk-title">Relativity: Space, Time, and Gravity</span>
+        <span class="wk-topics">Special relativity, time dilation, curved spacetime, black holes and gravitational waves</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-07.html?present=1">Present</a><a class="btn" href="modules/module-07.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 8</span>
+        <span class="wk-title">The Building Blocks of the Universe</span>
+        <span class="wk-topics">Particles and forces, the uncertainty and exclusion principles, quantum ideas in astronomy</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-08.html?present=1">Present</a><a class="btn" href="modules/module-08.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 9</span>
+        <span class="wk-title">The Sun and Measuring Stars</span>
+        <span class="wk-topics">How the Sun shines, the solar interior and activity, stellar distances, brightness, and the H-R diagram</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-09.html?present=1">Present</a><a class="btn" href="modules/module-09.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 10</span>
+        <span class="wk-title">Star Birth and Stellar Lives</span>
+        <span class="wk-topics">Star formation, life on the main sequence, how stars of different masses evolve and make elements</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-10.html?present=1">Present</a><a class="btn" href="modules/module-10.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 11</span>
+        <span class="wk-title">Stellar Remnants and the Milky Way</span>
+        <span class="wk-topics">White dwarfs, neutron stars, black holes, the structure and history of our galaxy</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-11.html?present=1">Present</a><a class="btn" href="modules/module-11.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 12</span>
+        <span class="wk-title">Galaxies and Their Evolution</span>
+        <span class="wk-topics">Types of galaxies, the distance ladder, Hubble’s law, how galaxies form and change</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-12.html?present=1">Present</a><a class="btn" href="modules/module-12.html">Open the reading</a></span>
+      </li>
+      <li class="pi-card">
+        <span class="wk">Module 13</span>
+        <span class="wk-title">The Big Bang and the Fate of the Universe</span>
+        <span class="wk-topics">Evidence for the Big Bang, dark matter, dark energy, the future of the cosmos, final review</span>
+        <span class="pi-actions"><a class="btn btn-primary" href="modules/module-13.html?present=1">Present</a><a class="btn" href="modules/module-13.html">Open the reading</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="prose" aria-labelledby="pi-how-h">
+    <h2 id="pi-how-h">In the classroom</h2>
+    <p>Plug in your clicker and press <strong>Present</strong>. The forward and back buttons change slides; the blank button (or the B key) blacks out the screen, and pressing it again brings the slide back. Press F for full screen and Esc to end. When you end, the page opens to the section you were last showing.</p>
+    <p>On guided problems, the clicker reveals the worked solution one step at a time before moving to the next slide. If a slide has more than fits on screen, the clicker scrolls it first. Press O, or click the slide counter, to jump to any slide.</p>
+    <p>With a projector, choose <strong>Presenter view</strong> from the control bar and drag the new window to your laptop screen. It shows what comes next, a timer, and definitions for the glossary terms on the current slide. Your clicker works in either window. If nothing opens, allow pop-ups for this site.</p>
+    <p>In a brightly lit room, the light theme projects best. Use A+ and A− on the control bar to make the text bigger or smaller for the room.</p>
+  </section>
+
+  <section class="prose pi-device" aria-labelledby="pi-dev-h">
+    <h2 id="pi-dev-h">This browser</h2>
+    <p id="pi-status" aria-live="polite">Present buttons are on in this browser.</p>
+    <p><button type="button" class="btn" id="pi-toggle">Turn them off</button></p>
+    <p>Use this on a shared or student-facing computer to return the modules to the textbook version. The Present links above work either way.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p>Built for <span class="program">PHYS 106 Astronomy</span>, Brookdale Community College, <span class="year">2026</span>.</p>
+    <p>Original course content. Your reading progress and quiz scores are saved only in this browser.</p>
+  </div>
+</footer>
+<script src="assets/js/glossary-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/mathtools.js"></script>
+<script src="assets/js/present.js"></script>
+<script>
+(function () {
+  var b = document.getElementById('pi-toggle'), st = document.getElementById('pi-status');
+  if (!b || !window.PresentMode) return;
+  function show() {
+    var on = window.PresentMode.isOn();
+    st.textContent = on ? 'Present buttons are on in this browser.' : 'Present buttons are off in this browser. Modules show the textbook version.';
+    b.textContent = on ? 'Turn them off' : 'Turn them back on';
+  }
+  b.addEventListener('click', function () { window.PresentMode.setOn(!window.PresentMode.isOn()); show(); });
+  show();
+})();
+</script>
+</body>
+</html>
